@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "surface-container-highest": "#e2e2ea",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-primary-fixed": "#001945",
+                        "on-surface-variant": "#434652",
+                        "surface-variant": "#e2e2ea",
+                        "background": "#faf8ff",
+                        "secondary-container": "#c5d4fe",
+                        "surface-container-low": "#f3f3fb",
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#ffa781",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e7f0",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary": "#602100",
+                        "secondary-fixed": "#d9e2ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4d5b7f",
+                        "surface-dim": "#d9d9e1",
+                        "outline": "#737783",
+                        "tertiary-container": "#853100",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d4",
+                        "secondary": "#4f5e82",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-secondary-fixed-variant": "#384669",
+                        "surface-container": "#ededf5",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b0c6ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-on-surface": "#f0f0f8",
+                        "inverse-surface": "#2e3036",
+                        "on-primary-container": "#a1bbff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1b21",
+                        "primary": "#003178",
+                        "on-surface": "#1a1b21",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 z-50">
+<div class="p-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="font-manrope text-sm font-medium tracking-tight text-slate-500">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="local_taxi">local_taxi</span> Drivers
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span> Riders
+            </a>
+<div class="pt-4 pb-2 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Operations</div>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span> Areas
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span> Stations
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="alt_route">alt_route</span> Routes
+            </a>
+<div class="pt-4 pb-2 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">Finance &amp; Data</div>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span> Pricing
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span> Payments
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-l-xl font-manrope text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> Profiles
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="flex items-center gap-3 p-3 bg-slate-100 dark:bg-slate-800/50 rounded-2xl">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full border-2 border-white" data-alt="close-up portrait of a professional male administrator in a clean office setting, natural lighting, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD38mbggmyUACjjY4J7HJCnwdLUYJlaXMLrci6Mv4C02sPn15OqJPpwl3t-xNVTK1h6rdN9crpXFNQXaVGWAJjJx7hlF770ItN-mVGtwImN8CHGccf6uNyv7SnBJptAbOMFLsde8lPQBb1Fn_ZRbJCjVbVfdElIN8XCQr6sIN045_uYcsqGDOH-XrTxCGSgV0J5uGqAZRkgmjGP1uKHlSy2AUkZWf0qir2b1U9O5WVQZ7tiMFw2B1WkukDnE0JgKVOL2kNcpUS_l2Q"/>
+<div>
+<p class="text-xs font-bold text-slate-900 dark:text-slate-100">Moasla Admin</p>
+<p class="text-[10px] text-slate-500">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Shell -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center bg-surface-container-high rounded-full px-4 py-2 w-96">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-manrope ml-2 w-full" placeholder="Search profiles, IDs, or transactions..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400" data-icon="language">language</span>
+<span class="font-manrope text-sm tracking-wide text-slate-500">English/عربي</span>
+</div>
+<div class="relative cursor-pointer group">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-blue-800 transition-colors" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-100">
+<span class="font-manrope text-sm font-semibold text-blue-800 dark:text-blue-400">Admin</span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary text-xs font-bold">AD</div>
+</div>
+</div>
+</header>
+<!-- User Profile Content -->
+<div class="p-10 space-y-8">
+<!-- Hero Header Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
+<div class="md:col-span-2 space-y-4">
+<div class="flex items-center gap-6">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-full opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
+<img alt="Ahmad Hassan Portrait" class="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl" data-alt="professional portrait of a middle-eastern man smiling confidently, soft natural lighting, blurred urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN4-bm_bBDzf6xOejS2jCUI86WzdbZJA17e-zchjvBZmpSCaspVeVs1PSgBgb4bkDXWQOwe5V0r686RZEmFf76jYxwHXTKvLlzPVgJfPII7Qc_BMX8h-XPrWGaBG16Ghctr2DMiRr7KjUGnvzVyAI_luSgM4k8bDEifYn8j1uO7kiOby5IhKxkn5_maczK0oUXWHvR9NVhDsT41kXnS6sU9tH_Q0MFb2x4NVRwwBJfZW_XOmL3WDRlK2QjY13OtQfa-mrmI4ZnOoM"/>
+<span class="absolute bottom-1 right-1 bg-green-500 w-6 h-6 rounded-full border-4 border-white"></span>
+</div>
+<div>
+<div class="flex items-center gap-3">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface">Ahmad Hassan</h2>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase tracking-widest">Premium Driver</span>
+</div>
+<p class="text-outline mt-1 font-medium">Joined Oct 12, 2022 • ID: #MSL-8829</p>
+<div class="flex gap-4 mt-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg hover:scale-105 active:scale-98 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span> Edit Profile
+                                </button>
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/20 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-surface-bright transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span> Suspend Account
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10 flex flex-col justify-between h-32">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Driver Rating</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-on-surface">4.92</span>
+<span class="text-slate-400 font-medium">/ 5.0</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[94%]"></div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Stats & Details -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Personal Info -->
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-3xl space-y-6">
+<h3 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">Contact Details</h3>
+<div class="space-y-4">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-primary opacity-60 uppercase tracking-widest">Phone</span>
+<span class="text-on-surface font-semibold">+962 79 123 4567</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-primary opacity-60 uppercase tracking-widest">Email</span>
+<span class="text-on-surface font-semibold">ahmad.h@moasla.com</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-primary opacity-60 uppercase tracking-widest">Address</span>
+<span class="text-on-surface font-semibold">Khalda, Amman, Jordan</span>
+</div>
+<div class="pt-4 flex gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Financial Summary Card -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary-container to-primary p-8 rounded-3xl relative overflow-hidden text-on-primary">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-[0.2em] opacity-80">Net Earnings</h3>
+<p class="text-5xl font-extrabold mt-2 tracking-tighter">1,482.50 <span class="text-xl font-normal opacity-70">JOD</span></p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-3 rounded-2xl">
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="bg-white/5 p-4 rounded-2xl backdrop-blur-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-60">This Month</p>
+<p class="text-xl font-bold mt-1">+ 425.20 JOD</p>
+</div>
+<div class="bg-white/5 p-4 rounded-2xl backdrop-blur-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest opacity-60">Pending Payout</p>
+<p class="text-xl font-bold mt-1">82.00 JOD</p>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 border-[32px] border-white/5 rounded-full"></div>
+</div>
+<!-- Quick Stats Column -->
+<div class="md:col-span-1 space-y-4">
+<div class="bg-surface-container-highest p-6 rounded-3xl">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Total Trips</p>
+<p class="text-3xl font-extrabold text-on-surface mt-1">1,204</p>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-3xl">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Total Hours</p>
+<p class="text-3xl font-extrabold text-on-surface mt-1">3,490h</p>
+</div>
+</div>
+</section>
+<!-- Activity History & Detailed Analysis -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Trip History List -->
+<div class="md:col-span-2 space-y-6">
+<div class="flex justify-between items-center px-2">
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Recent Trip History</h3>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All Activities</a>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm border border-outline-variant/10">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trip ID</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Date &amp; Time</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Route</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Fare</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-sm font-bold text-on-surface">#TR-9901</td>
+<td class="px-6 py-4 text-sm text-slate-600">May 12, 09:42 AM</td>
+<td class="px-6 py-4 text-sm font-medium text-on-surface">Amman ➔ Airport</td>
+<td class="px-6 py-4 text-sm font-bold text-primary">18.50 JOD</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-lg uppercase tracking-wider">Completed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-sm font-bold text-on-surface">#TR-9882</td>
+<td class="px-6 py-4 text-sm text-slate-600">May 11, 06:15 PM</td>
+<td class="px-6 py-4 text-sm font-medium text-on-surface">Abdoun ➔ City Center</td>
+<td class="px-6 py-4 text-sm font-bold text-primary">4.20 JOD</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-lg uppercase tracking-wider">Completed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-sm font-bold text-on-surface">#TR-9854</td>
+<td class="px-6 py-4 text-sm text-slate-600">May 11, 12:30 PM</td>
+<td class="px-6 py-4 text-sm font-medium text-on-surface">Sweifieh ➔ Madaba</td>
+<td class="px-6 py-4 text-sm font-bold text-primary">12.00 JOD</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded-lg uppercase tracking-wider">Cancelled</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="px-6 py-4 text-sm font-bold text-on-surface">#TR-9840</td>
+<td class="px-6 py-4 text-sm text-slate-600">May 10, 11:10 AM</td>
+<td class="px-6 py-4 text-sm font-medium text-on-surface">Airport ➔ Jabal Amman</td>
+<td class="px-6 py-4 text-sm font-bold text-primary">22.00 JOD</td>
+<td class="px-6 py-4">
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-lg uppercase tracking-wider">Completed</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Map / Vehicle Section -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold text-on-surface tracking-tight px-2">Current Status</h3>
+<div class="bg-surface-container-low rounded-3xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="h-48 w-full relative">
+<img alt="Map View" class="w-full h-full object-cover" data-alt="clean minimal digital map interface of a city with smooth light blue and grey tones" data-location="Amman, Jordan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALQk3xUDHA8zQLJfluK1OiPGy0RjBy1JJkmRGY7xEmLlDXBNcCCc000SNo1SLfUph2X57OhnpnzxxlEBHMx9ylSa21fQWVoYSxhte5anJV-MSWr67ZsPZBplax8lMCL0TpSu_9Npdw2Hu8txc-aJLjuFlAwymkpE-lxXUUD8wXtOkamIr7UENe2sYi3SRfimKSH6yHFUIWWZF_B6FKersQ18R0actNJnD_wjxf5qGE-SHImhY3by2Ev8ozBqqzuvvoObutXL07FrU"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative shadow-lg border-2 border-white"></div>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="directions_car">directions_car</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Active Vehicle</p>
+<p class="text-sm font-bold text-on-surface">Toyota Camry 2023 (White)</p>
+<p class="text-[10px] font-medium text-slate-400">Plate: 42-10292</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-slate-500">Current Battery/Fuel</span>
+<span class="text-xs font-bold text-on-surface">84%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[84%]"></div>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container-highest text-primary font-bold text-sm rounded-xl hover:bg-primary-container hover:text-on-primary transition-all">
+                                View Live Telemetry
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

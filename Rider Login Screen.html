@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Rider Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-tint": "#2b5bb5",
+                        "primary": "#003178",
+                        "surface-container-low": "#f3f3fb",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b0c6ff",
+                        "on-primary-fixed-variant": "#00429c",
+                        "secondary": "#4f5e82",
+                        "secondary-container": "#c5d4fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffa781",
+                        "surface-variant": "#e2e2ea",
+                        "inverse-surface": "#2e3036",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "primary-container": "#0d47a1",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface-container-high": "#e8e7f0",
+                        "surface-dim": "#d9d9e1",
+                        "on-secondary-container": "#4d5b7f",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "on-surface-variant": "#434652",
+                        "outline-variant": "#c3c6d4",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001945",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#853100",
+                        "background": "#faf8ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-container-highest": "#e2e2ea",
+                        "tertiary": "#602100",
+                        "on-background": "#1a1b21",
+                        "on-secondary-fixed-variant": "#384669",
+                        "on-primary-container": "#a1bbff",
+                        "surface-container": "#ededf5",
+                        "inverse-on-surface": "#f0f0f8",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "outline": "#737783",
+                        "on-surface": "#1a1b21"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #003178 0%, #0d47a1 100%);
+        }
+        .tonal-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        .ghost-border {
+            border: 1.5px solid rgba(0, 49, 120, 0.15);
+        }
+        .ghost-border:focus-within {
+            border-color: rgba(0, 49, 120, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center">
+<!-- Top Navigation Bar (Static/Branding) -->
+<header class="fixed top-0 w-full z-50 tonal-glass flex justify-between items-center px-6 h-16 shadow-sm shadow-primary/5">
+<div class="text-xl font-bold bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent font-headline">
+            مواصلة | Moasla
+        </div>
+<button class="flex items-center gap-2 text-primary font-semibold text-sm hover:opacity-80 transition-opacity">
+<span>العربية</span>
+<span class="material-symbols-outlined text-lg" data-icon="language">language</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center w-full max-w-md px-6 pt-24 pb-12">
+<!-- Hero Section / Brand Identity -->
+<div class="w-full mb-10 text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-xl signature-gradient mb-6 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-icon="directions_bus" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
+</div>
+<h1 class="text-3xl font-extrabold text-primary tracking-tight mb-2">Welcome Back</h1>
+<p class="text-secondary font-medium">Log in to your rider account</p>
+</div>
+<!-- Login Form Container -->
+<div class="w-full bg-surface-container-low p-1 rounded-2xl">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<form class="space-y-6">
+<!-- Phone/Email Field -->
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-secondary ml-1">Phone or email</label>
+<div class="ghost-border rounded-xl flex items-center px-4 py-3.5 bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="person">person</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline/60 font-medium" placeholder="e.g. +20100000000" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-semibold text-secondary">Password</label>
+<a class="text-xs font-bold text-primary-container hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="ghost-border rounded-xl flex items-center px-4 py-3.5 bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="lock">lock</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline/60 font-medium" placeholder="••••••••" type="password"/>
+<button class="text-outline hover:text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full signature-gradient text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/15 hover:opacity-90 active:scale-95 transition-all text-lg mt-4" type="submit">
+                        Login / تسجيل الدخول
+                    </button>
+</form>
+<!-- Divider -->
+<div class="flex items-center my-8">
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="px-4 text-xs font-bold text-outline uppercase tracking-widest">Or</span>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+</div>
+<!-- Secondary Actions -->
+<div class="space-y-4">
+<button class="w-full flex items-center justify-center gap-3 bg-surface-container-high py-3.5 rounded-full font-semibold text-on-surface-variant hover:bg-surface-variant transition-colors">
+<img alt="" class="w-5 h-5" data-alt="Google company icon in a minimalist flat design with primary colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuv9BNwlLTybgqooQ8PqSgwX2XgpennedULAMu1oCHPuef-j_j5YNGxSPslDwoghI53sPCs531n5ZRjtymVN3cX8ldvgl4YEClptHghyTXe4kNvgW6SNmfdo_umWIIn24k6YNAakHVMHrftWR8GWPKaYkKxXacxwGnDCBhiFA4TZBzATzxs2jIbINYP4ne-7oSffMvRKLncOVC2ITeoqC9RHZOqkUMAySCRRxZyx0uDkCNYw4Sp9WXongIqjdKTLGHalv4ptdz7jA"/>
+                        Continue with Google
+                    </button>
+</div>
+</div>
+</div>
+<!-- Create Account Link -->
+<div class="mt-10 text-center">
+<p class="text-secondary font-medium">
+                Don't have an account? 
+                <a class="text-primary font-extrabold ml-1 hover:underline decoration-2 underline-offset-4" href="#">Create Account</a>
+</p>
+</div>
+<!-- Visual Background Decoration (Subtle) -->
+<div class="fixed bottom-0 left-0 w-full h-1/3 -z-10 opacity-30 pointer-events-none overflow-hidden">
+<div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 rounded-full bg-secondary-container/20 blur-2xl"></div>
+</div>
+</main>
+<!-- Contextual Footer (Language Switch Only) -->
+<footer class="w-full max-w-md px-6 pb-8 flex justify-center gap-6 text-xs font-bold text-outline tracking-wider uppercase">
+<a class="hover:text-primary transition-colors" href="#">Help Center</a>
+<span class="text-outline-variant/50">•</span>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span class="text-outline-variant/50">•</span>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</footer>
+</body></html>

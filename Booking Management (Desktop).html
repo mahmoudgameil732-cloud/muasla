@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Booking Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "surface-container-highest": "#e2e2ea",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-primary-fixed": "#001945",
+                        "on-surface-variant": "#434652",
+                        "surface-variant": "#e2e2ea",
+                        "background": "#faf8ff",
+                        "secondary-container": "#c5d4fe",
+                        "surface-container-low": "#f3f3fb",
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#ffa781",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e7f0",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary": "#602100",
+                        "secondary-fixed": "#d9e2ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4d5b7f",
+                        "surface-dim": "#d9d9e1",
+                        "outline": "#737783",
+                        "tertiary-container": "#853100",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d4",
+                        "secondary": "#4f5e82",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-secondary-fixed-variant": "#384669",
+                        "surface-container": "#ededf5",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b0c6ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-on-surface": "#f0f0f8",
+                        "inverse-surface": "#2e3036",
+                        "on-primary-container": "#a1bbff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1b21",
+                        "primary": "#003178",
+                        "on-surface": "#1a1b21",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs font-manrope font-medium tracking-tight text-slate-500 mt-1 uppercase tracking-[0.1em]">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">local_taxi</span> Drivers
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">group</span> Riders
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">map</span> Areas
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">hub</span> Stations
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">alt_route</span> Routes
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">payments</span> Pricing
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">schedule</span> Shifts
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">reorder</span> Queue
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">commute</span> Trips
+            </a>
+<a class="flex items-center px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-l-xl font-manrope text-sm tracking-tight transition-all" href="#">
+<span class="material-symbols-outlined mr-3">book_online</span> Bookings
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">account_balance_wallet</span> Payments
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">person</span> Profiles
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">settings</span> Settings
+            </a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 rounded-2xl">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full object-cover" data-alt="professional male portrait with confident expression, clean office background, neutral soft lighting, high-end corporate photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmUwbxkG6MOSUJIzmA2YT2bH-k6A-GVyMTCAoZjIPWMgiH6rqItxiJcayEC03WZdGMLQSc76w72_iA_DS3PJGfvzf7r7fFRhvOSRJBADUGE1Ad1cPvhkcqzRTK4GEzvyJOh71MFobxLgATxIzemvHAGpgaKnG16V46EYexJTUt_MICyV8z7skF3JRUo6W4jX-UZRDDyraSrXD50rrgmUVYTuWgePZXSTbZPkemVZAgZQx-HRul3-lGhUOuY2lbYGvcWZfpqD7lpE"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Admin</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Super User</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400 transition-all" placeholder="Search bookings, riders, or routes..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 transition-all">
+<span class="material-symbols-outlined text-xl">language</span>
+<span class="text-xs font-semibold">English/عربي</span>
+</button>
+<div class="relative">
+<button class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 transition-all relative">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<span class="text-sm font-bold text-blue-800 dark:text-blue-400">Admin</span>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full object-cover group-hover:scale-105 transition-transform" data-alt="professional portrait of administrative staff member, soft daylight, minimalist modern background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGa57GI7uc76q6AtLRqQVuK8XdWAFdcaZ3zRG7jpECgc7uT9CNRZXymramXD-4oF6iRH8ICST2QsPcHF_wcdXD1FRgI5xe3sEIVH9UWMnVCkFH19OvgJ9uvrLhd5vmLWWGs8-_TPWnE3ZKceD7NYfcZ84TQKYHgLArbff_me87gLdUni8sZA28PoETtUwjb1U2TxexRMK3YkIqplcJbBPp1srBu4fU0DUq3SyVrIxJTz2_oy3vZNUg8Vql_3u8pBa_UWznHmvJ8mc"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-8 min-h-screen">
+<div class="max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="space-y-1">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Bookings Management</h2>
+<p class="text-on-surface-variant font-medium">Real-time oversight of all scheduled and active passenger trips.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-low text-on-surface-variant px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">download</span> Export Report
+                    </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-xl shadow-primary/10 hover:scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">add_circle</span> New Booking
+                    </button>
+</div>
+</div>
+<!-- Dashboard Stats Tonal Layering -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/15 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Total Bookings</p>
+<h4 class="text-2xl font-extrabold text-on-surface">1,284</h4>
+</div>
+<div class="w-12 h-12 bg-blue-50 text-blue-800 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/15 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Seats Filled</p>
+<h4 class="text-2xl font-extrabold text-on-surface">82%</h4>
+</div>
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">airline_seat_recline_normal</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/15 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Verified Today</p>
+<h4 class="text-2xl font-extrabold text-on-surface">412</h4>
+</div>
+<div class="w-12 h-12 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/15 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Revenue</p>
+<h4 class="text-2xl font-extrabold text-on-surface">$12.4k</h4>
+</div>
+<div class="w-12 h-12 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+</div>
+</div>
+<!-- Robust Filters Section -->
+<div class="bg-surface-container-low p-6 rounded-3xl mb-8 flex flex-wrap gap-4 items-center">
+<div class="flex-1 min-w-[200px]">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 px-1">Route Search</p>
+<select class="w-full bg-surface-container-highest border-none rounded-xl text-sm font-medium py-3">
+<option>All Routes</option>
+<option>Maadi - Heliopolis (Express)</option>
+<option>Giza - New Cairo</option>
+<option>Zamalek - Downtown</option>
+</select>
+</div>
+<div class="flex-1 min-w-[200px]">
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 px-1">Status</p>
+<div class="flex gap-2">
+<button class="bg-primary-container text-white px-4 py-2 rounded-lg text-xs font-bold">All</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 transition-colors">Confirmed</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 transition-colors">Pending</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:bg-slate-200 transition-colors">Canceled</button>
+</div>
+</div>
+<div class="w-full md:w-auto self-end">
+<button class="w-full bg-on-surface text-surface px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">filter_list</span> Apply Filters
+                    </button>
+</div>
+</div>
+<!-- Bookings List (Editorial Style Table) -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/50 border-b border-outline-variant/10">
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500">Rider</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500">Route</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500">Trip Time</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500">Seats</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500">Payment</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500 text-center">Status</th>
+<th class="px-8 py-5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-500 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold overflow-hidden">
+<img alt="Rider Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a young professional male, smiling, natural lighting, high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtu_zHZOGQsPOHEwd-hjP9TvZvrZ3Mwb-h4_GWRusQlXdUz34YbqGfSBOmG7IENAof6RlYohAM_-532ABDrds3ZMxthHhNO_Du4oHlr67Tv9TjylK25xUjThJX_6L3Xbt1M9k5RkbgSlSl59W63arKoiNxcMKcz1k7g3_6kwMTv4r3N_m1j0-ZlrwpDlb1JRTyBfPW-a87I7fV8NWZedghcgWXPIo8FO3YLxo4XaEUZYN1ETOcICdQKZYjdSa1aSsdW9kBkdWxPWQ"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Amir Yassin</p>
+<p class="text-[11px] text-slate-400">#BK-9021</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-semibold text-on-surface">Maadi Express</p>
+<p class="text-[11px] text-slate-400">Station 14 → Station 02</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-on-surface">08:45 AM</p>
+<p class="text-[11px] text-slate-400">Oct 24, 2023</p>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container px-2.5 py-1 rounded-md text-xs font-bold text-on-surface">02 Seats</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">credit_card</span>
+<span class="text-xs font-medium">Moasla Wallet</span>
+</div>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full tracking-wider">Confirmed</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Verify Ticket"><span class="material-symbols-outlined">qr_code_scanner</span></button>
+<button class="p-2 text-slate-400 hover:text-on-surface hover:bg-slate-100 rounded-lg transition-colors" title="Edit"><span class="material-symbols-outlined">edit_square</span></button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors" title="Cancel"><span class="material-symbols-outlined">cancel</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold overflow-hidden">
+<img alt="Rider Profile" class="w-full h-full object-cover" data-alt="professional woman portrait, friendly smile, urban neutral background, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrkK-Lvd4G8layNHVsMtOTLiUTj1buB2_gwRy5H_QRTw-SLy9aKH-gGJdKOU2BStB05EE5_Kd6GoDnkxD0gRV6LkggeXFBb0oQIgjbp-ePoyTIIXHlgtVKTK3DvL0NHBNRt7AiSPELGORN7TSg4fXsFqkPUH2pfNRHlV5rzEyh44iGzCFO9VhKqZFH-M0LOEs_oQFMnqwmg574u_ftee76Nr0ZQH8f_DHOOePoTXmt4X7h4PtXwQN46z_M3fRp2P88WIq5txNp-sI"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Layla Mansour</p>
+<p class="text-[11px] text-slate-400">#BK-9022</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-semibold text-on-surface">New Cairo Loop</p>
+<p class="text-[11px] text-slate-400">Station 05 → Station 19</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-on-surface">09:15 AM</p>
+<p class="text-[11px] text-slate-400">Oct 24, 2023</p>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container px-2.5 py-1 rounded-md text-xs font-bold text-on-surface">01 Seat</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">payments</span>
+<span class="text-xs font-medium">Cash at Pickup</span>
+</div>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="bg-amber-100 text-amber-800 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full tracking-wider">Pending</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Verify Ticket"><span class="material-symbols-outlined">qr_code_scanner</span></button>
+<button class="p-2 text-slate-400 hover:text-on-surface hover:bg-slate-100 rounded-lg transition-colors" title="Edit"><span class="material-symbols-outlined">edit_square</span></button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors" title="Cancel"><span class="material-symbols-outlined">cancel</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold overflow-hidden">
+<img alt="Rider Profile" class="w-full h-full object-cover" data-alt="middle aged man portrait with glasses, professional aesthetic, studio lighting, neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAySFW3iMNN185PjrfDO1tkkFDiGDxj1kad3W50QxwK6GZcnbrn631u-Y39G8JdjgWT50WEog3aTAh4IQyeH2rCzXIF9_4yIIt0YXpsKQs0lOv5YvM0K32EMGNScVtAvhZJIUaVHL3JhutyZHpbygc4uChGDIYuhKQxx9mdXDf4hMsVVn4NNSxtNg5_LlQdoYTGMgncM4L2yxMiXNJH8VCEHLjgfB81Qhj9masjrmcWkC6eTQBFrGUk1wsbVqOHnlnBa_emeawz4Po"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Karim Sabry</p>
+<p class="text-[11px] text-slate-400">#BK-9023</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-semibold text-on-surface">Zamalek Transit</p>
+<p class="text-[11px] text-slate-400">Station 01 → Station 44</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-on-surface">10:00 AM</p>
+<p class="text-[11px] text-slate-400">Oct 24, 2023</p>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container px-2.5 py-1 rounded-md text-xs font-bold text-on-surface">01 Seat</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">credit_card</span>
+<span class="text-xs font-medium">Apple Pay</span>
+</div>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="bg-slate-200 text-slate-600 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full tracking-wider">Canceled</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2 opacity-30 pointer-events-none">
+<button class="p-2"><span class="material-symbols-outlined">qr_code_scanner</span></button>
+<button class="p-2"><span class="material-symbols-outlined">edit_square</span></button>
+<button class="p-2"><span class="material-symbols-outlined">cancel</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-bright transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold overflow-hidden">
+<img alt="Rider Profile" class="w-full h-full object-cover" data-alt="young woman looking thoughtful, soft bokeh background, natural lighting, high quality portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LS1skJGK9XpkcusDDL7lngSwckd7EIIOfwatiWrbLeCyXFcRDcZA3SmhPDBI6A6tRYXrjkWg2Vqm5ne0LTt5UK22oO3J87jfEVue8hSA3tRcX5YP4C2jozMwsfMCa7NFcPI_pet9V5500Qngal0ughDnUdBgP44TcHU-JIkSFeSgEJMLrC3XvFlq6vKh8u-4u4YgNI3ERnwQ3hatsKZazdz2c2nBdrWILX2vqY5te2MPau8hGCKvjdz7HFoDDHH5AVH6wAw-Jxs"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Sarah Fouad</p>
+<p class="text-[11px] text-slate-400">#BK-9024</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-semibold text-on-surface">Heliopolis Line</p>
+<p class="text-[11px] text-slate-400">Station 08 → Station 22</p>
+</td>
+<td class="px-8 py-6">
+<p class="text-sm font-bold text-on-surface">11:30 AM</p>
+<p class="text-[11px] text-slate-400">Oct 24, 2023</p>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container px-2.5 py-1 rounded-md text-xs font-bold text-on-surface">04 Seats</span>
+</td>
+<td class="px-8 py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">credit_card</span>
+<span class="text-xs font-medium">Visa •••• 4242</span>
+</div>
+</td>
+<td class="px-8 py-6 text-center">
+<span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full tracking-wider">Confirmed</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Verify Ticket"><span class="material-symbols-outlined">qr_code_scanner</span></button>
+<button class="p-2 text-slate-400 hover:text-on-surface hover:bg-slate-100 rounded-lg transition-colors" title="Edit"><span class="material-symbols-outlined">edit_square</span></button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-colors" title="Cancel"><span class="material-symbols-outlined">cancel</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination Editorial Style -->
+<div class="px-8 py-6 bg-surface-container-low/30 border-t border-outline-variant/10 flex items-center justify-between">
+<p class="text-xs font-medium text-slate-500">Showing <span class="font-bold text-on-surface">1-4</span> of <span class="font-bold text-on-surface">1,284</span> bookings</p>
+<div class="flex items-center gap-1">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors text-slate-400"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white text-xs font-bold rounded-lg">1</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-xs font-bold rounded-lg transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-xs font-bold rounded-lg transition-colors">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container text-xs font-bold rounded-lg transition-colors">48</button>
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors text-slate-400"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Feedback Area (Toast Mimic) -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="bg-inverse-surface text-inverse-on-surface px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 animate-bounce-subtle">
+<span class="material-symbols-outlined text-emerald-400" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="pr-6 border-r border-white/10">
+<p class="text-sm font-bold">Booking BK-9021 Verified</p>
+<p class="text-[10px] opacity-70">Passenger Amir Yassin marked as boarded.</p>
+</div>
+<button class="text-xs font-bold uppercase tracking-widest text-primary-fixed hover:opacity-80 transition-opacity">Dismiss</button>
+</div>
+</div>
+</body></html>

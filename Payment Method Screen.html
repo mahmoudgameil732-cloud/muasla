@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-tint": "#2b5bb5",
+                    "primary": "#003178",
+                    "surface-container-low": "#f3f3fb",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "secondary": "#4f5e82",
+                    "secondary-container": "#c5d4fe",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-variant": "#e2e2ea",
+                    "inverse-surface": "#2e3036",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-dim": "#d9d9e1",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "outline-variant": "#c3c6d4",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001945",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#853100",
+                    "background": "#faf8ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary": "#602100",
+                    "on-background": "#1a1b21",
+                    "on-secondary-fixed-variant": "#384669",
+                    "on-primary-container": "#a1bbff",
+                    "surface-container": "#ededf5",
+                    "inverse-on-surface": "#f0f0f8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "outline": "#737783",
+                    "on-surface": "#1a1b21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .signature-gradient {
+            background: linear-gradient(135deg, #003178 0%, #0d47a1 100%);
+        }
+        .tap-highlight-none {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary/10">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-blue-900/5 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/10">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="portrait of a professional user with a friendly expression, clean lighting and minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEZ5TbmGGovzcS166OjBdDo7MKaAfImQvWDfSEsZ-y4ghBMxFm40iwNS4rFx_QvVtHJt6rReWemvEELCRZTQ6fqfS3KXvBJg-YDwQTRy3zY-u90TxMm2axNxhV7U-ecfaXBv5bSQXV_l4iUkpe88tUYpT2NCiOdgWCC7cEcXQtxy5OaFotXIDvpIOVEWoA0ryKIx6cBOe9FM1B6ugLS778d6owYsqPs5gP-AKN7EkVpe8LDDzz7gvYEmEDrcVeVREWU1gPXPjAcLg"/>
+</div>
+<h1 class="font-manrope text-base font-semibold tracking-tight text-blue-900 dark:text-blue-200">
+<span class="text-xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">مواصلة | Moasla</span>
+</h1>
+</div>
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-200" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Progress Indicator -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold uppercase tracking-wider text-primary">خطوة 3 من 3</span>
+<span class="text-xs font-medium text-outline">طريقة الدفع</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full signature-gradient w-[100%] rounded-full"></div>
+</div>
+</div>
+<!-- Trip Summary Bento Card -->
+<section class="bg-surface-container-low rounded-xl p-1 mb-8">
+<div class="bg-surface-container-lowest rounded-lg p-5">
+<h2 class="text-headline-sm font-bold text-on-surface mb-4">ملخص الرحلة</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center pt-1">
+<div class="w-2.5 h-2.5 rounded-full border-2 border-primary"></div>
+<div class="w-0.5 h-10 bg-surface-variant my-1"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div class="flex-1 space-y-4">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-outline font-bold">من</p>
+<p class="text-title-md font-bold">القاهرة، التجمع الخامس</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-outline font-bold">إلى</p>
+<p class="text-title-md font-bold">الإسكندرية، محطة الرمل</p>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-variant/30 flex justify-between">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1">المقاعد</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+<span class="text-body-md font-bold">2 مقعد (B3, B4)</span>
+</div>
+</div>
+<div class="text-left">
+<p class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1">الإجمالي</p>
+<p class="text-headline-sm font-extrabold text-primary">240 EGP</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Methods List -->
+<section class="space-y-3">
+<h2 class="text-title-md font-bold text-on-surface px-1 mb-2">اختر وسيلة الدفع</h2>
+<!-- Cash Option (Active State Example) -->
+<label class="group relative flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl cursor-pointer ring-2 ring-primary ring-offset-2 ring-offset-surface transition-all duration-300">
+<input checked="" class="hidden" name="payment" type="radio"/>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-body-md font-bold">Cash / كاش</p>
+<p class="text-[11px] text-outline">الدفع عند الركوب</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</label>
+<!-- Vodafone Cash -->
+<label class="group relative flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all duration-300">
+<input class="hidden" name="payment" type="radio"/>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-error/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-2xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<p class="text-body-md font-bold">Vodafone Cash / فودافون كاش</p>
+<p class="text-[11px] text-outline">محفظة إلكترونية</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</label>
+<!-- Instapay -->
+<label class="group relative flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all duration-300">
+<input class="hidden" name="payment" type="radio"/>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-2xl" data-icon="bolt">bolt</span>
+</div>
+<div>
+<p class="text-body-md font-bold">Instapay / إنستا باي</p>
+<p class="text-[11px] text-outline">تحويل بنكي فوري</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</label>
+<!-- Credit Card -->
+<label class="group relative flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all duration-300">
+<input class="hidden" name="payment" type="radio"/>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-secondary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="credit_card">credit_card</span>
+</div>
+<div>
+<p class="text-body-md font-bold">Visa / Credit Card</p>
+<p class="text-[11px] text-outline">بطاقة الائتمان أو الخصم</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</label>
+</section>
+<!-- Promo Code Tonal Section -->
+<section class="mt-8 p-4 bg-surface-container-low rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="sell">sell</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md flex-1 placeholder:text-outline" placeholder="هل لديك كود خصم؟" type="text"/>
+<button class="text-primary font-bold text-body-md px-2">تطبيق</button>
+</section>
+</main>
+<!-- Bottom Action Dock -->
+<div class="fixed bottom-0 w-full z-50 bg-white dark:bg-slate-900 shadow-[0_-4px_24px_-4px_rgba(26,27,33,0.06)] px-6 pt-4 pb-8">
+<div class="max-w-lg mx-auto flex flex-col gap-4">
+<div class="flex justify-between items-center px-2">
+<span class="text-outline text-body-md">المبلغ المطلوب دفعه</span>
+<span class="text-xl font-extrabold text-primary">240 EGP</span>
+</div>
+<button class="w-full signature-gradient text-white py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                Pay / Confirm / دفع وتأكيد
+            </button>
+</div>
+</div>
+</body></html>

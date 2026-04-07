@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-8 flex flex-col gap-1">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="font-manrope text-sm font-medium tracking-tight text-slate-500">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Navigation Items Mapping -->
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">local_taxi</span> Drivers
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">group</span> Riders
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">map</span> Areas
+            </a>
+<!-- Active Tab: Stations -->
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm tracking-tight text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined">hub</span> Stations
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">alt_route</span> Routes
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">payments</span> Pricing
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">schedule</span> Shifts
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">reorder</span> Queue
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">commute</span> Trips
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">book_online</span> Bookings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span> Payments
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">person</span> Profiles
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="flex items-center gap-3 p-3 bg-slate-100 dark:bg-slate-800/50 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a middle-aged male administrator in a clean modern office with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe61r7axeRo6uqhH1zLwyIWBy4fVjrwmAFZmrxnUDKQsS90EYLYDzsZsA8eeOjqCiN1FzQq0VSFk9q6rglgb-dJE41ZjGRLq1e4G6nmn1Ygyf31qcWyG_ibn2PYQz9hsiBgz51kdKHaVgbzuzrpwNeu--Dv4b3AI8fiESpznbkaO3s3YfztgOUplDsJVJJUXofehKFAkeajfBRrOHQU2F8a29JFf6h6OGgsNd99QzcYmOwY0q1CUoUh4d_sQkcs0zd4yVcFixUbwk"/>
+<div>
+<p class="text-xs font-bold text-blue-900 dark:text-blue-100">Moasla Admin</p>
+<p class="text-[10px] text-slate-500">Super User</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm border-b border-slate-100">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary-fixed-dim" placeholder="Search stations, areas, or codes..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-transform scale-95">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-transform scale-95 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-semibold text-slate-600">English/عربي</span>
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold">Admin</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-10 min-h-screen">
+<!-- Header Section -->
+<section class="mb-10 flex justify-between items-end">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Stations Management</h2>
+<p class="text-on-surface-variant text-lg">Orchestrate your network nodes. Group, monitor, and refine transit hubs with architectural precision.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 scale-100 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+                Add New Station
+            </button>
+</section>
+<!-- Stats Overview (Asymmetric Breathing Room) -->
+<section class="grid grid-cols-12 gap-6 mb-12">
+<div class="col-span-8 bg-surface-container-low p-8 rounded-full flex items-center justify-between">
+<div class="flex gap-12">
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant tracking-[0.1em] mb-1">TOTAL NODES</p>
+<p class="text-3xl font-black text-primary">124</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant tracking-[0.1em] mb-1">OPERATIONAL</p>
+<p class="text-3xl font-black text-emerald-600">118</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant tracking-[0.1em] mb-1">MAINTENANCE</p>
+<p class="text-3xl font-black text-tertiary">6</p>
+</div>
+</div>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-4 border-surface-container-low bg-blue-100 flex items-center justify-center text-blue-800 text-xs font-bold">MA</div>
+<div class="w-10 h-10 rounded-full border-4 border-surface-container-low bg-amber-100 flex items-center justify-center text-amber-800 text-xs font-bold">SY</div>
+<div class="w-10 h-10 rounded-full border-4 border-surface-container-low bg-emerald-100 flex items-center justify-center text-emerald-800 text-xs font-bold">+3</div>
+</div>
+</div>
+<div class="col-span-4 bg-primary-container text-on-primary-container p-8 rounded-full flex items-center justify-center gap-4">
+<span class="material-symbols-outlined text-4xl">analytics</span>
+<div>
+<p class="font-bold">Network Health</p>
+<p class="text-sm opacity-80">98.2% Uptime this month</p>
+</div>
+</div>
+</section>
+<!-- Main Station List - Grouped by Area -->
+<div class="space-y-12">
+<!-- Area Group 1 -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h3 class="text-2xl font-bold text-on-surface">Downtown Core</h3>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold">12 STATIONS</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/15">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-[10px] font-bold text-on-surface-variant tracking-[0.1em] border-b border-outline-variant/10">
+<tr>
+<th class="px-8 py-5">STATION NAME</th>
+<th class="px-8 py-5">CODE</th>
+<th class="px-8 py-5">LOAD FACTOR</th>
+<th class="px-8 py-5">STATUS</th>
+<th class="px-8 py-5 text-right">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">train</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Central Plaza Hub</p>
+<p class="text-xs text-on-surface-variant">Main Transfer Point</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-mono text-sm text-on-surface-variant">CP-H-001</td>
+<td class="px-8 py-6">
+<div class="w-32 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full w-[85%]"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-3 text-xs font-bold text-emerald-600">Active</span>
+</label>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 hover:bg-error-container hover:text-error rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary-fixed rounded-lg flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">directions_bus</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Library East Terminal</p>
+<p class="text-xs text-on-surface-variant">Cultural Quarter</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-mono text-sm text-on-surface-variant">LE-T-042</td>
+<td class="px-8 py-6">
+<div class="w-32 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-amber-500 h-full w-[40%]"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-3 text-xs font-bold text-emerald-600">Active</span>
+</label>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 hover:bg-error-container hover:text-error rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Area Group 2 -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h3 class="text-2xl font-bold text-on-surface">Northern Industrial</h3>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold">8 STATIONS</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/15">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-[10px] font-bold text-on-surface-variant tracking-[0.1em] border-b border-outline-variant/10">
+<tr>
+<th class="px-8 py-5">STATION NAME</th>
+<th class="px-8 py-5">CODE</th>
+<th class="px-8 py-5">LOAD FACTOR</th>
+<th class="px-8 py-5">STATUS</th>
+<th class="px-8 py-5 text-right">ACTIONS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-lg flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">factory</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Logistic Park North</p>
+<p class="text-xs text-on-surface-variant">Freight Exchange</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6 font-mono text-sm text-on-surface-variant">LN-P-901</td>
+<td class="px-8 py-6">
+<div class="w-32 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[95%]"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-3 text-xs font-bold text-on-surface-variant">Inactive</span>
+</label>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button class="p-2 hover:bg-error-container hover:text-error rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-xl">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Floating Action Visual (Design System Do) -->
+<div class="mt-20 relative rounded-3xl overflow-hidden h-64 bg-surface-dim flex items-center px-12 group">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
+<div class="relative z-10 max-w-lg">
+<h4 class="text-3xl font-black text-on-surface mb-4">Strategic Mapping</h4>
+<p class="text-on-surface-variant mb-6">Need a birds-eye view? Switch to the Geographic Interface to see how stations interact with real-time demand across the city.</p>
+<button class="flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all">
+                    Go to Map View <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Watermark "M" usage from design system -->
+<div class="absolute -right-10 -bottom-10 opacity-[0.03] rotate-12 select-none pointer-events-none">
+<span class="material-symbols-outlined !text-[400px]">hub</span>
+</div>
+<div class="absolute right-12 top-1/2 -translate-y-1/2 w-80 h-48 rounded-2xl overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 transition-transform">
+<img class="w-full h-full object-cover" data-alt="high contrast aerial view of complex city highway interchange at night with vibrant light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvA2K74y4BVow3Fg7J98-_J8YU2ZnIcCNempgNdtWj7zRG6L8-7iWgN9sAsh7vwT59hfZQznjb9Y62u0rOIAcyp6WjIuaqvQBk-VZdP41cxLWI_VMjXxV37D_pbnAUoqWM47Rtez8LXgJYZzGMtIFa12iGoCw3qAZz_YBPhy_sZhm9-SsDCni8szUGUqKtP9AYcYCvCZybyWAJ6BpItuUUSPGA392oLgZ6zmksu8--zra49QCDr7CVx1m7hpIPdDpzzIqUXIoya30"/>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Only on Management Screens as per rules) -->
+<button class="fixed bottom-10 right-10 w-16 h-16 bg-tertiary text-on-tertiary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">add</span>
+</button>
+</body></html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Shifts Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 z-50">
+<div class="p-6">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs font-manrope font-medium tracking-tight text-slate-500 mt-1">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Navigation Items Mapping from JSON -->
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">local_taxi</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Drivers</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Riders</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">map</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Areas</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">hub</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Stations</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">alt_route</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Routes</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">payments</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Pricing</span>
+</a>
+<!-- Active Navigation State for Shifts -->
+<a class="flex items-center px-3 py-2 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined mr-3">schedule</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Shifts</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">reorder</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Queue</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">commute</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Trips</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">book_online</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Bookings</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">account_balance_wallet</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Payments</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">person</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Profiles</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-4 flex items-center gap-3 border-t border-slate-100 dark:border-slate-800">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of a male administrative executive in a navy suit with soft office lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0yok_dVjvrCYM6ZCvjPeLmUSmtHBzIeyIhwvDlz8JwEvR3bvkF8xiL94d_qVVVrghZUuEVLWvfjvh0vTRZDlebkSOkttP9gy7gy8pHfwd9lpeAeKifGOIoGmTKGPm3t_k_buyt8AXr6PYG_-DduPEbTMzHzDas-fs87ClpRZbWie8Oe4Hr2Ywdo9hDJ3BK27eXawVZ947qqkt0JDDZeHTT9eApb5BZBWrKrnJLqxiMTuNsP9loLLYwDHsBccb6S5jKlTfP3CRyVQ"/>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Admin User</p>
+<p class="text-xs text-slate-500">Operation Head</p>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none font-manrope text-sm tracking-wide">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-high border-none rounded-md focus:ring-2 focus:ring-primary focus:bg-primary-fixed transition-all text-sm" placeholder="Search shifts, drivers, or routes..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<button class="flex items-center text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg p-2 transition-transform duration-150 active:scale-95">
+<span class="material-symbols-outlined">language</span>
+<span class="ml-2">English/عربي</span>
+</button>
+<button class="relative text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg p-2 transition-transform duration-150 active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="flex items-center gap-3 ml-4">
+<span class="font-semibold text-blue-800 dark:text-blue-400">Admin</span>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full border border-outline-variant/20" data-alt="Modern close-up of a female operations manager with confident expression and natural daylighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzudKJsEFwb5ndEhC3jPzSGHkz88LmuS_IvD-LFFPRGX3EyDl6PzpywPvh55l1QioegBkDttm-FJVDYXluQrbJBXtURsjy_D1_z3-bv7I-yGoJ6nD87W4LgF3F280GzaYhBiZadrzt2flmvC9BB09to_qxmeQORxjGueyAuv9AckCohscvmwswSbLdshaPuoLeCs9beXN3u_1vZ8S7nQwAo-qYk58gwhUc-uu-0YC9b8j8gzgWYNt6k2h5QrN_MYyMDY636SuLbiM"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-8 min-h-screen">
+<!-- Header Section -->
+<section class="mb-10 flex justify-between items-end">
+<div class="max-w-2xl">
+<h2 class="text-display-md font-extrabold tracking-tighter text-on-surface mb-2">Shifts Management</h2>
+<p class="text-on-surface-variant leading-relaxed">Oversee daily operational cycles, manage driver availability, and optimize route coverage through our fluid scheduling interface.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold shadow-sm hover:shadow-lg active:scale-95 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                    Create New Shift
+                </button>
+</div>
+</section>
+<!-- Bento Grid Overview -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<!-- Active Shifts Summary -->
+<div class="col-span-12 lg:col-span-4 p-8 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<span class="label-md tracking-widest text-primary font-bold">LIVE NOW</span>
+</div>
+<h3 class="text-4xl font-extrabold text-on-surface">42</h3>
+<p class="text-on-surface-variant font-medium mt-1">Active Shifts on Routes</p>
+<div class="mt-4 flex items-center text-xs text-green-600 font-bold bg-green-50 w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span>
+                    +12% vs last week
+                </div>
+</div>
+<!-- Pending Requests -->
+<div class="col-span-12 lg:col-span-4 p-8 bg-tertiary-fixed rounded-xl shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="label-md tracking-widest text-tertiary font-bold">ACTION REQUIRED</span>
+</div>
+<h3 class="text-4xl font-extrabold text-on-tertiary-fixed-variant">08</h3>
+<p class="text-on-tertiary-fixed-variant font-medium mt-1">Pending Shift Approvals</p>
+<button class="mt-6 text-sm font-bold flex items-center text-tertiary hover:underline">
+                    Review Requests <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</button>
+</div>
+<!-- Route Efficiency -->
+<div class="col-span-12 lg:col-span-4 p-8 bg-surface-container-low rounded-xl">
+<h4 class="label-md tracking-widest text-on-surface-variant font-bold mb-4">COVERAGE STATUS</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Morning Peak</span>
+<span class="font-bold">98%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[98%]"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-medium">Evening Late</span>
+<span class="font-bold">72%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[72%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Operational List View -->
+<section class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/10">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-6">
+<h3 class="text-xl font-bold">Shift Log: Week 34</h3>
+<div class="flex bg-surface-container-low p-1 rounded-lg">
+<button class="px-4 py-1.5 bg-white shadow-sm rounded-md text-sm font-bold">Weekly View</button>
+<button class="px-4 py-1.5 text-on-surface-variant text-sm font-medium">Daily Roster</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Shifts Table-less List -->
+<div class="space-y-4">
+<!-- Shift Item 1 -->
+<div class="group grid grid-cols-12 items-center p-5 bg-surface-container-low/30 hover:bg-surface-bright rounded-xl transition-all duration-300">
+<div class="col-span-3 flex items-center gap-4">
+<img alt="Driver Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a smiling mature male driver in a professional uniform with morning sunlight reflecting on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZ10rEVeS3NaPZedHk7Psl4plZCmB9qgwcs_MNnub410WOfmPqORM5Ah-mkTqOEB_tMAjpx-ppsg22Qdj0yJc7wpkSxrIETSMDYg3KMZMvcfS7WEJhkMtzaVrvQwM9SmyNv2PQkCtxj0HfqzYPsh1S4xMpho16FtDiDGxPxaylTb-75a8UA6p8Yma7jSTEJh7IM0hIkeLqx1ktldaQ1ERkOnLf_HT7PuNku7ib1ir1n8ZYNheLEERt_aS_0jLC4Saoj1GRRcEuRY"/>
+<div>
+<p class="font-bold text-sm">Ahmed Mansour</p>
+<p class="text-xs text-on-surface-variant">License: #MX-4029</p>
+</div>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">ROUTE</p>
+<p class="text-sm font-medium">Downtown Express</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">SHIFT NAME</p>
+<p class="text-sm font-medium">Early Sunrise</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">TIME WINDOW</p>
+<p class="text-sm font-bold text-primary">06:00 - 14:00</p>
+</div>
+<div class="col-span-1">
+<span class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded-full">Active</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant" title="Edit">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-error rounded-lg text-on-surface-variant" title="Deactivate">
+<span class="material-symbols-outlined text-lg">block</span>
+</button>
+</div>
+</div>
+<!-- Shift Item 2 (Pending) -->
+<div class="group grid grid-cols-12 items-center p-5 bg-tertiary-fixed/10 border-l-4 border-tertiary rounded-xl transition-all duration-300">
+<div class="col-span-3 flex items-center gap-4">
+<img alt="Driver Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up of a professional female driver in corporate attire with a focused and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXBoztMGFlkjP2Zqw5C59kCpamUt9JrXmIjDUJUZJyeJhQMLSoy-kycq79gaVWRlz3O6v1frUwUnnbzwcRsHlt7NBBDSWjRNuppGxWImbEx7Wp2_NEdherT9JJIDp7S24u1F94_QMDRREeoMUOqlv52L0B-qsfX0exL4y7VFQEoFgTSGlaGQgmz7XecXAIojIMk5sEAMRGQ34D9xm9B2rhFg1K0BYGAN69eIwC1QkrFto83ro6QG5kMZSJM7_1CrAk9NLM0DbBSUw"/>
+<div>
+<p class="font-bold text-sm">Sara Al-Fayed</p>
+<p class="text-xs text-on-surface-variant">License: #SA-1188</p>
+</div>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">ROUTE</p>
+<p class="text-sm font-medium">Coastal Highway</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">SHIFT NAME</p>
+<p class="text-sm font-medium">Night Watch</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">TIME WINDOW</p>
+<p class="text-sm font-bold text-tertiary">22:00 - 06:00</p>
+</div>
+<div class="col-span-1">
+<span class="px-3 py-1 bg-tertiary-fixed text-tertiary-container text-[10px] font-bold uppercase tracking-widest rounded-full">Pending</span>
+</div>
+<div class="col-span-2 flex justify-end gap-2">
+<button class="px-3 py-1 bg-primary text-white text-[11px] font-bold rounded-md hover:bg-primary-container transition-colors">Approve</button>
+<button class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[11px] font-bold rounded-md hover:bg-error-container hover:text-error transition-colors">Reject</button>
+</div>
+</div>
+<!-- Shift Item 3 -->
+<div class="group grid grid-cols-12 items-center p-5 bg-surface-container-low/30 hover:bg-surface-bright rounded-xl transition-all duration-300">
+<div class="col-span-3 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-xs text-outline">YK</div>
+<div>
+<p class="font-bold text-sm">Youssef Kamal</p>
+<p class="text-xs text-on-surface-variant">License: #YK-8801</p>
+</div>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">ROUTE</p>
+<p class="text-sm font-medium">Airport Link</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">SHIFT NAME</p>
+<p class="text-sm font-medium">Afternoon Peak</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">TIME WINDOW</p>
+<p class="text-sm font-bold text-primary">14:00 - 22:00</p>
+</div>
+<div class="col-span-1">
+<span class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded-full">Active</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-on-surface-variant" title="Edit">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-error-container hover:text-error rounded-lg text-on-surface-variant" title="Deactivate">
+<span class="material-symbols-outlined text-lg">block</span>
+</button>
+</div>
+</div>
+<!-- Shift Item 4 -->
+<div class="group grid grid-cols-12 items-center p-5 bg-surface-container-low/30 hover:bg-surface-bright rounded-xl transition-all duration-300 opacity-60">
+<div class="col-span-3 flex items-center gap-4">
+<img alt="Driver Profile" class="w-10 h-10 rounded-full object-cover grayscale" data-alt="Close-up of an experienced driver with grey hair and sharp expression in a soft-focused urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb82a1ri6-q0Q63iHbgoi1S53Ny8SgGuF4r0cg1gqtkr6rdbH22hIvJm2BqJw2pd926e1NnEF6lGMOd2ebR9sjnp2qFfhw84u3HnCcSPV17oxihf-_x2anF8FuUzJfC-GZ98zQsGa0EHsgngZBKvfBWKcHhOwnYD4YuGEDrlozLOPXVtUDDk-R07lPedcEgv8gpMEL5f7xcuvG0WcsAK0TSEUoHCPxDFj6H_eYDj9h1CY590Ifj30WHQRmfRGJCa9HzdyyIMyRHyc"/>
+<div>
+<p class="font-bold text-sm">Omar Khaled</p>
+<p class="text-xs text-on-surface-variant">License: #OK-2931</p>
+</div>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">ROUTE</p>
+<p class="text-sm font-medium">Business District</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">SHIFT NAME</p>
+<p class="text-sm font-medium">Full Loop</p>
+</div>
+<div class="col-span-2">
+<p class="text-xs label-md tracking-wider text-on-surface-variant font-bold mb-1">TIME WINDOW</p>
+<p class="text-sm font-bold text-primary">08:00 - 16:00</p>
+</div>
+<div class="col-span-1">
+<span class="px-3 py-1 bg-surface-dim text-on-surface-variant text-[10px] font-bold uppercase tracking-widest rounded-full">Inactive</span>
+</div>
+<div class="col-span-2 flex justify-end gap-1">
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface font-bold text-xs rounded-lg hover:bg-primary hover:text-white transition-all">Reactivate</button>
+</div>
+</div>
+</div>
+<!-- Table Pagination/Footer -->
+<div class="mt-10 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<p class="text-xs font-medium text-on-surface-variant">Showing 4 of 42 active driver shifts</p>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-sm">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Dynamic Shift Assignment Hint (Asymmetric Element) -->
+<div class="mt-8 flex gap-8">
+<div class="flex-1 bg-primary text-on-primary p-10 rounded-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-2xl font-extrabold mb-4">Route Optimization Suggestion</h3>
+<p class="text-on-primary-container max-w-lg mb-6 leading-relaxed">System analysis indicates a 15% increase in rider demand for the "Downtown Express" route between 14:00-18:00. Consider adding a supplemental overlap shift.</p>
+<button class="px-8 py-3 bg-white text-primary font-bold rounded-xl active:scale-95 transition-all">Allocate Driver</button>
+</div>
+<!-- Abstract 'M' Watermark -->
+<div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+<svg fill="currentColor" height="300" viewbox="0 0 100 100" width="300">
+<path d="M10 90 L30 10 L50 60 L70 10 L90 90 L80 90 L70 50 L50 95 L30 50 L20 90 Z"></path>
+</svg>
+</div>
+</div>
+<div class="w-80 bg-surface-container-high rounded-2xl p-8 flex flex-col justify-center text-center">
+<div class="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white mx-auto shadow-inner">
+<span class="material-symbols-outlined text-3xl text-primary" data-weight="fill">lightbulb</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Did you know?</h4>
+<p class="text-sm text-on-surface-variant">Scheduling overlapping shifts during peak hours reduces average rider wait time by 4 minutes.</p>
+</div>
+</div>
+</main>
+</body></html>

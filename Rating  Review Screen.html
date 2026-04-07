@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-tint": "#2b5bb5",
+                    "primary": "#003178",
+                    "surface-container-low": "#f3f3fb",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "secondary": "#4f5e82",
+                    "secondary-container": "#c5d4fe",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-variant": "#e2e2ea",
+                    "inverse-surface": "#2e3036",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-dim": "#d9d9e1",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "outline-variant": "#c3c6d4",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001945",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#853100",
+                    "background": "#faf8ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary": "#602100",
+                    "on-background": "#1a1b21",
+                    "on-secondary-fixed-variant": "#384669",
+                    "on-primary-container": "#a1bbff",
+                    "surface-container": "#ededf5",
+                    "inverse-on-surface": "#f0f0f8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "outline": "#737783",
+                    "on-surface": "#1a1b21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-active { font-variation-settings: 'FILL' 1; }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+<!-- Top Navigation Suppression: Rating is task-focused -->
+<main class="w-full max-w-md min-h-screen flex flex-col relative px-6 py-8">
+<!-- Close Button (Suppressing Global Nav) -->
+<div class="flex justify-end mb-8">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Hero Header -->
+<div class="text-center mb-10">
+<h1 class="text-headline-sm font-extrabold text-primary mb-2">كيف كانت رحلتك؟</h1>
+<p class="text-body-md text-slate-500">How was your trip with Moasla?</p>
+</div>
+<!-- Driver Profile Glass Card -->
+<div class="bg-surface-container-low rounded-xl p-6 mb-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a friendly male driver in a clean uniform with a warm smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnQkPQc6ceR-fq4GqyliXE-x089_6gDYgxwwlIncu8Hln03hciEASuJUbmae-CMRqlFVlSdIT8MsyfdnsrtvlPmllYWOur8c1v2eLzXKYANy906Lb8_huvdl_KGnWKn-N7jzM08HZye-IC4uxJpA9sqXs_V7JSYQbdomsKGmpvjw_zPPqjh4gqi2hXAMBtFjH6C0wfll4DvY8C2XXLnUPXKBC0cjTZXChS72CjhyovUUth3pr6s16_2ZHCYQ7lC3mPvhupa0ZEWqs"/>
+</div>
+<div>
+<h3 class="text-title-md font-bold text-on-surface">أحمد محمود</h3>
+<p class="text-body-md text-slate-500">تويوتا كامري • ٤٧٨٢ أ ب ج</p>
+</div>
+</div>
+</div>
+<!-- Rating Section -->
+<div class="flex flex-col items-center mb-10">
+<div class="flex gap-2 mb-4" dir="ltr">
+<button class="text-primary transition-all active:scale-125">
+<span class="material-symbols-outlined text-5xl star-active" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="text-primary transition-all active:scale-125">
+<span class="material-symbols-outlined text-5xl star-active" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="text-primary transition-all active:scale-125">
+<span class="material-symbols-outlined text-5xl star-active" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="text-primary transition-all active:scale-125">
+<span class="material-symbols-outlined text-5xl star-active" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="text-outline-variant transition-all active:scale-125">
+<span class="material-symbols-outlined text-5xl" data-icon="star">star</span>
+</button>
+</div>
+<span class="text-label-md font-bold text-primary px-4 py-1 bg-primary/10 rounded-full">جيد جداً / Very Good</span>
+</div>
+<!-- Quick Feedback Chips -->
+<div class="mb-8">
+<p class="text-label-md font-semibold text-on-surface-variant mb-4">ما الذي أعجبك؟ (What did you like?)</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-body-md font-medium">الالتزام بالموقت</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-body-md font-medium">نظافة المركبة</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-body-md font-medium">القيادة الآمنة</button>
+<button class="px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-body-md font-medium">أسلوب السائق</button>
+</div>
+</div>
+<!-- Text Comment Field -->
+<div class="mb-10">
+<label class="block text-label-md font-semibold text-on-surface-variant mb-2">أضف تعليقاً إضافياً (Optional Comment)</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 text-body-md focus:ring-2 focus:ring-primary/40 transition-all resize-none text-on-surface" placeholder="اكتب ملاحظاتك هنا..." rows="4"></textarea>
+</div>
+</div>
+<!-- Fixed Bottom Action -->
+<div class="mt-auto pt-6">
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-bold text-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                إرسال | Submit
+            </button>
+<button class="w-full py-4 text-slate-400 font-medium text-body-md mt-2">
+                تخطي الآن (Skip for now)
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Suppressed for task focus -->
+</body></html>

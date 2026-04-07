@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Review | Moasla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#602100",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary-container": "#853100",
+                    "secondary": "#4f5e82",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary": "#ffffff",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-primary-container": "#a1bbff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-variant": "#e2e2ea",
+                    "outline-variant": "#c3c6d4",
+                    "inverse-on-surface": "#f0f0f8",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#001945",
+                    "primary": "#003178",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "on-surface": "#1a1b21",
+                    "surface-container-low": "#f3f3fb",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384669",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "on-background": "#1a1b21",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "surface-dim": "#d9d9e1",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface": "#faf8ff",
+                    "secondary-container": "#c5d4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.75rem",
+                    "full": "1rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .display-md { font-size: 2.75rem; line-height: 1.1; font-weight: 800; }
+        .label-md { font-size: 0.75rem; font-weight: 600; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-low dark:bg-slate-900 shadow-sm dark:shadow-none flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="hover:bg-blue-50 dark:hover:bg-slate-800 p-2 rounded-full scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400">menu</span>
+</button>
+<span class="font-manrope display-md tracking-tight text-xl font-bold text-blue-900 dark:text-blue-200">Moasla | مواصله</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-container/10">
+<img class="w-full h-full object-cover" data-alt="professional headshot of a middle-aged male driver with a friendly smile, clean-shaven, studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIAofK6qWrR4NyUfiFiwos9Ox8EwKL9dlPkf0KWdVC1uA1cLCLFZj-okBLc10hf1F-Z5Xr891qCwPb3Hq8_cBY8ob0QAHlkcBNO5MKnciFcLTygshA0LkanLUWAyRlBhdzVWndnAoE2Wl-r0t3QE1-5yh5olimCxYZj7KCfkBNWbxlTKyNilb9_wnfZnaen35Yv0Eu-UGAwj1TBcVAkvZjYu4tXMxUcEi9OFlowV6gUHRCQWCwU2V94sB_f_fS-br4jAnZGr7P68g"/>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-4xl mx-auto min-h-screen flex flex-col justify-center">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="relative overflow-hidden bg-gradient-to-br from-primary to-primary-container p-8 md:p-12 rounded-[2rem] shadow-2xl shadow-primary/20">
+<!-- Abstract M Watermark -->
+<div class="absolute -right-20 -bottom-20 opacity-10 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'wght' 700;">grid_guides</span>
+</div>
+<div class="relative z-10 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-white/90 label-md uppercase tracking-widest mb-6">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Application Status</span>
+</div>
+<h1 class="font-manrope text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">Your account is under review</h1>
+<p class="text-on-primary-container text-lg md:text-xl font-medium opacity-90 leading-relaxed">
+                        Ahmed, we're currently verifying your documents to ensure the highest safety standards for the Moasla community. This usually takes 24-48 hours.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Status & Bento Progress -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Timeline Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm">
+<h3 class="text-on-surface font-bold text-xl mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Verification Timeline
+                </h3>
+<div class="space-y-8">
+<!-- Step 1: Complete -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white shrink-0">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-0.5 h-full bg-primary-container/30 my-1"></div>
+</div>
+<div class="pb-2">
+<p class="font-bold text-on-surface">Documents Submitted</p>
+<p class="text-sm text-outline">License, Identity, and Vehicle insurance received.</p>
+</div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0 relative">
+<div class="absolute inset-0 rounded-full border-2 border-primary border-t-transparent animate-spin duration-[2000ms]"></div>
+<span class="material-symbols-outlined text-xl">manage_search</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container-highest my-1"></div>
+</div>
+<div class="pb-2">
+<p class="font-bold text-on-surface">Background Check</p>
+<p class="text-sm text-outline">Our team is manually reviewing your safety records.</p>
+<div class="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-full border border-outline-variant/30 text-xs font-semibold text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                In Progress
+                            </div>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-xl">stadium</span>
+</div>
+</div>
+<div class="pb-2">
+<p class="font-bold text-outline">Platform Access</p>
+<p class="text-sm text-outline/60">Final step: Activation of your driver dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Info Card -->
+<div class="space-y-6">
+<!-- Vehicle Info Glass -->
+<div class="bg-surface-container-low p-6 rounded-[2rem] border border-white/50 backdrop-blur-sm">
+<p class="label-md text-outline uppercase tracking-widest mb-4">Registered Vehicle</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary text-3xl">directions_bus</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Toyota Hiace</p>
+<p class="text-sm text-outline">White · #4421</p>
+</div>
+</div>
+</div>
+<!-- Support Card -->
+<div class="bg-tertiary-fixed p-6 rounded-[2rem]">
+<h4 class="font-bold text-on-tertiary-fixed mb-2">Need help?</h4>
+<p class="text-sm text-on-tertiary-fixed-variant mb-6 leading-snug">If you have questions about the review process or need to update info.</p>
+<button class="w-full bg-tertiary-container hover:bg-tertiary text-white py-4 px-6 rounded-xl font-bold flex items-center justify-center gap-2 scale-95 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">support_agent</span>
+                        Contact Support
+                    </button>
+</div>
+</div>
+</section>
+<!-- Informational Footer Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 border-t border-outline-variant/10">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-tertiary text-4xl">history_edu</span>
+<div>
+<h5 class="font-bold text-on-surface mb-1 text-lg">Platform Standards</h5>
+<p class="text-outline text-sm leading-relaxed">Moasla maintains a 100% verification rate for all microbus drivers to ensure passenger safety and trust.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-4xl">lightbulb</span>
+<div>
+<h5 class="font-bold text-on-surface mb-1 text-lg">Pro Tip</h5>
+<p class="text-outline text-sm leading-relaxed">While you wait, ensure your profile photo is clear and professional. This helps riders identify you faster.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Suppressed for focused task context, but Drawer navigation handles system links) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined">route</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Trips</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Earnings</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100 rounded-2xl px-5 py-2">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+<!-- Navigation Drawer (Off-canvas logic simulated) -->
+<aside class="hidden lg:flex fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 flex-col py-8 px-4 bg-surface dark:bg-slate-950 border-r border-outline-variant/10 shadow-2xl z-40">
+<div class="mb-10 px-4">
+<h4 class="font-manrope text-sm font-black text-blue-900 mb-1">Ahmed Mansour</h4>
+<p class="text-xs text-slate-500">Microbus Driver #4421</p>
+</div>
+<nav class="space-y-2">
+<div class="flex items-center gap-3 p-3 text-slate-700 dark:text-slate-300 font-manrope text-sm font-medium hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">history</span> Shift History
+            </div>
+<div class="flex items-center gap-3 p-3 text-slate-700 dark:text-slate-300 font-manrope text-sm font-medium hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">format_list_numbered</span> Queue Status
+            </div>
+<div class="flex items-center gap-3 p-3 text-slate-700 dark:text-slate-300 font-manrope text-sm font-medium hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">directions_bus</span> Vehicle Info
+            </div>
+<div class="flex items-center gap-3 p-3 text-slate-700 dark:text-slate-300 font-manrope text-sm font-medium hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">notifications</span> Notifications
+            </div>
+<div class="flex items-center gap-3 p-3 text-slate-700 dark:text-slate-300 font-manrope text-sm font-medium hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">settings</span> Settings
+            </div>
+<div class="flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 font-bold font-manrope text-sm hover:pl-2 transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined">help_outline</span> Help &amp; Support
+            </div>
+</nav>
+<div class="mt-auto p-4 bg-surface-container-low rounded-xl">
+<p class="text-[10px] uppercase font-bold text-outline tracking-wider mb-2">System Status</p>
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-on-surface">Queue Active</span>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</div>
+</div>
+</aside>
+</body></html>

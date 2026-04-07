@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Intermediate Stations Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 z-50 font-manrope text-sm font-medium tracking-tight">
+<div class="p-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">local_taxi</span>
+<span>Drivers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Riders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">map</span>
+<span>Areas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all rounded-l-lg" href="#">
+<span class="material-symbols-outlined">hub</span>
+<span>Stations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">alt_route</span>
+<span>Routes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Pricing</span>
+</a>
+<div class="pt-4 pb-2 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Operations</div>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">schedule</span>
+<span>Shifts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">reorder</span>
+<span>Queue</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">commute</span>
+<span>Trips</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">book_online</span>
+<span>Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span>Payments</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="professional male admin portrait with confident expression in a bright modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MmHe1Y25bCFee2hJlIMFLxOVaxG-ivCx7JunP1g3UABStHc6GqpYmYQtlLDH5Cv35Ot_fFGcfm5t7PJuNPxhwzuJvP1fV1-IhlSrmuyqQ7-mLM3mAXuOaBot4cZlhn4DzACCZ02GXbPFpczfQ7vh2IPRpRGAeewqOi421882WzlZaT5uT55aciNUXQgZP26rIXwzz9t53jPb2NcAUJ5WU24TWFowqGciLlyiOov4oyPbFxxU4y4rJHYMK2E3u7RbyhTRD1zXwzQ"/>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate text-blue-900 dark:text-blue-100">Moasla Admin</p>
+<p class="text-[10px] text-slate-500 truncate">admin@moasla.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none font-manrope text-sm tracking-wide">
+<div class="flex items-center gap-6">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-900 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-xs" placeholder="Search routes or stations..." type="text"/>
+</div>
+<nav class="flex items-center gap-6">
+<a class="text-blue-700 dark:text-blue-300 font-semibold" href="#">Management</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 px-3 py-1 rounded-lg transition-colors" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 px-3 py-1 rounded-lg transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform active:scale-95 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-blue-900 dark:text-blue-100">English/عربي</span>
+<span class="text-[10px] text-primary font-medium tracking-tighter">Admin Control</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-10 bg-surface min-h-[calc(100vh-4rem)]">
+<!-- Header Section with Route Identity -->
+<div class="max-w-6xl mx-auto mb-12 flex justify-between items-end">
+<div>
+<nav class="flex gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">
+<span>Routes</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary">RT-402 Giza Express</span>
+</nav>
+<h2 class="text-4xl font-extrabold tracking-tighter text-on-surface leading-tight">
+                    Intermediate Stations <br/>
+<span class="text-primary">RT-402 Giza Express</span>
+</h2>
+<p class="text-slate-500 mt-2 max-w-lg">Manage stop sequence, distance calibration, and station connectivity for the Giza-October arterial route.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_location_alt</span>
+                Add Intermediate Station
+            </button>
+</div>
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Timeline Container -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Station Card: Start -->
+<div class="relative flex items-start group">
+<!-- Timeline Spine -->
+<div class="absolute left-6 top-10 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-800 -mb-6"></div>
+<div class="z-10 bg-primary w-12 h-12 rounded-full flex items-center justify-center text-on-primary shadow-lg ring-4 ring-white dark:ring-slate-900 shrink-0">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">trip_origin</span>
+</div>
+<div class="ml-8 flex-1 bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-transparent hover:border-primary/10 transition-colors">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-[10px] font-black text-primary tracking-widest uppercase mb-1 block">Origin Station</span>
+<h3 class="text-xl font-bold text-on-surface">Giza Central Hub</h3>
+<p class="text-sm text-slate-400">Main Concourse, Platform 12</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-black text-slate-200 tracking-tighter">0.0 KM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Intermediate Stations (Vertical Timeline List) -->
+<div class="space-y-6">
+<!-- Station Item 1 -->
+<div class="relative flex items-start group">
+<div class="absolute left-6 top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-800 -my-6"></div>
+<div class="z-10 bg-white dark:bg-slate-800 w-12 h-12 rounded-full flex items-center justify-center text-slate-400 border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-lg">drag_indicator</span>
+</div>
+<div class="ml-8 flex-1 bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">Stop 02</span>
+<span class="h-[1px] w-4 bg-slate-200"></span>
+<span class="text-[10px] font-bold text-tertiary tracking-widest uppercase">Busy Node</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface">Zamalek Crossing</h3>
+<p class="text-sm text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 12 min from start
+                                </p>
+</div>
+<div class="text-right">
+<div class="text-xl font-black text-primary tracking-tighter">4.2 KM</div>
+<div class="flex gap-2 mt-2">
+<button class="p-1.5 text-slate-400 hover:text-error hover:bg-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-primary-fixed rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Station Item 2 -->
+<div class="relative flex items-start group">
+<div class="absolute left-6 top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-800 -my-6"></div>
+<div class="z-10 bg-white dark:bg-slate-800 w-12 h-12 rounded-full flex items-center justify-center text-slate-400 border-2 border-slate-200 dark:border-slate-700 group-hover:border-primary transition-colors shrink-0">
+<span class="material-symbols-outlined text-lg">drag_indicator</span>
+</div>
+<div class="ml-8 flex-1 bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex items-center gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">Stop 03</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface">Smart Village North</h3>
+<p class="text-sm text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 28 min from start
+                                </p>
+</div>
+<div class="text-right">
+<div class="text-xl font-black text-primary tracking-tighter">12.8 KM</div>
+<div class="flex gap-2 mt-2">
+<button class="p-1.5 text-slate-400 hover:text-error hover:bg-error-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<button class="p-1.5 text-slate-400 hover:text-primary hover:bg-primary-fixed rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Station Item 3 (Drag Preview Look) -->
+<div class="relative flex items-start group">
+<div class="absolute left-6 top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-800 -my-6"></div>
+<div class="z-10 bg-primary-container w-12 h-12 rounded-full flex items-center justify-center text-on-primary-container border-2 border-primary shadow-inner shrink-0 scale-110 ring-8 ring-blue-50/50">
+<span class="material-symbols-outlined text-lg">drag_pan</span>
+</div>
+<div class="ml-8 flex-1 bg-primary-fixed p-6 rounded-2xl shadow-xl transition-all flex items-center gap-6 ring-2 ring-primary">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Moving Station...</span>
+</div>
+<h3 class="text-lg font-bold text-on-primary-fixed">Desert Road Park</h3>
+<p class="text-sm text-on-primary-fixed-variant flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-sm">schedule</span> 35 min from start
+                                </p>
+</div>
+<div class="text-right">
+<div class="text-xl font-black text-primary tracking-tighter">18.1 KM</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Station Card: End -->
+<div class="relative flex items-start group pt-6">
+<div class="absolute left-6 top-0 bottom-10 w-[2px] bg-slate-200 dark:bg-slate-800"></div>
+<div class="z-10 bg-inverse-surface w-12 h-12 rounded-full flex items-center justify-center text-inverse-on-surface shadow-lg ring-4 ring-white dark:ring-slate-900 shrink-0">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="ml-8 flex-1 bg-surface-container-low p-6 rounded-2xl border border-slate-200">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-[10px] font-black text-slate-500 tracking-widest uppercase mb-1 block">Destination Station</span>
+<h3 class="text-xl font-bold text-on-surface">October Terminal</h3>
+<p class="text-sm text-slate-400">District 1 Main Gate</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-black text-on-surface tracking-tighter">24.5 KM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Actions & Context -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Map Preview Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-2 shadow-sm overflow-hidden h-80 relative group">
+<img class="w-full h-full object-cover rounded-2xl grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700" data-alt="top-down digital map view of a city grid with blue and red transit route lines highlighted" data-location="Cairo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1SsZPiN7hR5-Zz3iZRogS39Svt6f_m1-s15syUlszKPAHPC4hkpG7DIi89xxndOHfumLZQykLGOIFKqIX9YFCpPff8mpZGWe9dL4D_EtcRGwqU01FasCauoTjCCL2CmCFoxEtAB2muNpaIIIkvrTBZiWLho4XD2qWzf_NjyVbOxGm2tOcW_CNueAussAJQ6__QpdjZ4cza7DprL8xz5BFEftu88I6LVIewbO5NMH-7_bZQROBLctFgGLUbgpAkK7z1h8VGkiP2YA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent p-6 flex flex-col justify-end">
+<p class="text-white font-bold text-lg leading-tight">Live Route Path</p>
+<p class="text-white/70 text-xs">RT-402 Giza Express Overlay</p>
+</div>
+<button class="absolute top-4 right-4 bg-white/90 backdrop-blur-md p-2 rounded-xl text-primary shadow-lg hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+<!-- Stats Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-2">linear_scale</span>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Total Stops</p>
+<p class="text-2xl font-black text-on-surface tracking-tighter">14</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl">
+<span class="material-symbols-outlined text-primary mb-2">avg_pace</span>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Avg Gap</p>
+<p class="text-2xl font-black text-on-surface tracking-tighter">1.7km</p>
+</div>
+</div>
+<!-- Action Card -->
+<div class="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden">
+<!-- Subtle 'M' Watermark -->
+<div class="absolute -right-4 -bottom-4 text-white opacity-5 text-9xl font-black select-none pointer-events-none">M</div>
+<h4 class="text-xl font-bold mb-4">Route Calibration</h4>
+<p class="text-white/60 text-sm mb-6 leading-relaxed">Changes to intermediate stops may affect calculated fare pricing and driver shift durations.</p>
+<div class="space-y-3">
+<button class="w-full py-3 bg-white text-slate-950 rounded-xl font-bold text-sm hover:bg-blue-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">save</span>
+                            Publish Changes
+                        </button>
+<button class="w-full py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-bold text-sm transition-colors">
+                            Preview Schedule
+                        </button>
+</div>
+<div class="mt-8 flex items-center gap-3 p-3 bg-white/5 rounded-2xl border border-white/5">
+<div class="p-2 bg-tertiary rounded-lg">
+<span class="material-symbols-outlined text-white">info</span>
+</div>
+<p class="text-[10px] leading-tight text-white/70">Automatic distance updates are enabled for GPS-tagged stations.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Trip Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-tint": "#2b5bb5",
+                    "primary": "#003178",
+                    "surface-container-low": "#f3f3fb",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "secondary": "#4f5e82",
+                    "secondary-container": "#c5d4fe",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-variant": "#e2e2ea",
+                    "inverse-surface": "#2e3036",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-dim": "#d9d9e1",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "outline-variant": "#c3c6d4",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001945",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#853100",
+                    "background": "#faf8ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary": "#602100",
+                    "on-background": "#1a1b21",
+                    "on-secondary-fixed-variant": "#384669",
+                    "on-primary-container": "#a1bbff",
+                    "surface-container": "#ededf5",
+                    "inverse-on-surface": "#f0f0f8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "outline": "#737783",
+                    "on-surface": "#1a1b21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #faf8ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .tap-highlight-none { -webkit-tap-highlight-color: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm shadow-blue-900/5 h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man with a friendly expression, natural lighting, soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqB-pLre6xwkDvrarv8EksBcwEjJuCzswcp-Jp9tsrShUdYFwc6IY_165zX9d_DcyTXRcdXG-9yPH4UEnezXhb5OLUXC-q8ROQNLaxHvvTJA4W3SdW99vuQCodDUir5zABLRNk-OMQRHxRKaUHcfxqbRxj0iSBwuTmSg8FQRqvswxodZNquf7fn2qb-It260DvLpO4gb9AwGibsrSo_kSRG_j-z6HtZ6Y6aB_gNR37trrLPhcAACmnKtyO9VrtGgajF8HCeB-BugA"/>
+</div>
+<h1 class="text-xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent font-headline">
+                مواصلة | Moasla
+            </h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-blue-900 hover:opacity-80 transition-opacity active:scale-90">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-28 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Search Summary & Filter Section -->
+<section class="mb-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<div class="flex items-center gap-2 text-primary font-semibold mb-1">
+<span class="text-sm uppercase tracking-wider">Cairo</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+<span class="text-sm uppercase tracking-wider">Alexandria</span>
+</div>
+<h2 class="text-2xl font-extrabold text-on-surface">Available Trips</h2>
+<p class="text-outline text-sm">Found 12 options for Today, 24 Oct</p>
+</div>
+<!-- Quick Filters -->
+<div class="flex overflow-x-auto pb-2 gap-2 scrollbar-hide">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-full text-sm font-medium whitespace-nowrap">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+                        Recommended
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap hover:bg-surface-variant transition-colors">
+                        Price: Low to High
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap hover:bg-surface-variant transition-colors">
+                        Time: Earliest
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium whitespace-nowrap hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+                        Filters
+                    </button>
+</div>
+</div>
+</section>
+<!-- Trip Results Grid -->
+<div class="space-y-4">
+<!-- Result Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group cursor-pointer border border-transparent active:scale-[0.99]">
+<div class="flex flex-col md:flex-row justify-between gap-6">
+<div class="flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest rounded-lg">Express Route • الطريق السريع</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+<span class="text-xs font-bold">4 Seats left</span>
+</div>
+</div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">08:30</span>
+<span class="text-[10px] text-outline font-medium">CAI</span>
+</div>
+<div class="flex-1 px-4 flex flex-col items-center justify-center pt-3">
+<div class="w-full h-[2px] bg-surface-variant relative">
+<div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-primary"></div>
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full border-2 border-primary bg-white"></div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="directions_bus">directions_bus</span>
+</div>
+</div>
+<span class="mt-4 text-[10px] text-outline uppercase font-bold tracking-tighter">2h 30m Transit</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">11:00</span>
+<span class="text-[10px] text-outline font-medium">ALX</span>
+</div>
+</div>
+</div>
+<div class="md:w-px md:h-24 bg-surface-variant self-center hidden md:block"></div>
+<div class="flex md:flex-col justify-between items-center md:items-end gap-2">
+<div class="text-right">
+<p class="text-[10px] text-outline font-bold uppercase">Price • السعر</p>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black text-primary">180</span>
+<span class="text-xs font-bold text-primary">EGP</span>
+</div>
+</div>
+<button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full text-sm font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-container flex items-center gap-4 text-outline text-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="wifi">wifi</span>
+<span>Free Wi-Fi</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="ac_unit">ac_unit</span>
+<span>Climate Control</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+<span>Power Outlets</span>
+</div>
+</div>
+</div>
+<!-- Result Card 2 (Premium Luxury) -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group cursor-pointer border-2 border-primary/10 relative overflow-hidden active:scale-[0.99]">
+<div class="absolute top-0 right-0">
+<div class="bg-primary text-on-primary text-[9px] font-black uppercase px-3 py-1 rounded-bl-xl tracking-widest">Premium Selection</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between gap-6">
+<div class="flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-lg">Royal Elite • رويال إيليت</span>
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-sm" data-icon="event_seat" style="font-variation-settings: 'FILL' 1;">event_seat</span>
+<span class="text-xs font-bold">2 Seats remaining!</span>
+</div>
+</div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">10:15</span>
+<span class="text-[10px] text-outline font-medium">CAI</span>
+</div>
+<div class="flex-1 px-4 flex flex-col items-center justify-center pt-3">
+<div class="w-full h-[2px] bg-primary/20 relative">
+<div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-primary"></div>
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full border-2 border-primary bg-white"></div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="airport_shuttle">airport_shuttle</span>
+</div>
+</div>
+<span class="mt-4 text-[10px] text-primary uppercase font-black tracking-tighter">Luxury Van • VIP Transit</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">12:30</span>
+<span class="text-[10px] text-outline font-medium">ALX</span>
+</div>
+</div>
+</div>
+<div class="md:w-px md:h-24 bg-surface-variant self-center hidden md:block"></div>
+<div class="flex md:flex-col justify-between items-center md:items-end gap-2">
+<div class="text-right">
+<p class="text-[10px] text-outline font-bold uppercase">Premium Fare</p>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black text-primary">350</span>
+<span class="text-xs font-bold text-primary">EGP</span>
+</div>
+</div>
+<button class="px-8 py-3 bg-primary text-on-primary rounded-full text-sm font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                            Select Seat
+                        </button>
+</div>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow group cursor-pointer border border-transparent active:scale-[0.99]">
+<div class="flex flex-col md:flex-row justify-between gap-6">
+<div class="flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase tracking-widest rounded-lg">Economy Plus • الدرجة السياحية</span>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="airline_seat_recline_normal">airline_seat_recline_normal</span>
+<span class="text-xs font-bold">12 Seats left</span>
+</div>
+</div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">13:00</span>
+<span class="text-[10px] text-outline font-medium">CAI</span>
+</div>
+<div class="flex-1 px-4 flex flex-col items-center justify-center pt-3">
+<div class="w-full h-[2px] bg-surface-variant relative">
+<div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-primary"></div>
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full border-2 border-primary bg-white"></div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white px-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="directions_bus">directions_bus</span>
+</div>
+</div>
+<span class="mt-4 text-[10px] text-outline uppercase font-bold tracking-tighter">2h 45m Transit</span>
+</div>
+<div class="flex flex-col items-center gap-1 w-12">
+<span class="text-lg font-extrabold text-on-surface">15:45</span>
+<span class="text-[10px] text-outline font-medium">ALX</span>
+</div>
+</div>
+</div>
+<div class="md:w-px md:h-24 bg-surface-variant self-center hidden md:block"></div>
+<div class="flex md:flex-col justify-between items-center md:items-end gap-2">
+<div class="text-right">
+<p class="text-[10px] text-outline font-bold uppercase">Basic • أساسي</p>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black text-primary">150</span>
+<span class="text-xs font-bold text-primary">EGP</span>
+</div>
+</div>
+<button class="px-8 py-3 bg-secondary-container text-on-secondary-container rounded-full text-sm font-bold active:scale-95 transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More (Subtle) -->
+<div class="mt-12 flex justify-center">
+<button class="px-6 py-3 text-primary font-bold text-sm border-2 border-primary/10 rounded-full hover:bg-primary/5 transition-colors">
+                Show more departures
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full bg-white rounded-t-2xl z-50 shadow-[0_-4px_24px_-4px_rgba(26,27,33,0.06)] flex justify-around items-center px-4 pb-4 pt-2">
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 text-blue-800 rounded-xl px-5 py-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bus" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
+<span class="font-manrope text-[11px] font-bold uppercase tracking-wider mt-1">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[11px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

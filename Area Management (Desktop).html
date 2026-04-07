@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Areas Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "surface-container-highest": "#e2e2ea",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-primary-fixed": "#001945",
+                        "on-surface-variant": "#434652",
+                        "surface-variant": "#e2e2ea",
+                        "background": "#faf8ff",
+                        "secondary-container": "#c5d4fe",
+                        "surface-container-low": "#f3f3fb",
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#ffa781",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e7f0",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary": "#602100",
+                        "secondary-fixed": "#d9e2ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4d5b7f",
+                        "surface-dim": "#d9d9e1",
+                        "outline": "#737783",
+                        "tertiary-container": "#853100",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d4",
+                        "secondary": "#4f5e82",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-secondary-fixed-variant": "#384669",
+                        "surface-container": "#ededf5",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b0c6ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-on-surface": "#f0f0f8",
+                        "inverse-surface": "#2e3036",
+                        "on-primary-container": "#a1bbff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1b21",
+                        "primary": "#003178",
+                        "on-surface": "#1a1b21",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 font-manrope text-sm font-medium tracking-tight z-50">
+<div class="p-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Nav Item: Dashboard -->
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<!-- Nav Item: Drivers -->
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="local_taxi">local_taxi</span>
+                Drivers
+            </a>
+<!-- Nav Item: Riders -->
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+                Riders
+            </a>
+<!-- Nav Item: Areas (ACTIVE) -->
+<a class="flex items-center px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="map" style="font-variation-settings: 'FILL' 1;">map</span>
+                Areas
+            </a>
+<!-- Nav Item: Stations -->
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="hub">hub</span>
+                Stations
+            </a>
+<!-- Nav Item: Routes -->
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="alt_route">alt_route</span>
+                Routes
+            </a>
+<!-- Additional items suppressed for brevity but maintaining hierarchy -->
+<div class="pt-4 pb-2 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Operations</div>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="payments">payments</span>
+                Pricing
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="commute">commute</span>
+                Trips
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-2xl flex items-center gap-3">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5OMVQsKF_cOphvHGk2jS7Y_lgP0rCklSH21aZOy470_pwiOY-7tfH_ruUTI-xGKM9fwVR1FzOcUxMjf4WlW7XGHgvA0PgTYUllfOgJPaHviozXfGd3eUfdiNqyfBY0gAznXtd-r3wqdFf3sb0uvpPWXIaTcmxt79d4M0hb6JLRT03NFhNOCYr6ztmDJKZKLkpjIXCU0jFm4MsZmec7dsTv1ZI3CSHfewIx69FJTFEN0awtAKxRQApSrhulHTJYUUBbB91E8IfxYg"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-blue-900 truncate">Moasla Admin</p>
+<p class="text-[10px] text-slate-500">Super User</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none font-manrope text-sm tracking-wide">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg" data-icon="search">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search service areas..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+<span class="font-medium text-xs">English/عربي</span>
+</button>
+<button class="relative text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">
+<span class="text-xs font-bold text-primary">Admin</span>
+<img alt="Administrator Portrait" class="w-7 h-7 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaS_FTSvWTBirXFwhaUSMdmKXTgtmgW1-uvt9KH1PYmT3Ermt-t_3WkVEi-xDwbE5K7Pu8ZRCpfkHp2SGD9MlvxF46lKX25-w5w9R4zXkU0fRRl68r5YgCa3cApCGmek2JqIFOqvg_jE7MvGKQpTQfBguZNT0f-2RzF6yoj2nz4mo8vD5D0qLi-RzPbl57Bsoqe2IohMMUqSwtJB1U4mtuLkDIeuvCzYPajo4OWRCcqDgUcVGQoJjZ6RNYDjf1n6INGmAi-uDdik"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-8 min-h-[calc(100vh-4rem)]">
+<!-- Hero / Header Section -->
+<section class="mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<h2 class="text-display-md font-extrabold tracking-tight text-on-surface mb-2 leading-tight">Service Areas <span class="text-primary-container">Management</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Oversee regional logistics, station density, and operational status across the Moasla network.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl flex items-center gap-3 shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="add_location">add_location</span>
+<span class="font-bold tracking-tight">Add New Area</span>
+</button>
+</section>
+<!-- Stats Overview Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-full flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Areas</p>
+<p class="text-2xl font-extrabold">24</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Stations</p>
+<p class="text-2xl font-extrabold">142</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="electric_car">electric_car</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Active Routes</p>
+<p class="text-2xl font-extrabold">88</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Status</p>
+<p class="text-2xl font-extrabold text-emerald-700">Healthy</p>
+</div>
+</div>
+</div>
+<!-- Areas Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Area Card 1: Nakla -->
+<div class="bg-surface-container-lowest rounded-full overflow-hidden flex flex-col group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of a vibrant suburban town in Egypt with modern infrastructure and organized street layouts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPqNi9aLaA-yq7LPJ30wn_7Fv187zwownX93edwZBdTlp7_yTMLWq5SS3j6oG_z3vCzSAhw5lUAU1E28QQ5GT_NNE6nEna3KAHv3lVvIYVJeYb_rTy4A0hMaxPdEl744Lxh4xXOBZd5X0B4DsY-gB4ya4Nl8nlXD7Y8017-bmkbGga5G9lJMhhZOzJQU8p1hOKt6y00EsyYa3uvEwrO_LBNk_olxrJHZYUNR8PbGSJQJv5kK0vnEjr2MZotdIaNJgh8UiXxU0Wyw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-widest">Active</div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-2xl font-extrabold">Nakla</h3>
+<p class="text-white/80 text-xs font-medium">Giza Governorate</p>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Stations</p>
+<p class="text-xl font-extrabold text-primary">12</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Coverage</p>
+<p class="text-xl font-extrabold text-primary">85%</p>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUWwzfS87wsWVH3gqWUH4glgIGs-1OirMTrUoyiN6Z8ocYE-0n4fE6nFxpUYzRlOMP5t0zC_icoJXwEEyhApzQrsUktB5YMQ9SCI3H8fitadxdGMD6uX0Luyr8OWgZJNY22Ot3f7Sp1bkJ_qxR6Fgk2uGpiHYOXqVlc4a9oaCxmoetV6Kx_oadl0aC7gHojupD5GXz2LTvp5gv3Pr4Afb4XYrQeMZn-vB086lvXv1IfMZc0YYgLVS9DW4IznKU1NofzID0SYsjRM"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArdqvc6yrpAUas7YDdwkK_USp_ErXy5QjVNpmlhQ3xkUbjLHA0Oc4cV1xbl8LJAS69yZkCobFaUl_gBLZyIP7bHNYp7DgRlhAvnCWYlusbTCMTFJtaDwBTf9abKg3jN4XdeZQ-brmDjZKf0RCyra-VXtf25X417QS98RRZkrNPEAPBq0FqzO4Sj6UWJjnqAPiFX0MbDWGzGx77l6qtGums7YZv5nIlOcOW3VCkQ5oflPtoomiSiRkABsLLgJAy9svzADIyzV2SWzw"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500">+4</div>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-xl flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="px-4 h-10 rounded-xl bg-surface-container-high text-on-surface-variant font-bold text-xs hover:bg-error hover:text-white transition-all">Deactivate</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Area Card 2: El Manashy -->
+<div class="bg-surface-container-lowest rounded-full overflow-hidden flex flex-col group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Cinematic street view of a busy intersection in a growing metropolitan area at dusk with glowing city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_wT54K6_bDo7l6rz6KUYgD7gwN1op8KWQqwJ4mj2gDYB_iIVHJNNTXUXpZ2XkhZ4uV8cgJO7wCIhC6n4LnQIjiRxUsYPMyWAHFSGU4AqdOpufufm98_IJZVBf-qC3ddDhf5hyT-Ce87IiPjX-Nus8wpd4kf79gGibQ0IfaS92xt3gkedr1Q4okKLTJNzy7a3Ir8pZfMmotBjNMo4afttK9H5WgWRb4Y6jdvcmt2q3cxl0ct6W9MY5FZ5AvDaGCl1nE6eovvega3Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-widest">Active</div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-2xl font-extrabold">El Manashy</h3>
+<p class="text-white/80 text-xs font-medium">Qalyubia Governorate</p>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Stations</p>
+<p class="text-xl font-extrabold text-primary">08</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Coverage</p>
+<p class="text-xl font-extrabold text-primary">62%</p>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_4uXrIWpU25X7sH6FVXPASDD4i1kmg9N-5C-3LqSx3WzyAiUQE6XS569HTAVfHHFrEge_RFvzboUOpqQULfRUr5UhDlCaM64YSNyoTzsedwWqzUesTZW36iGF_-z48CFM3-9TdtijsYzj-L0hwn5jetHPP_hkkxAvuLy4wPyfW7j7KB1fTu4wUwf660kBn7uPwm6s4Ood8kczqWJcFYZtPWbdPAMTj6bVfpUOyn1d23dGJkVwnia4BN7NYXIz60uLMD-od9NIkjU"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACUJgilEAGvJ8tnrDvzmQfJ-a29sFNACy7oDE_0qblVmEKSnVodZt4e-0_wSR3zXZV9fMBl0E9FkRemyi6JKWh5VcVeqHmbmKYBUL_zW5DTSHF0ENEuLEZTTP7M8CkPkTBULZ5lPnYIrnHIp9ppFfNKVWW7fe4WPidnRlyARl3GplAKQmkfwU4K25wQjXfW7h55WeUDge18mtPzS3OUZ8SGc7cBYQ6jLk14lAyfYBp2ILR2jwenEJVIra6LGysfZFJ_RV9NYZKJmI"/>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-xl flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="px-4 h-10 rounded-xl bg-surface-container-high text-on-surface-variant font-bold text-xs hover:bg-error hover:text-white transition-all">Deactivate</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Area Card 3: Kafr El Sheikh (Expansion Area) -->
+<div class="bg-surface-container-low/50 border-2 border-dashed border-outline-variant rounded-full overflow-hidden flex flex-col group hover:border-primary/50 transition-all duration-500">
+<div class="h-48 relative overflow-hidden bg-slate-100 flex items-center justify-center grayscale opacity-60">
+<span class="material-symbols-outlined text-6xl text-slate-300" data-icon="explore">explore</span>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-200 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-slate-400/50 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-widest">Pending</div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-slate-500 text-2xl font-extrabold">Kafr El Sheikh</h3>
+<p class="text-slate-400 text-xs font-medium">Coming Soon</p>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex flex-col items-center justify-center flex-1 text-center py-4">
+<p class="text-on-surface-variant text-sm font-medium mb-4 italic">Zone initialization in progress. Infrastructure mapping scheduled for Q4.</p>
+<button class="w-full bg-surface-container-high text-on-surface-variant font-bold text-sm py-4 rounded-xl hover:bg-primary hover:text-white transition-all">Setup Infrastructure</button>
+</div>
+</div>
+</div>
+<!-- Area Card 4: Al Wardan -->
+<div class="bg-surface-container-lowest rounded-full overflow-hidden flex flex-col group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-500">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Calm residential area with wide roads and green spaces under a soft blue sky during mid-morning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-4ZaMykz_4bIhoFNXTpz11s_uUVBkBWnOCna3qGCi6CoujSXsArm39ilga5x1q6mRw3UuEFpIzhQoXZI00Xf8iilprZQDN39rtaLXzJuPqYA8lBO2Ve0UgshiHc5owdSccMAcj7BI1BLQHWn9kSof-FtD9QVCeW0Pbabp2HyIEa6N7aYLKCmTUpfSB4CDneZK3L1zN4S-Ov1bV8dHCoKMw6lkFV2SynzV_rrRsK48Quri_Cxb9F-SwZEQwS1tqfHV3frDAOnSpcQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase tracking-widest">Active</div>
+<div class="absolute bottom-4 left-6">
+<h3 class="text-white text-2xl font-extrabold">Al Wardan</h3>
+<p class="text-white/80 text-xs font-medium">Giza Governorate</p>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Stations</p>
+<p class="text-xl font-extrabold text-primary">05</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Coverage</p>
+<p class="text-xl font-extrabold text-primary">45%</p>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3o2dXqywel9LLoAOmGJs8gPpuEy4An9TMOOpB5sd3eM5n0fb2f2q5TeU7YhBGe987gwpBAshj1G9ft40mhtALdGb7JcgZjVsXpOIKoBjOJ2gPb5xmU2unX_4KtRwLn32s5-jNqy6t65YrrCn-_iV2PySVmjkYY7hcxvD0Qx62MJh3mSF2z7GgCbpkXEh_Zpd0yrGWPHmdg71Iawxff82nL6SmQrqGVGU3Cknr3YzoTbdotjuEU2OHZzygklA3KU4faXdQ59J5s1k"/>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-xl flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="px-4 h-10 rounded-xl bg-surface-container-high text-on-surface-variant font-bold text-xs hover:bg-error hover:text-white transition-all">Deactivate</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Area Empty State / Action Card -->
+<div class="bg-white border-2 border-dashed border-primary/20 rounded-full flex flex-col items-center justify-center p-12 text-center group cursor-pointer hover:border-primary/50 transition-all bg-gradient-to-br hover:from-white hover:to-blue-50">
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all mb-6 shadow-sm">
+<span class="material-symbols-outlined text-4xl" data-icon="add">add</span>
+</div>
+<h4 class="text-xl font-extrabold text-blue-900 mb-2">Define New Region</h4>
+<p class="text-on-surface-variant text-sm max-w-[200px]">Expand Moasla's footprint into new cities or districts.</p>
+</div>
+</div>
+<!-- Secondary Management Section -->
+<section class="mt-16 bg-surface-container-low rounded-[2.5rem] p-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<div>
+<h3 class="text-2xl font-extrabold text-on-surface mb-1">Regional Map Data</h3>
+<p class="text-on-surface-variant text-sm">Real-time geospatial distribution of active stations and hubs.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-white px-5 py-2.5 rounded-full text-xs font-bold shadow-sm border border-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                        All Regions
+                    </button>
+<button class="bg-white px-5 py-2.5 rounded-full text-xs font-bold shadow-sm border border-slate-100 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Export GIS Data
+                    </button>
+</div>
+</div>
+<div class="relative h-[400px] w-full rounded-full overflow-hidden bg-slate-200 border-8 border-white shadow-xl">
+<img class="w-full h-full object-cover opacity-80" data-alt="High-contrast satellite view of a metropolitan city map with illuminated points representing transport hubs" data-location="Cairo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUrQOgZdgasOQIPmwu91KOm5FhjuHHejy5TlCIMK388jqRQpwZz6R2fyvAClqI08qHzPZu56iY1IiImhzqdeVuDFe7iMVrSSS1I_IRTK-kTU2tHRiJoR62YYgoBnKw-3W5Id9XDuWQHQGVNHoJjIe2ycxECCuKGyvj-unh99j2wg8zruzxGws3Fy_jp_bv2YRXhQV3G3TO_xCikUCSHyqkI20oNl4pOdO_X9kL8Pz5w0CCuDDyjzneGo9c1dkB_8nB8GZkWg8xvDU"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<!-- Floating Map Controls -->
+<div class="absolute bottom-6 left-6 flex flex-col gap-2">
+<button class="w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center font-bold text-on-surface hover:bg-slate-50">+</button>
+<button class="w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center font-bold text-on-surface hover:bg-slate-50">-</button>
+</div>
+<!-- Map Markers (Visual Placeholder) -->
+<div class="absolute top-1/2 left-1/3 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+<div class="absolute top-1/4 left-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+<div class="absolute bottom-1/3 right-1/4 w-6 h-6 bg-secondary rounded-full border-4 border-white shadow-lg"></div>
+<div class="absolute top-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl w-64 border border-white/50">
+<p class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-3">Live Feed</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<p class="text-xs font-bold">Nakla Station 02 Online</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-amber-500"></div>
+<p class="text-xs font-bold">El Manashy Heavy Traffic</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-xs font-bold">New Area Proposed: Toukh</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB for quick area addition on mobile view (though desktop hidden) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center md:hidden z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

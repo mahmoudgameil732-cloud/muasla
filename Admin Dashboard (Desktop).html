@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | مواصله - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#b7c6f0",
+                      "surface-container-highest": "#e2e2ea",
+                      "primary-fixed-dim": "#b0c6ff",
+                      "on-primary-fixed": "#001945",
+                      "on-surface-variant": "#434652",
+                      "surface-variant": "#e2e2ea",
+                      "background": "#faf8ff",
+                      "secondary-container": "#c5d4fe",
+                      "surface-container-low": "#f3f3fb",
+                      "surface": "#faf8ff",
+                      "on-tertiary-container": "#ffa781",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e8e7f0",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "tertiary-fixed": "#ffdbcd",
+                      "tertiary": "#602100",
+                      "secondary-fixed": "#d9e2ff",
+                      "primary-fixed": "#d9e2ff",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#4d5b7f",
+                      "surface-dim": "#d9d9e1",
+                      "outline": "#737783",
+                      "tertiary-container": "#853100",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#c3c6d4",
+                      "secondary": "#4f5e82",
+                      "on-primary-fixed-variant": "#00429c",
+                      "on-secondary-fixed-variant": "#384669",
+                      "surface-container": "#ededf5",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#b0c6ff",
+                      "on-tertiary-fixed": "#360f00",
+                      "inverse-on-surface": "#f0f0f8",
+                      "inverse-surface": "#2e3036",
+                      "on-primary-container": "#a1bbff",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "error": "#ba1a1a",
+                      "on-background": "#1a1b21",
+                      "primary": "#003178",
+                      "on-surface": "#1a1b21",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#faf8ff",
+                      "primary-container": "#0d47a1",
+                      "surface-tint": "#2b5bb5",
+                      "on-secondary-fixed": "#0a1a3b",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-6">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs font-manrope font-medium tracking-tight text-slate-500 uppercase mt-1">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm tracking-tight">Dashboard</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="local_taxi">local_taxi</span>
+<span class="font-manrope text-sm tracking-tight">Drivers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-manrope text-sm tracking-tight">Riders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-manrope text-sm tracking-tight">Areas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-manrope text-sm tracking-tight">Stations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="alt_route">alt_route</span>
+<span class="font-manrope text-sm tracking-tight">Routes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-sm tracking-tight">Pricing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-manrope text-sm tracking-tight">Shifts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="reorder">reorder</span>
+<span class="font-manrope text-sm tracking-tight">Queue</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="commute">commute</span>
+<span class="font-manrope text-sm tracking-tight">Trips</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="book_online">book_online</span>
+<span class="font-manrope text-sm tracking-tight">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-manrope text-sm tracking-tight">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-sm tracking-tight">Profiles</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors mb-6" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="p-4 bg-slate-100 dark:bg-slate-800/50 mt-auto">
+<div class="flex items-center gap-3">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a middle-aged male administrator in a light blue shirt with a confident smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKHCxQtYPA5tp94LFUBO9QL1DbE1Ngt1D0hyMW85dra-Xc3cnqdNtofsKDbxkVFn98ADOlokVP_2zmEDp42u2JOktD6hB17RwJF7UQ1KO4A3myO619fQu8o5qorC1_QuoMIoI5cJIdAJLmpMfGA7TgmkxyFNjGRxWALaZW7roP0qwXESJSeyxmn_gZBDuRYGDeYNX8XbjUcVn0Q3EEsAGRcu_S6WhcC9mjI8ypWKvOevyAJLeAbyqeex3ZCpn0wqsUkQk9GIsFq6U"/>
+<div>
+<p class="text-xs font-bold text-on-surface">Admin</p>
+<p class="text-[10px] text-slate-500">System Controller</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-md py-2 pl-10 text-sm focus:ring-2 focus:ring-primary-fixed-dim" placeholder="Search systems, drivers, or routes..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform duration-150 scale-95">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400" data-icon="language">language</span>
+<span class="font-manrope text-sm tracking-wide text-slate-500">English/عربي</span>
+</button>
+<button class="relative p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform duration-150 scale-95">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-100 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-manrope text-sm tracking-wide text-blue-700 font-semibold">Admin</span>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full border-2 border-primary-fixed-dim" data-alt="close up headshot of male administrator in office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIfjaSCzG53TfNY3Iqtlc4dFz6DxYhb3fvHkQDnJ3k9x_3r6hUZ2r3_WQcTYYRXb3ZPDHUroT5PY3K1W--PxlcuEMxVISjzKLDogHxLXLPw3rVUWfsiSWDJRskrDPGi5BwIy5zueiJn4sh10Xo2w0Mj7vpP_DbtlmJjFhXPKOO4o9wtjH8YTCKlGvtIsAjb-IMoFHSTjq47cPZ8-yJiPn2nmdSo1d_yW91MtpBHm54EhNGEbOme7hzzxT-ePlYp_t55FO_OEYSY78"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-8 min-h-screen">
+<!-- Dashboard Header -->
+<div class="mb-10 flex justify-between items-end">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface leading-tight">Operations <span class="text-primary-container">Control Center</span></h2>
+<p class="text-on-surface-variant font-medium mt-2">Fleet overview and live transit metrics for Moasla Network.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-low text-on-surface flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border border-outline-variant/15 hover:bg-surface-bright transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                    Export Data
+                </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center gap-2 px-6 py-3 rounded-xl font-semibold shadow-lg shadow-primary-container/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Dispatch New Trip
+                </button>
+</div>
+</div>
+<!-- Summary Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-10">
+<!-- Total Drivers -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm border-b-4 border-primary">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Total Drivers</p>
+<h3 class="text-3xl font-extrabold text-primary">1,284</h3>
+<div class="flex items-center gap-1 text-emerald-600 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                    +12%
+                </div>
+</div>
+<!-- Active Drivers -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Active Now</p>
+<h3 class="text-3xl font-extrabold text-on-surface">856</h3>
+<p class="text-xs text-slate-500 mt-2 font-medium">67% Utilization</p>
+</div>
+<!-- Pending Approvals -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Pending Approvals</p>
+<h3 class="text-3xl font-extrabold text-tertiary">42</h3>
+<p class="text-xs text-slate-500 mt-2 font-medium">High Priority</p>
+</div>
+<!-- Total Routes -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Total Routes</p>
+<h3 class="text-3xl font-extrabold text-on-surface">158</h3>
+<p class="text-xs text-slate-500 mt-2 font-medium">12 Regions</p>
+</div>
+<!-- Today's Bookings -->
+<div class="md:col-span-2 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm border-b-4 border-secondary">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Today's Bookings</p>
+<h3 class="text-3xl font-extrabold text-secondary">4,902</h3>
+<div class="flex items-center gap-1 text-emerald-600 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                    +4.5k
+                </div>
+</div>
+<!-- Active Trips -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Active Trips</p>
+<h3 class="text-3xl font-extrabold text-primary-container">312</h3>
+<p class="text-xs text-slate-500 mt-2 font-medium">Live on map</p>
+</div>
+<!-- Queue Status -->
+<div class="md:col-span-1 lg:col-span-1 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Queue Status</p>
+<h3 class="text-3xl font-extrabold text-on-surface">8 min</h3>
+<p class="text-xs text-emerald-500 mt-2 font-bold">Optimal</p>
+</div>
+</div>
+<!-- Operations Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Operations & Alerts -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Live Map Section (Placeholder aesthetic) -->
+<section class="bg-surface-container-low rounded-2xl overflow-hidden relative min-h-[400px]">
+<div class="absolute inset-0 grayscale opacity-40 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&amp;fit=crop&amp;q=80&amp;w=1200')]" data-alt="minimalist overhead map view of city streets in slate blue and grey tones with soft lighting" style="background-size: cover;"></div>
+<div class="relative z-10 p-8 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-surface-container-lowest/90 backdrop-blur px-4 py-2 rounded-full border border-outline-variant/20 flex items-center gap-3">
+<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+<span class="text-xs font-bold text-on-surface uppercase tracking-wider">Live System Feed</span>
+</div>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10"><span class="material-symbols-outlined" data-icon="fullscreen">fullscreen</span></button>
+<button class="p-2 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10"><span class="material-symbols-outlined" data-icon="layers">layers</span></button>
+</div>
+</div>
+<!-- Mini Alert in Map -->
+<div class="mt-auto self-start bg-error-container/95 backdrop-blur text-on-error-container p-4 rounded-xl max-w-sm flex gap-4 items-center">
+<div class="bg-error p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-error" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase">Critical Alert</p>
+<p class="text-sm font-medium">Traffic block on Cairo Ring Road. Redirecting 14 active trips.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section>
+<h4 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+                        Quick Infrastructure Actions
+                    </h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<button class="group p-6 bg-surface-container-lowest rounded-2xl text-left border border-outline-variant/5 hover:border-primary/20 transition-all">
+<div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_road">add_road</span>
+</div>
+<h5 class="font-bold text-on-surface">Create New Route</h5>
+<p class="text-xs text-on-surface-variant mt-1">Design transit paths between stations</p>
+</button>
+<button class="group p-6 bg-surface-container-lowest rounded-2xl text-left border border-outline-variant/5 hover:border-primary/20 transition-all">
+<div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_location">add_location</span>
+</div>
+<h5 class="font-bold text-on-surface">Add Station</h5>
+<p class="text-xs text-on-surface-variant mt-1">Deploy new pick-up/drop-off nodes</p>
+</button>
+<button class="group p-6 bg-surface-container-lowest rounded-2xl text-left border border-outline-variant/5 hover:border-primary/20 transition-all">
+<div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+</div>
+<h5 class="font-bold text-on-surface">Onboard Driver</h5>
+<p class="text-xs text-on-surface-variant mt-1">Review credentials &amp; activate fleet</p>
+</button>
+</div>
+</section>
+</div>
+<!-- Right Column: Activity & Status -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Critical Alerts Panel -->
+<section class="bg-surface-container-low rounded-2xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h4 class="text-lg font-bold text-on-surface uppercase tracking-tight">Critical Alerts</h4>
+<span class="bg-error text-on-error text-[10px] px-2 py-0.5 rounded-full font-bold">03 LIVE</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-3 border-l-4 border-error">
+<span class="material-symbols-outlined text-error" data-icon="emergency">emergency</span>
+<div>
+<p class="text-xs font-bold text-on-surface">Station #402 Offline</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Hardware failure at New Giza Hub. Maintenance dispatched.</p>
+<p class="text-[10px] text-slate-400 mt-2">12 mins ago</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-3 border-l-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary" data-icon="report_problem">report_problem</span>
+<div>
+<p class="text-xs font-bold text-on-surface">Unusual Delay: Route R12</p>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Average wait time exceeding 20 mins. Re-routing queue.</p>
+<p class="text-[10px] text-slate-400 mt-2">24 mins ago</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Log -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10">
+<h4 class="text-lg font-bold text-on-surface mb-6">Recent Activity</h4>
+<div class="space-y-6 relative before:absolute before:left-3.5 before:top-2 before:bottom-2 before:w-[1px] before:bg-slate-100">
+<div class="relative pl-10">
+<span class="absolute left-0 top-0.5 w-7 h-7 bg-primary/10 text-primary rounded-full flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle">check_circle</span>
+</span>
+<p class="text-xs font-bold text-on-surface">Ahmed K. Approved</p>
+<p class="text-[11px] text-on-surface-variant">New driver background check verified.</p>
+<p class="text-[10px] text-slate-400 mt-1">2:45 PM</p>
+</div>
+<div class="relative pl-10">
+<span class="absolute left-0 top-0.5 w-7 h-7 bg-secondary/10 text-secondary rounded-full flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="edit_road">edit_road</span>
+</span>
+<p class="text-xs font-bold text-on-surface">Route Update: Zone B</p>
+<p class="text-[11px] text-on-surface-variant">Price surge applied (+5%) due to high demand.</p>
+<p class="text-[10px] text-slate-400 mt-1">1:30 PM</p>
+</div>
+<div class="relative pl-10">
+<span class="absolute left-0 top-0.5 w-7 h-7 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+</span>
+<p class="text-xs font-bold text-on-surface">Shift Scheduled</p>
+<p class="text-[11px] text-on-surface-variant">Night shift roster published for Heliopolis sector.</p>
+<p class="text-[10px] text-slate-400 mt-1">11:12 AM</p>
+</div>
+<div class="relative pl-10">
+<span class="absolute left-0 top-0.5 w-7 h-7 bg-primary/10 text-primary rounded-full flex items-center justify-center ring-4 ring-white">
+<span class="material-symbols-outlined text-[16px]" data-icon="add_business">add_business</span>
+</span>
+<p class="text-xs font-bold text-on-surface">New Hub Online</p>
+<p class="text-[11px] text-on-surface-variant">Maadi Station #05 officially joined the network.</p>
+<p class="text-[10px] text-slate-400 mt-1">Yesterday</p>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-xs font-bold text-primary hover:bg-primary/5 rounded-xl transition-colors">View All Logs</button>
+</section>
+</div>
+</div>
+<!-- Footer / System Branding Element -->
+<footer class="mt-20 border-t border-outline-variant/10 pt-10 pb-16 flex justify-between items-center opacity-40">
+<div class="flex items-center gap-4">
+<span class="text-4xl font-extrabold tracking-tighter">M</span>
+<div class="h-6 w-[1px] bg-on-surface"></div>
+<p class="text-xs font-medium uppercase tracking-[0.2em]">Moasla Intelligence Systems</p>
+</div>
+<p class="text-xs">© 2024 Moasla Technologies. All rights reserved.</p>
+</footer>
+</main>
+</body></html>

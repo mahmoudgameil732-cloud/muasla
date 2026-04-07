@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#602100",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e2e2ea",
+                        "tertiary-container": "#853100",
+                        "secondary": "#4f5e82",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b0c6ff",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary": "#ffffff",
+                        "outline": "#737783",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4d5b7f",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary-container": "#a1bbff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d9e2ff",
+                        "surface-variant": "#e2e2ea",
+                        "outline-variant": "#c3c6d4",
+                        "inverse-on-surface": "#f0f0f8",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-fixed": "#001945",
+                        "primary": "#003178",
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "on-surface-variant": "#434652",
+                        "on-surface": "#1a1b21",
+                        "surface-container-low": "#f3f3fb",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#384669",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "surface-container-high": "#e8e7f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffa781",
+                        "on-background": "#1a1b21",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#ededf5",
+                        "inverse-surface": "#2e3036",
+                        "surface-dim": "#d9d9e1",
+                        "surface-bright": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface": "#faf8ff",
+                        "secondary-container": "#c5d4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-surface-container-low dark:bg-slate-900 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400 cursor-pointer hover:bg-blue-50 dark:hover:bg-slate-800 p-2 rounded-full transition-transform active:scale-95 duration-150">menu</span>
+<h1 class="font-manrope text-xl font-bold text-blue-900 dark:text-blue-200 tracking-tight">Moasla | مواصله</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden md:block">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Ahmed Mansour</p>
+<p class="text-[10px] text-blue-800">#4421</p>
+</div>
+<img alt="driver profile photo" class="w-10 h-10 rounded-full border-2 border-primary-fixed shadow-sm" data-alt="professional portrait of a middle-aged Egyptian man with a friendly smile, wearing a clean polo shirt, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVfaqCDubUO07yW7TRYUCEzQmaG_Y3eSwQfv9AWPPxvJbVrrwNhl6n0holJjjsO4LFRDGAw4FlGjYaKBXDyRbtGCaQulNMvPA9f9CAe7QZURVWweuK7p_KKmbczc6ceADBoS_AI75ZaLFS4sHXGtwt4O4OTAiI1RzSyX_IjGStx-MiUujIHLGE2TfmQKF5YdaMfwdudkw_SOkHt1vaW6S38FIn8CSpr7rQeB5O6SCIcL3cycTdFRiguoqC2cCe03Da8b6UiL1Hk8"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Header & Date -->
+<section class="mb-8">
+<p class="font-manrope label-md uppercase tracking-widest text-slate-500 mb-1">Performance Overview</p>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight">Daily Earnings</h2>
+<p class="text-on-surface-variant">Wednesday, 24 May 2024</p>
+</section>
+<!-- Bento Grid Earnings -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Main Total Card -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl text-on-primary flex flex-col justify-between min-h-[220px] shadow-lg">
+<div>
+<span class="font-manrope label-md uppercase tracking-widest opacity-80">Total Revenue Today</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-5xl font-extrabold tracking-tighter">EGP 1,240</span>
+<span class="text-xl font-medium opacity-70">.00</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex gap-6">
+<div>
+<p class="text-xs opacity-70 uppercase tracking-widest mb-1">Trips</p>
+<p class="text-xl font-bold">14</p>
+</div>
+<div>
+<p class="text-xs opacity-70 uppercase tracking-widest mb-1">Online</p>
+<p class="text-xl font-bold">8h 12m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-4xl opacity-20">payments</span>
+</div>
+</div>
+<!-- Sub-stats Side Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-manrope label-md uppercase tracking-widest text-slate-500">Net Profit</span>
+<p class="text-2xl font-bold text-on-surface mt-2">EGP 1,085</p>
+<p class="text-sm text-green-600 font-bold mt-1">↑ 12% vs yesterday</p>
+</div>
+<button class="w-full mt-6 py-3 px-4 bg-primary-fixed text-on-primary-fixed rounded-xl font-bold text-sm transition-all hover:bg-primary-fixed-dim active:scale-95">
+                    View Weekly Report
+                </button>
+</div>
+</div>
+<!-- Payment Methods Breakdown -->
+<section class="mb-12">
+<h3 class="font-manrope text-lg font-bold text-on-surface mb-6 px-1">Payment Distribution</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Cash -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-blue-900">payments</span>
+</div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Cash</p>
+<p class="text-xl font-extrabold text-on-surface">EGP 820</p>
+<div class="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+<div class="bg-blue-900 h-full w-[66%]"></div>
+</div>
+</div>
+<!-- Visa -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-blue-900">credit_card</span>
+</div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Visa</p>
+<p class="text-xl font-extrabold text-on-surface">EGP 310</p>
+<div class="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+<div class="bg-blue-600 h-full w-[25%]"></div>
+</div>
+</div>
+<!-- Instapay -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-tertiary">bolt</span>
+</div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Instapay</p>
+<p class="text-xl font-extrabold text-on-surface">EGP 110</p>
+<div class="w-full h-1 bg-surface-container-highest mt-4 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[9%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Payouts -->
+<section class="mb-8">
+<div class="flex justify-between items-center mb-6 px-1">
+<h3 class="font-manrope text-lg font-bold text-on-surface">Recent Payouts</h3>
+<a class="text-sm font-bold text-primary hover:underline" href="#">See all activity</a>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Payout Item 1 -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-700">account_balance</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Bank Transfer Success</p>
+<p class="text-xs text-on-surface-variant">23 May • 04:30 PM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">EGP 4,200.00</p>
+<span class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase">Completed</span>
+</div>
+</div>
+<!-- Payout Item 2 -->
+<div class="flex items-center justify-between p-5 border-t border-surface-container-low hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-700">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Instapay Instant Cashout</p>
+<p class="text-xs text-on-surface-variant">21 May • 11:15 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">EGP 850.00</p>
+<span class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase">Completed</span>
+</div>
+</div>
+<!-- Payout Item 3 -->
+<div class="flex items-center justify-between p-5 border-t border-surface-container-low hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500">pending</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Weekly Settlement</p>
+<p class="text-xs text-on-surface-variant">20 May • 10:00 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">EGP 6,120.00</p>
+<span class="inline-block px-2 py-0.5 bg-slate-200 text-slate-600 text-[10px] font-bold rounded uppercase">Processing</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">route</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100 rounded-2xl px-5 py-2 scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1 font-bold">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Cashout -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 bg-gradient-to-br from-tertiary to-tertiary-container text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-3 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-bold">Cash Out Now</span>
+</button>
+</body></html>

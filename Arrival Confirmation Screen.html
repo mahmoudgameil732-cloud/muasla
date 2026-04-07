@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Arrival Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#602100",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary-container": "#853100",
+                    "secondary": "#4f5e82",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary": "#ffffff",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-primary-container": "#a1bbff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-variant": "#e2e2ea",
+                    "outline-variant": "#c3c6d4",
+                    "inverse-on-surface": "#f0f0f8",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#001945",
+                    "primary": "#003178",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "on-surface": "#1a1b21",
+                    "surface-container-low": "#f3f3fb",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384669",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "on-background": "#1a1b21",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "surface-dim": "#d9d9e1",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface": "#faf8ff",
+                    "secondary-container": "#c5d4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .display-md { font-size: 2.75rem; line-height: 1.2; font-weight: 800; }
+        .label-md { font-size: 0.875rem; font-weight: 500; }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Section -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="text-blue-800 hover:bg-blue-50 transition-transform duration-150 scale-95 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-manrope text-xl font-bold text-blue-900 tracking-tight">Moasla | مواصله</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-blue-900 uppercase tracking-widest">Ahmed Mansour</p>
+<p class="text-[10px] text-slate-500">Microbus Driver #4421</p>
+</div>
+<img alt="driver profile photo" class="w-10 h-10 rounded-full border-2 border-primary-fixed shadow-sm object-cover" data-alt="Close up portrait of a professional middle-aged driver wearing a clean uniform, warm natural morning lighting, friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyl6cW56qn82jAR-Tm-QpVEX5sdA1ZVn83k8t2C77oB5Dty-exmxt7VWLMcwMMUSO_LzQsMAmD8AcrXaSCj1GEq6dMbcHKQokefNtSy2QGYVpSzuIdegml7G4Dn6bUekzNoUM5-0Y9SHHfv8S1QWoAjhKnjYMF9yZdijPvABiegfDVVk-cH3sKneR7SrzcSXm--D6MFRgbPV1-yIu-jBP8mZ0JjCPGYHE5uWsYHzna-aJL8qvhrjN1XhNXMAFjuAMWQfnfJEMdpZ4"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full">
+<!-- Status Indicator -->
+<div class="mb-8 text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-fixed text-primary font-bold text-xs uppercase tracking-widest mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Arriving at Destination
+            </div>
+<h2 class="display-md text-blue-900 tracking-tighter mb-2">Almost There</h2>
+<p class="text-on-surface-variant font-medium">Please confirm your arrival at the station.</p>
+</div>
+<!-- Station Card (Asymmetric Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
+<div class="md:col-span-12 bg-surface-container-lowest p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] relative overflow-hidden">
+<!-- Abstract 'M' Watermark -->
+<div class="absolute -right-10 -bottom-10 opacity-[0.03] pointer-events-none">
+<svg class="text-primary" fill="currentColor" height="300" viewbox="0 0 100 100" width="300">
+<path d="M10 90 L30 10 L50 50 L70 10 L90 90 H70 L60 50 L50 90 L40 50 L30 90 Z"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="text-xs font-bold text-tertiary uppercase tracking-widest">Departure Station</span>
+<h3 class="text-2xl font-extrabold text-on-surface">Ramses Square Central</h3>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-3 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm font-medium">Platform</span>
+<span class="font-bold text-blue-900">Zone B-12</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm font-medium">Estimated Queue</span>
+<span class="font-bold text-blue-900">4 Vehicles</span>
+</div>
+<div class="flex justify-between items-center py-3">
+<span class="text-on-surface-variant text-sm font-medium">Arrival Time</span>
+<span class="font-bold text-blue-900">08:45 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Snippet -->
+<div class="rounded-[2rem] h-48 bg-surface-container-low mb-12 overflow-hidden relative group">
+<img alt="map of station" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="Aerial satellite view map of a busy urban transit hub with interconnected roads and bus lanes in a modern city" data-location="Cairo, Egypt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQsRZ16Mk8UDtMs3n0Koh1Hm6dtbtaOB32LYV7X9MHQ4RmIaMDXkyYqF0ZJK-GLVJk5xs-n1cucSW7kCUCoEbG0tRYR6w2r8ZiLUllkehohySj1z4FyRbqRH5TaCkossXI6RDLurEd1hq6-NO19jvpTfj98N04bg-TvzDAksKuSgaVBfhwNIbQtO3o6WrA1FL4BWDdKhT4t-Ay4o4vLWdMMHtQ26A4-tni8392pS-2hRDmNCpSsWk36xrA2z-HWuRg3AiwIDx9-dw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-lg flex items-center gap-2 border border-white/50">
+<span class="material-symbols-outlined text-blue-900" data-icon="my_location">my_location</span>
+<span class="text-sm font-bold text-blue-900">Verify GPS Location</span>
+</div>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="flex flex-col gap-4">
+<button class="w-full h-20 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-[1.25rem] flex items-center justify-center gap-4 shadow-xl hover:shadow-primary/20 active:scale-[0.98] transition-all duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="check_circle">check_circle</span>
+<div class="text-left">
+<p class="font-bold text-lg leading-tight">I have arrived</p>
+<p class="text-sm opacity-80 font-medium">لقد وصلت</p>
+</div>
+</button>
+<button class="w-full py-4 text-on-surface-variant font-bold text-sm uppercase tracking-widest hover:text-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="report">report</span>
+                Can't reach station? Report issue
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] flex justify-around items-center px-4 pb-4 pt-2">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200 scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 text-blue-900 rounded-2xl px-5 py-2 transition-all duration-200 scale-98 font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200 scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200 scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

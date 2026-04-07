@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Pre-Trip Departure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#602100",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary-container": "#853100",
+                    "secondary": "#4f5e82",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary": "#ffffff",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-primary-container": "#a1bbff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-variant": "#e2e2ea",
+                    "outline-variant": "#c3c6d4",
+                    "inverse-on-surface": "#f0f0f8",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#001945",
+                    "primary": "#003178",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "on-surface": "#1a1b21",
+                    "surface-container-low": "#f3f3fb",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384669",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "on-background": "#1a1b21",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "surface-dim": "#d9d9e1",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface": "#faf8ff",
+                    "secondary-container": "#c5d4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-800" data-icon="menu">menu</span>
+<h1 class="text-xl font-bold text-blue-900 font-manrope tracking-tight">Moasla | مواصله</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="driver profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional middle-aged man with a friendly expression, soft natural indoor lighting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF9fNlAaQhx4I0KB-UbOOfaHqxaTlMY_7bn5jr8CVkZW0RG7tjVFx6hPk2wW8NzoN4sZPYVVPZ4ML7pbsWWxQx4aT1-h4dUnwBUvjRI9j1YCFW-WzFnbyvGV9WFHAf8w2lCw8of2F2NCQgq-WREC-m2XA6wkgoJ18jPJO1RjXQPBaWwaKLOYz2iCwhSBBBXpk3kMDC6btZfSvL8W170LsgXNNzmRR5nNupKE4T5KkOTAeHCaIGSxxkj1srPF4C-fWifvqiyhTp_3o"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Countdown Bento Card -->
+<section class="bg-surface-container-lowest rounded-[2rem] p-8 mb-8 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container/10">
+<div class="h-full bg-primary-container w-2/3"></div>
+</div>
+<div class="mb-4">
+<span class="text-blue-800 font-bold uppercase tracking-widest text-xs">Trip Starts In</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-7xl font-extrabold text-primary tracking-tighter">10</span>
+<span class="text-2xl font-semibold text-primary/60">mins</span>
+</div>
+<p class="text-slate-500 font-medium">To departure | موعد الانطلاق</p>
+<!-- Abstract 'M' Watermark -->
+<div class="absolute -right-8 -bottom-8 opacity-5 select-none pointer-events-none">
+<span class="material-symbols-outlined text-[160px]" data-icon="share_location">share_location</span>
+</div>
+</section>
+<!-- Main Alert Messaging -->
+<div class="mb-12 space-y-4">
+<div class="bg-primary/5 rounded-3xl p-8 border-l-4 border-primary">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight mb-4">
+                    Where are you? <br/>
+<span class="text-primary-container">Trip time is now</span>
+</h2>
+<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight text-right dir-rtl">
+                    أين أنتم؟ <br/>
+<span class="text-primary-container">موعد الرحلة الآن</span>
+</h2>
+</div>
+</div>
+<!-- Rider Status List (Contextual Information) -->
+<div class="grid grid-cols-1 gap-4 mb-8">
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Booked Riders</p>
+<p class="text-sm text-slate-500">12 / 14 Seats filled</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-3 py-1 bg-blue-100 text-blue-900 text-xs font-bold rounded-full">NEARBY</span>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="space-y-4">
+<button class="w-full py-6 rounded-2xl bg-gradient-to-br from-primary to-primary-container text-white font-bold text-xl flex items-center justify-center gap-3 shadow-xl hover:scale-[0.98] transition-transform active:opacity-90">
+<span class="material-symbols-outlined" data-icon="notifications_active" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<div class="flex flex-col items-center">
+<span>Send reminder to rider</span>
+<span class="text-sm font-medium opacity-80">إرسال تنبيه للركاب</span>
+</div>
+</button>
+<button class="w-full py-4 rounded-2xl border border-outline-variant/20 text-on-surface font-semibold hover:bg-surface-container-low transition-colors">
+                View Passenger List
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 backdrop-blur-xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] rounded-t-3xl border-t-0">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 text-blue-900 rounded-2xl px-5 py-2 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="route" style="font-variation-settings: 'FILL' 1;">route</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest mt-1 font-bold">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:bg-slate-100 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
+</div>
+</body></html>

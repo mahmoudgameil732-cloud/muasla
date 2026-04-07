@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Live Trip Monitoring</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d9e2ff; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<!-- SideNavBar Anchor -->
+<nav class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 z-50 font-manrope text-sm font-medium tracking-tight">
+<div class="p-6">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs text-slate-500 mt-1 uppercase tracking-widest">Admin Dashboard</p>
+</div>
+<div class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="commute">commute</span>
+<span>Trips</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="local_taxi">local_taxi</span>
+<span>Drivers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Riders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>Areas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>Stations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Pricing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span>Shifts</span>
+</a>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of a professional male administrator in a light blue shirt with a focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvF2buUlCyqNLGXLT8b7FZUC0VfPGWh9KzmETzCG_ge-7_UQzSdZ2H10eq0DqTLqJQcQ9Dw9De1LYybHyTBxDTnyrcl_lubStNMMqXNpstIqkMYgc2N_CK4Ynqh_IOqJ98dZMt5yiAVcvza69DY3tJWdyYkzMfaAJCJ1X9pFVQUYViRF6kWvj0DL7EOzIhwCk6BCgZQzG0jZtgvO9SDcNkTywat7M0vezsrduoy_CjpZDxlsqyr9qwEVAHYIO8m_ao-KwF6VTB1vo"/>
+<div>
+<p class="text-sm font-bold text-blue-900 dark:text-blue-100">Moasla Admin</p>
+<p class="text-[10px] text-slate-500">System Controller</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 h-screen flex flex-col relative">
+<!-- TopAppBar Anchor -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none font-manrope text-sm tracking-wide">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-high px-4 py-2 rounded-full flex items-center gap-2 w-96">
+<span class="material-symbols-outlined text-slate-400" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-400" placeholder="Search trips, drivers, or stations..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-slate-500">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+<span>English/عربي</span>
+</div>
+<button class="relative text-slate-500 hover:text-blue-700 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<span class="font-semibold text-blue-800">Admin</span>
+<img class="w-8 h-8 rounded-full border border-blue-100" data-alt="Administrator Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApcUWXhMqOqprnkU2LYSBeLco-G2eAmnA7xQlg1AoGrH3K1QLRB9gjytd8I8V6UPfaSaB-w6MU9TkomUAxyTSFk_mnkhg_wWzVd0pAcYCGQoa-VJcYDfOTOKYhdClq6s4MJHpLKbIoKS4brnCBj0fnS8vRLAvVhi9n34qDOaYp3BZcjH3xedHqorauuEaPT49hPw6b14KKog6MVa7iqzXurjxOEWRMqnHjmnTT897PX0n4jKDzfjkZKxVv_LjJh_Xj6nSpzFa82Rs"/>
+</div>
+</div>
+</header>
+<!-- Live Monitoring Dashboard Layout -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Map Area -->
+<div class="flex-1 relative bg-surface-container-low">
+<!-- Interactive Map Placeholder -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale-[20%] opacity-90" data-alt="Stylized overhead map view of a modern city grid with glowing data points representing vehicle positions and routes" data-location="Cairo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlAwjvOayvYbaGyGOUpGRfu7VCtn8GvkOlYZVjBbQn8Qf8st3X0BmiirvKbCcAmEvDB0ILuDJGMUifk2FImNuyFBSQxOQ_596SiiX0w_E6bzri6lGu6-L2xzmannq1ntDYArmKCeZuakUABwTHDB-cKnBqokFTTBGVp9nkOdyXB_TtsSgFudTmjSTGXF7glkYNlrZLTeWka2Onr9huT_r44eIPnYtt5Ia_U-50PdEPjyav2MnVajeRilVg1Mh2BBuF_qXXu0lEQnM')"></div>
+</div>
+<!-- Live Indicators Over Map -->
+<div class="absolute inset-0 z-10 pointer-events-none p-8 flex flex-col justify-between">
+<!-- Top Float Stats -->
+<div class="flex gap-4 pointer-events-auto">
+<div class="glass-panel px-6 py-4 rounded-full shadow-2xl flex items-center gap-4 border border-white/40">
+<div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+<div>
+<p class="text-[10px] uppercase tracking-tighter font-bold text-slate-500">Active Trips</p>
+<p class="text-2xl font-extrabold text-primary">1,284</p>
+</div>
+</div>
+<div class="glass-panel px-6 py-4 rounded-full shadow-2xl flex items-center gap-4 border border-white/40">
+<span class="material-symbols-outlined text-tertiary" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="text-[10px] uppercase tracking-tighter font-bold text-slate-500">Alerts</p>
+<p class="text-2xl font-extrabold text-tertiary">03</p>
+</div>
+</div>
+</div>
+<!-- Map Overlay Controls -->
+<div class="flex justify-between items-end pointer-events-auto">
+<div class="glass-panel p-2 rounded-2xl flex flex-col gap-2 shadow-lg border border-white/40">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white hover:bg-slate-50 text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white hover:bg-slate-50 text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<div class="h-[1px] bg-slate-200 mx-2"></div>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-white hover:bg-slate-50 text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span>
+</button>
+</div>
+<div class="glass-panel px-6 py-3 rounded-2xl shadow-xl border border-white/40 flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 bg-primary rounded-sm"></span>
+<span class="text-xs font-bold">Standard</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 bg-tertiary-container rounded-sm"></span>
+<span class="text-xs font-bold">Premium</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-4 bg-secondary rounded-sm"></span>
+<span class="text-xs font-bold">Shared</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pulsing GPS Marker Examples (Fixed positioning for visual demo) -->
+<div class="absolute top-1/3 left-1/4 z-20 pointer-events-auto cursor-pointer group">
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full animate-ping scale-150"></div>
+<div class="bg-primary p-2 rounded-full text-white shadow-xl relative transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="local_taxi" style="font-variation-settings: 'FILL' 1;">local_taxi</span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block whitespace-nowrap">
+<div class="glass-panel px-3 py-1.5 rounded-lg shadow-xl text-[10px] font-bold">ID: MS-8829 | 4 Passengers</div>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 left-2/3 z-20 pointer-events-auto cursor-pointer group">
+<div class="relative">
+<div class="absolute inset-0 bg-tertiary/20 rounded-full animate-ping scale-150"></div>
+<div class="bg-tertiary p-2 rounded-full text-white shadow-xl relative transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="directions_bus" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
+</div>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block whitespace-nowrap">
+<div class="glass-panel px-3 py-1.5 rounded-lg shadow-xl text-[10px] font-bold">ID: MS-1044 | 18 Passengers</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Trip List -->
+<aside class="w-96 bg-surface-container-lowest border-l border-slate-100 flex flex-col shadow-2xl z-30">
+<div class="p-6 border-b border-slate-50">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-lg font-extrabold tracking-tight text-primary">Active Trips</h2>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold">LIVE</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-primary text-on-primary rounded-xl text-xs font-bold shadow-md">All Trips</button>
+<button class="flex-1 py-2 bg-surface-container-high text-on-surface-variant rounded-xl text-xs font-bold">Critical</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Trip Card 1 -->
+<div class="p-6 border-b border-slate-50 hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="commute">commute</span>
+</div>
+<div>
+<p class="text-sm font-bold">Trip #MS-4492</p>
+<p class="text-[10px] text-slate-400">Driver: Ahmed Al-Farsi</p>
+</div>
+</div>
+<span class="text-[10px] font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded uppercase">On Time</span>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="trip_origin">trip_origin</span>
+<span class="text-slate-600 truncate">Heliopolis Station 4</span>
+</div>
+<div class="w-px h-2 bg-slate-200 ml-[7px]"></div>
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="text-slate-900 font-semibold truncate">Cairo Festival City</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a young woman with curly hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbgTo9KGtpqtBOTcdMIOVr3-4cJANv-QQNNmrC-mVNYhnBWDYO2khPtVq5tSN8RIFT6xWDZkMI7MuSauWgUq_wrIm_fdpwe2orKlg_ti9p-oFL1s3XR0UZbNFgblhHXH9E2bYbxKFdxB6YN2WIQ3tE9ycWmX3UWxAtpSSvgJ4wjJVNXA8kQ7ICIYOCAFLC580_McPS_fthz6HGkJumaD9QRlQEwUFXsA237nX7AZ97DH0x4v4oOq6Gudij81clEmoOw4DXnWLpKEQ"/>
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a smiling young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLLnzjqc3iW6amTAW0kldhMy2BmZknUN5Ca9WlUvuBAexIRK3XDRMVVUC7-T6KSDMmQjJAnbWg1zhvH5Srnasg8nYS898Na_3shkulKqaYzM1UfKhWI33G4JQ8i2nmYmXAHgJ9TP8f43UNLhuqyLUPH8eDDK3pMVRAkwpAJ83p2tk2xU4sucNzRaWrfeF-bbMSo4vtAQFRFhaRHPSLr_kLQaMjzOinqXe_D6Q-hkXlNlLpV44Yva1FuN4RNRlQ0OmmuWyP_wQXe3I"/>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[8px] font-bold text-slate-500">+1</div>
+</div>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-[10px] font-bold">12m left</span>
+</div>
+</div>
+</div>
+<!-- Trip Card 2 (Alert State) -->
+<div class="p-6 border-b border-slate-50 bg-tertiary/5 hover:bg-tertiary/10 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary/10 rounded-xl flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<p class="text-sm font-bold">Trip #MS-1022</p>
+<p class="text-[10px] text-slate-400">Driver: Sara Khaled</p>
+</div>
+</div>
+<span class="text-[10px] font-bold bg-error-container text-on-error-container px-2 py-0.5 rounded uppercase">Delayed</span>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="trip_origin">trip_origin</span>
+<span class="text-slate-600 truncate">Maadi West Hub</span>
+</div>
+<div class="w-px h-2 bg-slate-200 ml-[7px]"></div>
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="location_on">location_on</span>
+<span class="text-slate-900 font-semibold truncate">New Giza Sector 2</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="group">group</span>
+<span class="text-[10px] font-bold text-tertiary">14/20 Cap.</span>
+</div>
+<button class="bg-tertiary text-white px-3 py-1 rounded-lg text-[10px] font-bold hover:scale-105 transition-transform">RESOLVE</button>
+</div>
+</div>
+<!-- Trip Card 3 -->
+<div class="p-6 border-b border-slate-50 hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="commute">commute</span>
+</div>
+<div>
+<p class="text-sm font-bold">Trip #MS-3882</p>
+<p class="text-[10px] text-slate-400">Driver: Omar Hassan</p>
+</div>
+</div>
+<span class="text-[10px] font-bold bg-blue-100 text-blue-700 px-2 py-0.5 rounded uppercase">En Route</span>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-slate-400 text-sm" data-icon="trip_origin">trip_origin</span>
+<span class="text-slate-600 truncate">Downtown Gate</span>
+</div>
+<div class="w-px h-2 bg-slate-200 ml-[7px]"></div>
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on">location_on</span>
+<span class="text-slate-900 font-semibold truncate">6th October City</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a smiling woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBloQypTWBJjbgpuMBEaGUxh3IMOJP8FAQkbWW7a-XG7NaCuUdDSsxDohf0HzdIwE-2gdsXEDNPpWZ2BTOGP9HyF31yzOzV-XXxrno8pouNXbxX9lCLwjF3CIS3YmY2ZxKZ_IjTnu0Yon83GctdvEwQ5XDR7KKq0CzMtDOXX5PvSuBpcPgIHt8N8LAc5vpl__lbyIv7YIt3IaEhHYA5kXQNbbdmUQ3pwbVHzhEHA6yjrs6PVW9k8kH7sMAtchO5j3Xtn4LU_iB53_M"/>
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a young man with a short beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfZSZlYeb88rZi1N7JlbMk9hxww8OXfZPDBL-lwdo92UCuWsk8JJ1JBlcGXmkkuzLy7Q0QuAqbBQOY_z2_zu8WSF53Fk5WStkIzFQRXSi9WGJGMIqvsOtK93BLlQtd8gJl0K_NpFYoADC9t8aF5h_3rd2Hqq3Ow6EpFvOQ1AhSkSfarizHNrNXqgdeGwIPdifUIc8GUuYEluTUtSWKwlR6eOWTf-sQKGj7sFH8qPOeNO4vHnT_0Zrfh5b1f9h7-RDRuzP2Sp2RLxE"/>
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a man in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnDeZzzK8bTIC4vCMGB7crJkRAlrQhwPRgpAhvUig96vOSW-0h01JKPftjrAa4k175VEFaxVzt12S9yeichXYtNTMGH0WcUhRBPOt-8rCCsb1rEmiaRbuEgihusYr6LiMpNV9nEl0twEd1jGfAo4ClC02crSfKWeoVD1I4LwG4zgtQQk-GQSsrB0ivc4fYvuq0WmEiY9yZJd9tvc0sm77SNREHWF3X5Qr0DocS0kMCmliRkXc__bPSOQN7W57qhDvESGhqlH0o6ic"/>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[8px] font-bold text-slate-500">+4</div>
+</div>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-[10px] font-bold">28m left</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-slate-50">
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl text-xs font-extrabold shadow-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add_circle">add_circle</span>
+                        DISPATCH NEW VEHICLE
+                    </button>
+</div>
+</aside>
+</div>
+<!-- System Status Bar -->
+<footer class="h-10 bg-primary text-on-primary px-8 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest z-40">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+<span>System Online</span>
+</div>
+<div class="h-3 w-[1px] bg-white/20"></div>
+<span>Server: CAI-EAST-04</span>
+</div>
+<div class="flex items-center gap-6">
+<span>Lat: 30.0444° N, Lon: 31.2357° E</span>
+<span id="live-timer">14:32:05 GMT+2</span>
+</div>
+</footer>
+</main>
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-14 right-[400px] z-50 flex flex-col gap-3">
+<button class="w-14 h-14 bg-white text-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all border border-slate-100">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</button>
+</div>
+</body></html>

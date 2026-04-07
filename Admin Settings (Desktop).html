@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla Admin Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="font-manrope text-sm font-medium tracking-tight text-blue-800 dark:text-blue-400 mt-1">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">local_taxi</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Drivers</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Riders</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">map</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Areas</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">hub</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Stations</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">alt_route</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Routes</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">payments</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Pricing</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">schedule</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Shifts</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">reorder</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Queue</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">commute</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Trips</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">book_online</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Bookings</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">account_balance_wallet</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Payments</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3">person</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Profiles</span>
+</a>
+<a class="flex items-center px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="p-6 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center space-x-3">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full" data-alt="Professional portrait of a male tech administrator in a clean office setting, soft daylight, premium digital concierge style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6tInwC-OAz2NRG63zFBpBxXQ_GlEukRgW80wLaLUHSzNSSjNw_qCw3GAkcn4UACAyL8itw-3XOev5bKK6wdMtCQ16OrOpLFBaKjGWsbaau8QvhZleGKALtuVbsnLfzqjRyLzMdEwEV4xqrUsYeDYmMo3K1WXZMHNoShTNiZ4PTj0-k-6Rt28cINt6_o3jX6WP_c9MTOIaATW7UNCa1cT7Y9EDdg5k2vLU0C9Nc6_4VyJv1TNR3oZG6iq8iFCaPmtuaLKj9evfm9g"/>
+<div>
+<p class="text-xs font-bold text-on-surface">Admin User</p>
+<p class="text-[10px] text-slate-500">System Master</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-lg w-96">
+<span class="material-symbols-outlined text-slate-400 mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-manrope" placeholder="Search configurations..." type="text"/>
+</div>
+<div class="flex items-center space-x-6">
+<button class="flex items-center space-x-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+<span class="font-manrope text-xs font-semibold">English/عربي</span>
+</button>
+<button class="relative text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant opacity-20"></div>
+<div class="flex items-center space-x-3">
+<span class="font-manrope text-sm font-bold text-primary">Admin</span>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full border border-primary/20" data-alt="High-contrast studio portrait of a business executive, sharp lighting, editorial style, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoF52KF7P-fffEB2O0XuLx7Sbcvg9YrtlDPmh24nytnwl96a0742zPJjSamYTeNaQEXjsmEalo-qY1yP5oPfx1RoeuYzwsleWCMS-6QoZAiKNbaNiNy02CkgxfJNz9AdTO0uYFbbzjGntQb8JvzfsdDAF-IJRI3rjHuvOvdV4CFh-QeBIuRV841_vPPG9sCCQ4zhVcVzUCjjwXIZ1r4XiYfeIuWPpnsl-cfBhFSNPpT1TIbNbL4ZuG_SP2q1zh0egUK3ZqUCMM1_A"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-10 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">System Settings</h2>
+<p class="text-on-surface-variant font-medium">Configure global parameters and rules for the Moasla ecosystem.</p>
+</div>
+<!-- Bento Grid Settings Panels -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Language & Localization -->
+<section class="col-span-12 md:col-span-4 bg-surface-container-lowest rounded-xl p-8 transition-all hover:scale-[1.01] flex flex-col justify-between h-full">
+<div>
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">language</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Language</h3>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Set the default system language and supported locales for riders and drivers.</p>
+</div>
+<div class="space-y-3">
+<label class="flex items-center p-4 bg-surface-container-low rounded-lg cursor-pointer group hover:bg-primary-fixed transition-colors">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" name="lang" type="radio"/>
+<span class="ml-4 font-bold text-sm">English (Global)</span>
+</label>
+<label class="flex items-center p-4 bg-surface-container-low rounded-lg cursor-pointer group hover:bg-primary-fixed transition-colors">
+<input class="text-primary focus:ring-primary h-4 w-4" name="lang" type="radio"/>
+<span class="ml-4 font-bold text-sm">العربية (Default)</span>
+</label>
+</div>
+</section>
+<!-- System Rules -->
+<section class="col-span-12 md:col-span-8 bg-surface-container-low rounded-xl p-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-xl font-bold">System Rules</h3>
+<p class="text-on-surface-variant text-sm">Define booking constraints and vehicle capacities.</p>
+</div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl">rule</span>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<label class="block text-[10px] font-bold tracking-widest uppercase text-outline mb-3">Booking Window (Minutes)</label>
+<input class="w-full accent-primary" max="120" min="15" type="range" value="30"/>
+<div class="flex justify-between mt-2 text-xs font-bold">
+<span>15m</span>
+<span class="text-primary">Current: 30m</span>
+<span>120m</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl">
+<label class="block text-[10px] font-bold tracking-widest uppercase text-outline mb-3">Max Seats per Booking</label>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-bold">-</button>
+<span class="text-2xl font-extrabold flex-1 text-center">4</span>
+<button class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold">+</button>
+</div>
+</div>
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between">
+<div>
+<h4 class="font-bold text-sm">Instant Dispatch</h4>
+<p class="text-xs text-on-surface-variant">Automatically assign nearest driver when queue is empty.</p>
+</div>
+<div class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none bg-primary">
+<span class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Defaults -->
+<section class="col-span-12 md:col-span-5 bg-surface-container-lowest rounded-xl p-8 flex flex-col h-full border border-primary/5">
+<h3 class="text-xl font-bold mb-6">Pricing Defaults</h3>
+<div class="space-y-6 flex-1">
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline">BASE FARE (EGP)</label>
+<div class="flex items-center bg-surface-container-low px-4 py-3 rounded-lg">
+<span class="text-primary font-bold mr-2">EGP</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-bold" type="number" value="15.00"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline">PRICE PER KM</label>
+<div class="flex items-center bg-surface-container-low px-4 py-3 rounded-lg">
+<span class="text-primary font-bold mr-2">EGP</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-bold" type="number" value="4.50"/>
+</div>
+</div>
+<div class="p-4 bg-tertiary-fixed rounded-lg flex items-center space-x-3">
+<span class="material-symbols-outlined text-tertiary">trending_up</span>
+<span class="text-xs font-bold text-on-tertiary-fixed-variant">Surge Multiplier active: 1.2x</span>
+</div>
+</div>
+</section>
+<!-- Queue Protocol & RBAC -->
+<div class="col-span-12 md:col-span-7 grid grid-rows-2 gap-8">
+<!-- Queue Protocol -->
+<div class="bg-primary-container p-8 rounded-xl text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-xl font-bold mb-2">Queue Protocol</h3>
+<p class="text-on-primary-container text-sm mb-6 max-w-md">Manage how drivers enter and exit stations based on priority levels.</p>
+<div class="flex space-x-4">
+<button class="px-6 py-2 bg-white text-primary font-bold rounded-xl text-xs hover:scale-95 transition-all">FIFO Protocol</button>
+<button class="px-6 py-2 bg-primary/40 text-white font-bold rounded-xl text-xs hover:scale-95 transition-all">Rating Priority</button>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -right-8 -bottom-8 text-white/10 text-[180px] select-none" style="font-variation-settings: 'FILL' 1;">reorder</span>
+</div>
+<!-- Role-Based Access Control -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-xl font-bold mb-4">Role-Based Access</h3>
+<div class="flex items-center space-x-2 mb-6">
+<div class="flex -space-x-3">
+<img class="h-8 w-8 rounded-full ring-2 ring-white" data-alt="Portrait of a female developer, bright lighting, urban setting, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Hs6bjG9E80HZ12i3XBeBSFaveeCgSAdgE3vHHx4mojpjQ1FXuMHK4tLkCPTnorBF97NhvfrXnvTZpY46vdJf660FLjjmD4rhtS9pD0_rVnFc4ReABZ8aKlpszTqK4J70ezSbMw2fcj665h3BiUK3kwSXY1LHssXV_fnJ2pwCQrbQx6qynJTSbfIjxQBCeT4B-JEeTTC9QKNQGqvfYsmBeD6-ggwG0ble_Ku3TqeYa4Rm41wOee1WIXdl3H6Kb2tkd_RTSICfa1Q"/>
+<img class="h-8 w-8 rounded-full ring-2 ring-white" data-alt="Portrait of a smiling professional woman, natural outdoor light, garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8_esi8ZOO7vigZj1GeYYKz-6qb7M0cMhlovVvuXY8iFUDn4nHWyHG2MUoPbcv2eWeqT1Dr0dOt3H3twXaAQWu3o9x3GB_YY3xzaUYFJ40ZuvLNExcypB4y2pruI-LfsZp82EbZvgvTfuM-DrkrbOLGfdRsMuw0RdsXYjb_-XnbE5I_ne5zYs0SW0KfnW2Z8MLxb5gXdrcnjD0NvwZHq6TptklzUobOo3NttgxNXCcOrWwO1d5JPoUz43c0sMakLDSwdpK-Y6bloU"/>
+<img class="h-8 w-8 rounded-full ring-2 ring-white" data-alt="Close-up portrait of a thoughtful man in a tech office, modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDftF5zrJBJXKtMXWDO8_Vo-F9Z5xmm8_d3LHZmx8-yBYC8UCamufXvCvBK8Z7mCAdIxBo1gF_7zvgjGVdDRvmQb4dGiYcxqb6eckaBMAOQTn0tZzS6tr247akpg9NO0CKl8kLN-wmH8f45DSu6MR4MnADNU3OtuyaEcKQzReAUKH-CVBZdFc9zdi-A8jKk8hgkAVGDI_1c23WJFI8bHYInzv4UobcE9nJvIXZAMo8IewnzhPx-f4ipEQ1QQ7YxTPCHZ2qYBmBDYdk"/>
+</div>
+<span class="text-xs font-bold text-on-surface-variant ml-2">+12 Managed Users</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-secondary mr-3">shield_person</span>
+<div>
+<p class="text-sm font-bold">Manage Roles</p>
+<p class="text-[10px] text-outline">Super Admin, Dispatcher, Support</p>
+</div>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Global Action Bar -->
+<div class="mt-12 flex justify-end space-x-4 border-t border-outline-variant/10 pt-8">
+<button class="px-8 py-4 font-bold text-on-surface hover:bg-surface-container-high rounded-xl transition-all scale-95 active:opacity-80">Discard Changes</button>
+<button class="px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg hover:shadow-primary/20 transition-all scale-95 active:scale-90">
+                    Save Configuration
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Save Indicator (Floating) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-on-surface/90 backdrop-blur-md text-white px-6 py-3 rounded-full flex items-center space-x-3 shadow-2xl z-50">
+<span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+<p class="text-xs font-bold tracking-wide">SYSTEM ONLINE &amp; UPDATED</p>
+<div class="h-4 w-[1px] bg-white/20"></div>
+<button class="text-xs font-extrabold text-primary-fixed hover:text-white transition-colors">BACKUP NOW</button>
+</div>
+</body></html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rider Management | Moasla</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "surface-container-highest": "#e2e2ea",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-primary-fixed": "#001945",
+                        "on-surface-variant": "#434652",
+                        "surface-variant": "#e2e2ea",
+                        "background": "#faf8ff",
+                        "secondary-container": "#c5d4fe",
+                        "surface-container-low": "#f3f3fb",
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#ffa781",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e7f0",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary": "#602100",
+                        "secondary-fixed": "#d9e2ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4d5b7f",
+                        "surface-dim": "#d9d9e1",
+                        "outline": "#737783",
+                        "tertiary-container": "#853100",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#c3c6d4",
+                        "secondary": "#4f5e82",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-secondary-fixed-variant": "#384669",
+                        "surface-container": "#ededf5",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b0c6ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-on-surface": "#f0f0f8",
+                        "inverse-surface": "#2e3036",
+                        "on-primary-container": "#a1bbff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1b21",
+                        "primary": "#003178",
+                        "on-surface": "#1a1b21",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="px-6 py-8">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="font-manrope text-sm font-medium tracking-tight text-blue-800/60 dark:text-blue-400/60">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="local_taxi">local_taxi</span>
+                Drivers
+            </a>
+<!-- Riders is Active -->
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-bold tracking-tight text-blue-800 dark:text-blue-400 border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-l-lg" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+                Riders
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="map">map</span>
+                Areas
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="hub">hub</span>
+                Stations
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="alt_route">alt_route</span>
+                Routes
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="payments">payments</span>
+                Pricing
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="schedule">schedule</span>
+                Shifts
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="reorder">reorder</span>
+                Queue
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="commute">commute</span>
+                Trips
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="book_online">book_online</span>
+                Bookings
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="account_balance_wallet">account_balance_wallet</span>
+                Payments
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="person">person</span>
+                Profiles
+            </a>
+<a class="flex items-center px-4 py-3 font-manrope text-sm font-medium tracking-tight text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined mr-3 group-hover:text-blue-800" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-blue-100/50 dark:bg-blue-900/30 rounded-2xl p-4 flex items-center gap-3">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-800" data-alt="professional portrait of a middle-aged male administrator in a light blue shirt with a friendly expression and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYSTJmIjIMoMA_gEGC_pF9ay_HHbjnLVlZxPCMM7A095O6p6scndaR_m0LUWKf7xqbvr219jOu-lcB6byriKzwqGr_pRsprjz9IXR4dtr9IqwFUT0d294PG5KID94m7o3caZbtkbMtjF-eJKMVPtaHdSDiwTsH3_KZ0oOjNUcvK5TGkgOMvOsLDrvro9zo5g3Ux9bj3h9QFJlPyoAWVA_VVN5zdqh0JO47Kq7D3KDs6Vlglb8SGSGyH31YDtCoLJq2zily8sg-S2Y"/>
+<div>
+<p class="text-xs font-bold text-blue-900 dark:text-blue-100">Moasla Admin</p>
+<p class="text-[10px] text-blue-800/70 dark:text-blue-300/70">Administrator Portrait</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none font-manrope text-sm tracking-wide">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-high border-none rounded-full text-sm focus:ring-2 focus:ring-primary-fixed transition-all" placeholder="Search riders by name, email or phone..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400" data-icon="language">language</span>
+<span class="text-slate-600 dark:text-slate-400">English/عربي</span>
+</div>
+<div class="relative cursor-pointer">
+<span class="material-symbols-outlined text-blue-800 dark:text-blue-400" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full ring-2 ring-white"></span>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-blue-800 dark:text-blue-400">Admin</span>
+<img alt="Admin Avatar" class="w-8 h-8 rounded-full" data-alt="close up headshot of a professional man in high resolution with neutral office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3PWKxT1fc1YBGOObuHL-gvBaBTLN6_PjJIBl8Mp-z2ADNmux1R5uZ2dNIGHFByIXqIgySKeX4UXRwcf9Zn-Oq-liPvqux1nS8LZVeMa8K0PFq14f63OhgjphuRIYrjTA8wBmFkqjiEyb3rO4A4WijcX0Xnn9kxZEhVlnmrVGgTmzp5_wKnmr0qsLLW2_Lqlor9kqmQO5v-iYk_79OeuNBCPqlig1Wbtl1FQnzd8qkKbQ4ivCQhcMXrzVOU9SaA1UnXMXW68zkDcc"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-8 min-h-screen">
+<div class="mb-10 flex justify-between items-end">
+<div>
+<span class="text-label-md uppercase tracking-[0.1em] text-blue-700 font-bold mb-2 block">Management</span>
+<h2 class="text-display-md font-extrabold tracking-tight text-on-surface leading-none">Rider Directory</h2>
+<p class="text-on-surface-variant mt-3 text-lg">Manage passenger accounts, review trip history, and control access permissions.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-95 transition-transform shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+                New Rider
+            </button>
+</div>
+<!-- Quick Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Total Riders</p>
+<p class="text-2xl font-extrabold text-on-surface">12,482</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-green-600 text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                    12% from last month
+                </div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="electric_car">electric_car</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Active Today</p>
+<p class="text-2xl font-extrabold text-on-surface">843</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-xs font-medium">
+                    Consistent with weekday avg
+                </div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-800">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Verified Accounts</p>
+<p class="text-2xl font-extrabold text-on-surface">94.2%</p>
+</div>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-purple-600 h-full w-[94%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Flagged/Blocked</p>
+<p class="text-2xl font-extrabold text-on-surface">42</p>
+</div>
+</div>
+<p class="text-xs text-error font-medium underline cursor-pointer">Review 8 new reports</p>
+</div>
+</div>
+<!-- Rider List Canvas -->
+<section class="bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-2xl shadow-on-surface/5">
+<div class="p-8 border-b border-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex gap-4">
+<div class="bg-surface-container-high rounded-full px-6 py-2 flex items-center gap-2 cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="text-sm font-bold">All Areas</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<div class="bg-surface-container-high rounded-full px-6 py-2 flex items-center gap-2 cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="text-sm font-bold">Status: All</span>
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<p class="text-sm text-on-surface-variant font-medium">Displaying 1–10 of 12,482</p>
+<div class="flex gap-1">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold">Name</th>
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold">Contact Info</th>
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold">Primary Area</th>
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold text-center">Total Bookings</th>
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold">Status</th>
+<th class="px-8 py-5 text-label-md uppercase tracking-widest text-slate-500 font-extrabold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Rider 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">FA</div>
+<div>
+<p class="font-bold text-on-surface">Fatima Al-Sayed</p>
+<p class="text-xs text-on-surface-variant">Joined Oct 2023</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface">+20 100 234 5678</p>
+<p class="text-on-surface-variant">fatima.sayed@email.com</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container-high px-3 py-1 rounded-md text-sm font-medium">New Cairo</span>
+</td>
+<td class="px-8 py-6 text-center">
+<p class="text-lg font-bold text-primary">142</p>
+</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-1.5 text-green-600 font-bold text-xs uppercase tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="Booking History">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-2 hover:bg-red-50 text-error rounded-lg" title="Block Rider">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Rider 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center font-bold text-secondary">OM</div>
+<div>
+<p class="font-bold text-on-surface">Omar Mansour</p>
+<p class="text-xs text-on-surface-variant">Joined Jan 2024</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface">+20 112 555 9001</p>
+<p class="text-on-surface-variant">o.mansour@provider.net</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container-high px-3 py-1 rounded-md text-sm font-medium">Maadi</span>
+</td>
+<td class="px-8 py-6 text-center">
+<p class="text-lg font-bold text-primary">28</p>
+</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-1.5 text-green-600 font-bold text-xs uppercase tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="Booking History">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-2 hover:bg-red-50 text-error rounded-lg" title="Block Rider">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Rider 3 (Flagged/Blocked) -->
+<tr class="hover:bg-error-container/10 bg-error-container/5 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center font-bold text-error">YI</div>
+<div>
+<p class="font-bold text-error">Youssef Ibrahim</p>
+<p class="text-xs text-error/60">Suspended: Mar 12, 2024</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface">+20 155 888 2233</p>
+<p class="text-on-surface-variant">youssef.ib@mail.com</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container-high px-3 py-1 rounded-md text-sm font-medium">Heliopolis</span>
+</td>
+<td class="px-8 py-6 text-center">
+<p class="text-lg font-bold text-error/40">5</p>
+</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-1.5 text-error font-bold text-xs uppercase tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                                    Blocked
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="Booking History">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-2 hover:bg-green-50 text-green-700 rounded-lg" title="Unblock Rider">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Rider 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed-dim flex items-center justify-center font-bold text-tertiary">ZK</div>
+<div>
+<p class="font-bold text-on-surface">Zainab Khaled</p>
+<p class="text-xs text-on-surface-variant">Joined Aug 2022</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<div class="text-sm">
+<p class="text-on-surface">+20 100 444 1122</p>
+<p class="text-on-surface-variant">zainab.k@outlook.com</p>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="bg-surface-container-high px-3 py-1 rounded-md text-sm font-medium">Zamalek</span>
+</td>
+<td class="px-8 py-6 text-center">
+<p class="text-lg font-bold text-primary">312</p>
+</td>
+<td class="px-8 py-6">
+<span class="flex items-center gap-1.5 text-green-600 font-bold text-xs uppercase tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                    Active
+                                </span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="View Profile">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 hover:bg-blue-50 text-blue-800 rounded-lg" title="Booking History">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="p-2 hover:bg-red-50 text-error rounded-lg" title="Block Rider">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-8 bg-surface-container-low/30 flex items-center justify-center">
+<nav class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-primary font-bold bg-white shadow-sm ring-1 ring-outline-variant/10">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant font-medium hover:bg-surface-container-high transition-colors">124</button>
+</nav>
+</div>
+</section>
+<!-- Asymmetric Detail Section -->
+<div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-gradient-to-br from-primary-container to-primary p-12 rounded-[2.5rem] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl group-hover:scale-125 transition-transform duration-1000"></div>
+<div class="relative z-10">
+<h3 class="text-3xl font-extrabold text-white mb-6 tracking-tight">Generate Rider Insights</h3>
+<p class="text-blue-100 text-lg mb-10 max-w-lg leading-relaxed">Download a comprehensive report of rider demographics, peak usage areas, and behavior patterns to optimize your fleet distribution.</p>
+<div class="flex gap-4">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-blue-50 transition-colors shadow-xl">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                            Export CSV
+                        </button>
+<button class="bg-primary/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-primary/30 transition-colors">
+                            Monthly Audit
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed p-10 rounded-[2.5rem] flex flex-col justify-between">
+<div class="w-16 h-16 bg-tertiary text-white rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h4 class="text-2xl font-extrabold mb-4 leading-tight">Safety &amp; Policy Updates</h4>
+<p class="opacity-80 leading-relaxed mb-6">34 riders have been flagged for repeated cancellations. Review the updated "Fair Use" policy guidelines for automated suspension triggers.</p>
+<a class="inline-flex items-center gap-2 font-bold underline decoration-2 underline-offset-4" href="#">
+                        View Safety Protocols
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</body></html>

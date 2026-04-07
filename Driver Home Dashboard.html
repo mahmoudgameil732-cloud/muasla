@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | مواصله - Driver Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#602100",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary-container": "#853100",
+                    "secondary": "#4f5e82",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary": "#ffffff",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-primary-container": "#a1bbff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-variant": "#e2e2ea",
+                    "outline-variant": "#c3c6d4",
+                    "inverse-on-surface": "#f0f0f8",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#001945",
+                    "primary": "#003178",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "on-surface": "#1a1b21",
+                    "surface-container-low": "#f3f3fb",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384669",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "on-background": "#1a1b21",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "surface-dim": "#d9d9e1",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface": "#faf8ff",
+                    "secondary-container": "#c5d4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600">menu</span>
+<h1 class="text-xl font-bold text-blue-900 font-manrope tracking-tight">Moasla | مواصله</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden md:block">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Ahmed Mansour</p>
+<p class="text-[10px] text-tertiary font-bold uppercase tracking-tighter">Offline State</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-white">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged egyptian man with a friendly expression wearing a clean polo shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvwD_nLB_Rvm6ZdXn2CDmLXQriYfedmmPin0Zt_9E7pjuUeWQKiKk9XdVL_Miz7ovb_xYmHYnR04yybOnHLCKDYfajreiQfOFEyiCgG1zAaR6N1Bzy02-FU2Si0cRyp6hEV8aAwvkFtB1ke_XeNzV3lTMWaFPrL-bmHJzSQQSpU5CLbIOJu4X3-3iRZDq61SdVVmiMpsAvoBSJqcSCpKfW2XYrSPy7cUWi69mCBXvK2looxA8evc2Nlrb64eH75sMVLPVG7PTtUUU"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-8">
+<div class="bg-surface-container-low p-1 rounded-full w-fit mx-auto md:mx-0 flex items-center gap-3 px-4 py-2 border border-outline-variant/10">
+<span class="w-2 h-2 rounded-full bg-slate-400 animate-pulse"></span>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Status: Offline</span>
+</div>
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-7 space-y-4">
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tighter leading-tight">
+                    Good Morning, <br/> <span class="text-primary">Ahmed Mansour</span>
+</h2>
+<p class="text-on-surface-variant max-w-md text-lg">Your vehicle is ready. Start your shift whenever you are at the station.</p>
+</div>
+<div class="md:col-span-5">
+<button class="w-full group bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full py-8 px-8 shadow-xl shadow-primary/20 hover:scale-[0.98] transition-all duration-300 flex flex-col items-center justify-center gap-2 relative overflow-hidden">
+<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="text-xl font-extrabold tracking-tight">Start Shift</span>
+<span class="text-lg font-medium opacity-90">بدء الشيفت</span>
+</button>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5 hover:bg-surface-bright transition-colors">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Current Station</p>
+<p class="text-lg font-bold text-on-surface">Ramses Square</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5 hover:bg-surface-bright transition-colors">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">directions_bus</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Vehicle Info</p>
+<p class="text-lg font-bold text-on-surface">Toyota Coaster #4421</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5 hover:bg-surface-bright transition-colors">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">confirmation_number</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Queue Status</p>
+<p class="text-lg font-bold text-on-surface">3rd in line</p>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-2xl font-bold tracking-tight">Today's Performance</h3>
+<button class="text-primary text-sm font-bold uppercase tracking-widest hover:underline">View History</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-full space-y-1">
+<p class="text-3xl font-black text-on-surface">0</p>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Trips Today</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full space-y-1">
+<p class="text-3xl font-black text-tertiary">EGP 0</p>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Earnings</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm">
+<div class="h-40 bg-surface-variant relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="clean abstract city map showing transit lines with a soft light blue and grey color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIANgFhvq7SC8HRIDkfj80w8waJMPGIisK_N7zvO7WpTY5LY6e4tGDNyNgUoW5v_fKHdkUILISmaZYttzKWTOB9PTImmMMPt9pCJ65krH8rUPhveiZlqfgR1BZUCxN37wYCI86g0CWWMCL-sx-5-7LD8RZemutfRFBMI2Rz4sKPK9WC86f3WkP8om6fBuchbGT9VfSXq_X4-4_MWc2AgeAeacObKHWusCKCRHVDCSvIAMruyeuNkfiuu_9xhMN5IrVPoelffSWsxI"/>
+<div class="absolute inset-0 flex items-center justify-center bg-white/20 backdrop-blur-[2px]">
+<p class="bg-white/90 px-4 py-2 rounded-full text-xs font-bold text-primary uppercase tracking-widest shadow-sm">Route Preview Unavailable Offline</p>
+</div>
+</div>
+<div class="p-6">
+<p class="font-bold text-lg mb-1">Main Route: Ramses - Heliopolis</p>
+<p class="text-sm text-on-surface-variant">Estimated 12 stops • 45 min per cycle</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-2xl font-bold tracking-tight">Notifications</h3>
+<span class="w-6 h-6 bg-primary text-on-primary rounded-full flex items-center justify-center text-[10px] font-bold">2</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex gap-5 border-l-4 border-primary">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex-shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">campaign</span>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface">Station Update</h4>
+<span class="text-[10px] font-bold text-slate-400">10:45 AM</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Maintenance on Dock B complete. All drivers please use Platform 4 for departure.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex gap-5">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex-shrink-0 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface">Payout Processed</h4>
+<span class="text-[10px] font-bold text-slate-400">YESTERDAY</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your weekly earnings of EGP 3,420 have been transferred to your wallet.</p>
+</div>
+</div>
+</div>
+<div class="bg-blue-900 text-white p-8 rounded-3xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
+<p class="text-xs font-bold opacity-70 uppercase tracking-widest mb-2">Safety Tip of the Day</p>
+<h4 class="text-xl font-bold mb-4 leading-tight">Keep your distance and stay alert during rush hour.</h4>
+<button class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white text-xs font-bold py-2 px-6 rounded-full transition-colors">Read Safety Guide</button>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] rounded-t-3xl border-t-0">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-900 dark:text-blue-100 rounded-2xl px-5 py-2 scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">route</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

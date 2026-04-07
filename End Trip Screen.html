@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#602100",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e2e2ea",
+                        "tertiary-container": "#853100",
+                        "secondary": "#4f5e82",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-primary": "#b0c6ff",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary": "#ffffff",
+                        "outline": "#737783",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4d5b7f",
+                        "on-secondary-fixed": "#0a1a3b",
+                        "primary-container": "#0d47a1",
+                        "surface-tint": "#2b5bb5",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary-container": "#a1bbff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d9e2ff",
+                        "surface-variant": "#e2e2ea",
+                        "outline-variant": "#c3c6d4",
+                        "inverse-on-surface": "#f0f0f8",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-primary-fixed": "#001945",
+                        "primary": "#003178",
+                        "secondary-fixed-dim": "#b7c6f0",
+                        "on-surface-variant": "#434652",
+                        "on-surface": "#1a1b21",
+                        "surface-container-low": "#f3f3fb",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#384669",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "surface-container-high": "#e8e7f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffa781",
+                        "on-background": "#1a1b21",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#ededf5",
+                        "inverse-surface": "#2e3036",
+                        "surface-dim": "#d9d9e1",
+                        "surface-bright": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface": "#faf8ff",
+                        "secondary-container": "#c5d4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .display-md { font-size: 2.75rem; line-height: 1.2; font-weight: 800; }
+        .label-md { font-size: 0.875rem; font-weight: 500; }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-800">menu</span>
+<h1 class="text-xl font-bold text-blue-900 font-headline tracking-tight">Moasla | مواصله</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Driver profile" class="w-full h-full object-cover" data-alt="Close up portrait of a professional middle-aged driver smiling warmly with a clean urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg8MGX4eGQkwVnc-Ii3zzhRaJUBByF3kO-bFbqGvKsYKB0IEDpG4n5xTMeqYbOK1V1HeppYXYUrbr-P4ME1uOup_uW8f5tyxq7PgWw2zKYlq3y2BVZPHSu6f3QzdTHhXW9fiO_VN_cjLKLYpkMfx0RfDf7kDkZpUtE2WTz5tEExymB4FHRND72jNS9s3iiq-NdemCTcOkGjCItnapVYkt97vQCI6_4baN2sq5U_D-2WyLdAuQZsgerdJSlgu0F6RU5q5Ws-23YIWw"/>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-4xl mx-auto w-full">
+<section class="mb-12 text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-primary-container text-white rounded-full mb-6 shadow-xl">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="display-md text-primary mb-2">Trip Complete</h2>
+<h2 class="text-2xl font-bold text-blue-900 tracking-tight">تم اكتمال الرحلة</h2>
+<p class="text-on-surface-variant mt-4 font-medium">Great job, Ahmed! You've successfully finished your shift on Route 44B.</p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="md:col-span-2 bg-surface-container-lowest rounded-3xl p-8 shadow-sm flex flex-col relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">route</span>
+</div>
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="label-md uppercase tracking-widest text-primary block mb-1">Route Summary</span>
+<h3 class="text-2xl font-extrabold text-on-surface">Cairo West - Downtown</h3>
+</div>
+<div class="bg-surface-container-high px-4 py-2 rounded-full">
+<span class="label-md font-bold text-primary">#4421</span>
+</div>
+</div>
+<div class="space-y-6 relative">
+<div class="absolute left-3 top-2 bottom-2 w-0.5 bg-dashed border-l-2 border-dashed border-outline-variant"></div>
+<div class="flex items-center gap-6 relative z-10">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center ring-4 ring-primary-fixed">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">Start Point</p>
+<p class="font-semibold text-on-surface">6th of October Station</p>
+</div>
+</div>
+<div class="flex items-center gap-6 relative z-10">
+<div class="w-6 h-6 rounded-full bg-tertiary flex items-center justify-center ring-4 ring-tertiary-fixed">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-tighter">End Point</p>
+<p class="font-semibold text-on-surface">Tahrir Square Hub</p>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-surface-container-highest grid grid-cols-2 gap-4">
+<div>
+<span class="label-md uppercase tracking-widest text-outline block mb-1">Distance</span>
+<p class="text-xl font-black text-on-surface">32.4 KM</p>
+</div>
+<div>
+<span class="label-md uppercase tracking-widest text-outline block mb-1">Average Speed</span>
+<p class="text-xl font-black text-on-surface">45 KM/H</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="bg-primary-container text-on-primary-container rounded-3xl p-6 shadow-lg flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-4xl opacity-80">group</span>
+<div>
+<p class="label-md uppercase tracking-widest text-blue-200 opacity-70">Total Riders</p>
+<p class="text-5xl font-black">48</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-3xl p-6 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-4xl text-primary">schedule</span>
+<div>
+<p class="label-md uppercase tracking-widest text-outline">Duration</p>
+<p class="text-4xl font-black text-on-surface">1h 12m</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm mb-12">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-lg font-bold text-on-surface">Earning Breakdown</h4>
+<span class="material-symbols-outlined text-tertiary">payments</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Base Fare Revenue</span>
+<span class="font-bold">EGP 720.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Peak Hour Bonus</span>
+<span class="font-bold text-primary">+ EGP 45.00</span>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-high">
+<span class="font-bold text-on-surface">Total Trip Earnings</span>
+<span class="text-2xl font-black text-tertiary">EGP 765.00</span>
+</div>
+</div>
+</div>
+<div class="w-full max-w-md mx-auto">
+<button class="w-full py-5 rounded-2xl bg-gradient-to-br from-primary to-primary-container text-white text-xl font-extrabold shadow-xl hover:scale-95 transition-transform duration-150 flex items-center justify-center gap-3">
+<span>Finish / إنهاء</span>
+<span class="material-symbols-outlined">flag</span>
+</button>
+<p class="text-center text-outline text-sm mt-4">Data will be synced with your shift history</p>
+</div>
+</main>
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 backdrop-blur-xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] rounded-t-3xl md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 text-blue-900 rounded-2xl px-5 py-2">
+<span class="material-symbols-outlined" data-icon="route" style="font-variation-settings: 'FILL' 1;">route</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Trips</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Earnings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

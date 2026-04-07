@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seat Selection - Moasla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-tint": "#2b5bb5",
+                    "primary": "#003178",
+                    "surface-container-low": "#f3f3fb",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "secondary": "#4f5e82",
+                    "secondary-container": "#c5d4fe",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-variant": "#e2e2ea",
+                    "inverse-surface": "#2e3036",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-dim": "#d9d9e1",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "outline-variant": "#c3c6d4",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001945",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#853100",
+                    "background": "#faf8ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary": "#602100",
+                    "on-background": "#1a1b21",
+                    "on-secondary-fixed-variant": "#384669",
+                    "on-primary-container": "#a1bbff",
+                    "surface-container": "#ededf5",
+                    "inverse-on-surface": "#f0f0f8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "outline": "#737783",
+                    "on-surface": "#1a1b21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tap-highlight-none {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/10">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-blue-900/5 h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</button>
+<h1 class="font-manrope text-base font-semibold tracking-tight text-blue-900">اختر مقعدك | Select Seat</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-900" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile portrait of a smiling professional man for account identification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC94U8An962j2AIPPiWlHGg2KlUB1tGxU2uSqKC150cPNddpoEu8M5P5BPo2-SaK5Zf5O_RSe6RtxwS4UhRqbogTFBhAae_3_c_TEhZV5n9aVn8iFHVIm0JWM2x7OGKyek9saCM5vLhVZqP2WMFTiRWzuM36qLo-UDhA6oH9VgYq71AfPrznXxwgjE0yRfVbNYpcgBjzMTGaNLE8Uy-007U0Kyk5KcXjpknVPc_xXzc3SwWo4pOZ9reRdHejmbMmTKgPwN4lxbShYA"/>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-md mx-auto">
+<!-- Vehicle Info Card -->
+<section class="mb-8">
+<div class="bg-surface-container-low rounded-xl p-5 border-r-4 border-primary shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-sm text-outline font-medium mb-1">الرحلة المتجهة إلى</p>
+<h2 class="text-xl font-bold text-primary tracking-tight">القاهرة - الإسكندرية</h2>
+</div>
+<div class="bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
+<span class="text-xs font-bold text-primary">14 راكب</span>
+</div>
+</div>
+<div class="flex gap-6 items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="schedule">schedule</span>
+<span class="text-sm font-semibold">10:30 صباحاً</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="commute">commute</span>
+<span class="text-sm font-semibold">ميكروباص مكيف</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Seat Legend -->
+<section class="mb-8 grid grid-cols-3 gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border-2 border-outline-variant/30"></div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-outline">Available</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary shadow-lg shadow-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Selected</span>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-8 h-8 rounded-lg bg-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">close</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest">Booked</span>
+</div>
+</section>
+<!-- Interactive Bus Layout -->
+<section class="relative bg-surface-container-low rounded-[2.5rem] p-8 pb-12 border-t-4 border-surface-variant">
+<!-- Steering Wheel / Driver Area -->
+<div class="flex justify-between items-center mb-10 px-4">
+<div class="w-12 h-12 rounded-full border-4 border-outline-variant flex items-center justify-center rotate-45">
+<span class="material-symbols-outlined text-outline" data-icon="settings">settings</span>
+</div>
+<div class="w-16 h-8 bg-surface-variant/40 rounded-full flex items-center justify-center">
+<span class="text-[10px] font-bold text-outline">FRONT</span>
+</div>
+</div>
+<!-- Seat Grid -->
+<div class="grid grid-cols-3 gap-y-6 gap-x-4">
+<!-- Row 1 (Premium) -->
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-tertiary-fixed shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-tertiary-container">01</span>
+<span class="material-symbols-outlined text-tertiary/40 group-hover:text-primary transition-colors" data-icon="chair">chair</span>
+<span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-tertiary text-white text-[8px] px-2 py-0.5 rounded-full font-bold">PREMIUM</span>
+</button>
+<div class="w-full aspect-square"></div> <!-- Aisle -->
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-tertiary-fixed shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-tertiary-container">02</span>
+<span class="material-symbols-outlined text-tertiary/40" data-icon="chair">chair</span>
+<span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-tertiary text-white text-[8px] px-2 py-0.5 rounded-full font-bold">PREMIUM</span>
+</button>
+<!-- Row 2 -->
+<button class="relative w-full aspect-square bg-primary shadow-xl shadow-primary/20 rounded-xl flex items-center justify-center active:scale-90 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-white/60">03</span>
+<span class="material-symbols-outlined text-white" data-icon="chair" style="font-variation-settings: 'FILL' 1;">chair</span>
+</button>
+<div class="w-full aspect-square"></div> <!-- Aisle -->
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">04</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<!-- Row 3 -->
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">05</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<div class="w-full aspect-square"></div> <!-- Aisle -->
+<button class="relative w-full aspect-square bg-on-surface-variant/20 rounded-xl flex items-center justify-center cursor-not-allowed">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-on-surface-variant/40">06</span>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="block">block</span>
+</button>
+<!-- Row 4 -->
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">07</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">08</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">09</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<!-- Back Row (All seats) -->
+<button class="relative w-full aspect-square bg-on-surface-variant/20 rounded-xl flex items-center justify-center cursor-not-allowed">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-on-surface-variant/40">10</span>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="block">block</span>
+</button>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">11</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">12</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<!-- Last pair -->
+<div class="w-full aspect-square"></div>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">13</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+<button class="relative w-full aspect-square bg-surface-container-lowest rounded-xl border-b-4 border-outline-variant shadow-sm flex items-center justify-center group active:scale-95 transition-transform tap-highlight-none">
+<span class="absolute top-1 right-1 text-[8px] font-bold text-outline">14</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="chair">chair</span>
+</button>
+</div>
+<!-- Booking Limit Hint -->
+<div class="mt-8 text-center">
+<p class="text-[11px] font-semibold text-outline-variant uppercase tracking-wider">الحد الأقصى: 3 مقاعد فقط</p>
+<div class="flex justify-center gap-1 mt-2">
+<div class="w-6 h-1 rounded-full bg-primary"></div>
+<div class="w-6 h-1 rounded-full bg-outline-variant/30"></div>
+<div class="w-6 h-1 rounded-full bg-outline-variant/30"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar (Floating Premium Feel) -->
+<footer class="fixed bottom-0 w-full bg-white/90 backdrop-blur-xl border-t border-surface-variant p-6 z-50">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-outline font-medium">إجمالي السعر</span>
+<span class="text-2xl font-extrabold text-on-surface">150.00 <span class="text-sm font-bold text-primary">جم</span></span>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-primary/30 flex items-center gap-3 active:scale-95 transition-transform">
+<span>استمرار</span>
+<span class="material-symbols-outlined text-xl">east</span>
+</button>
+</div>
+</footer>
+<!-- Universal Bottom Nav Suppression Check (Not rendered as this is a focused task) -->
+</body></html>

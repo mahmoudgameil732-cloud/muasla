@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moasla | Driver Approval</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-6">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="text-xs font-medium tracking-tight text-slate-500 uppercase mt-1">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center px-4 py-3 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-r-none rounded-l-xl font-manrope text-sm tracking-tight scale-98 transition-all" href="#">
+<span class="material-symbols-outlined mr-3">local_taxi</span> Drivers
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">group</span> Riders
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">map</span> Areas
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">hub</span> Stations
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">alt_route</span> Routes
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">payments</span> Pricing
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">schedule</span> Shifts
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">reorder</span> Queue
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">commute</span> Trips
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">book_online</span> Bookings
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">account_balance_wallet</span> Payments
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">person</span> Profiles
+            </a>
+<a class="flex items-center px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined mr-3">settings</span> Settings
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl flex items-center gap-3">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a middle-aged man in a suit with a confident expression, clean corporate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBLZC1ehK9WbrJ_C8FAvmdkZIcP1ut4OGeaLOeMnzGNNEbSneG9XwTdlcND6ZTnqY_GRG9nQ9FuHsfGLYXh5ip28z0kF-5BiYVBjVA-Crki0X3Wki_V7vVF0k-Q0T9HTPDKFCM82tFYgKXUQm3A-ji-c2dwKwv2wdFq7Xh-kKIMjQEQv34XCKSlhKTmW9SAz56Euw2jrwJIEz-gqmu0kDBknAspmtlBtFz_SVHfIRdCMlxu5fQIKqsOQTerrbRE9k1IjoZUnLZ0_I"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-blue-900 truncate">Administrator</p>
+<p class="text-[10px] text-slate-500 truncate">admin@moasla.app</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-50 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-blue-500/20 placeholder:text-slate-400" placeholder="Search driver requests..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-6 font-manrope text-sm tracking-wide">
+<button class="flex items-center gap-2 px-3 py-1.5 hover:bg-slate-50 rounded-lg transition-all scale-95 active:scale-90 text-slate-500">
+<span class="material-symbols-outlined">language</span>
+<span>English/عربي</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-8 w-px bg-slate-100 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-semibold text-blue-800">Admin</span>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full" data-alt="portrait of a focused professional in business attire, clean modern office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4O3fX6iZbu3oSVocdIYtBJvoliY5d2bUCWXBFrFjqr3zmq0KnosRNl0bMpKzYGUh-vryGKNLmUCQk1QZSpiAEvifuTUcLKvYxcAcKeXEan8uuAMoxj2SpzWj0m3oYcHAcJporAPPSOEZbeRgGfy1U3-4wwJYpEIijr-AYue_QMPcWdo1E25bxxcB3iIaRGoHqw41y1zUD0Wf6vG7bb76MXLC9SDjOVMxx9_RJwQ-ioFpfywjSPyEyaSDWT_H-E_a-TD2rVcCKqj8"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-10 min-h-screen">
+<!-- Header Section -->
+<section class="mb-10 flex justify-between items-end">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Driver Approval Queue</h2>
+<p class="text-lg text-on-surface-variant font-medium leading-relaxed">Review and manage pending driver applications for the Moasla transportation network.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-3 bg-primary-container text-white rounded-full font-bold flex items-center gap-2 shadow-sm hover:brightness-110 transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined">filter_list</span>
+<span>Filter Applications</span>
+</button>
+<button class="px-6 py-3 bg-surface-container-high text-on-surface rounded-full font-bold flex items-center gap-2 hover:bg-surface-container-highest transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined">download</span>
+<span>Export Data</span>
+</button>
+</div>
+</section>
+<!-- Stats Bento Section -->
+<section class="grid grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">pending_actions</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Pending Review</p>
+<p class="text-2xl font-extrabold">24</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">person_add</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">New Today</p>
+<p class="text-2xl font-extrabold">8</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed-dim/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Approved (Wk)</p>
+<p class="text-2xl font-extrabold">112</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-full shadow-sm flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-3xl">block</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Avg rejection %</p>
+<p class="text-2xl font-extrabold">12%</p>
+</div>
+</div>
+</section>
+<!-- Driver Table Section -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm">
+<div class="p-6 border-b border-surface-container-high flex justify-between items-center bg-surface-container-low/30">
+<h3 class="font-bold text-lg">Applications Needing Action</h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-lg text-xs font-bold text-on-surface-variant">Showing 1-10 of 24</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Full Name</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Phone &amp; Email</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Area/Station</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Vehicle Type</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-bold">AH</div>
+<div>
+<p class="font-bold text-on-surface">Ahmed Hassan</p>
+<p class="text-xs text-on-surface-variant">Applied 2h ago</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">+20 102 345 6789</p>
+<p class="text-xs text-on-surface-variant">ahmed.h@gmail.com</p>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">New Cairo</p>
+<p class="text-xs text-on-surface-variant">Teseen St. Hub</p>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-sm">directions_car</span> Sedan
+                                </span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-black uppercase tracking-tighter">Pending Review</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all" title="View Profile">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-all" title="Approve">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-all" title="Reject">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold">ME</div>
+<div>
+<p class="font-bold text-on-surface">Mona Ezzat</p>
+<p class="text-xs text-on-surface-variant">Applied 5h ago</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">+20 115 987 6543</p>
+<p class="text-xs text-on-surface-variant">mona_ezzat90@outlook.com</p>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Maadi</p>
+<p class="text-xs text-on-surface-variant">Degla Station</p>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-sm">electric_car</span> EV Sedan
+                                </span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-black uppercase tracking-tighter">Pending Review</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all" title="View Profile">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-all" title="Approve">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-all" title="Reject">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-white flex items-center justify-center font-bold">OM</div>
+<div>
+<p class="font-bold text-on-surface">Omar Mahmoud</p>
+<p class="text-xs text-on-surface-variant">Applied Yesterday</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">+20 155 443 2211</p>
+<p class="text-xs text-on-surface-variant">om.mahmoud@moasla.net</p>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">6th of October</p>
+<p class="text-xs text-on-surface-variant">Hosary Square Hub</p>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-sm">airport_shuttle</span> Van
+                                </span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-black uppercase tracking-tighter">Pending Review</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all" title="View Profile">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-all" title="Approve">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-all" title="Reject">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-400 text-white flex items-center justify-center font-bold">KM</div>
+<div>
+<p class="font-bold text-on-surface">Khaled Mostafa</p>
+<p class="text-xs text-on-surface-variant">Applied 1d ago</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">+20 100 876 5432</p>
+<p class="text-xs text-on-surface-variant">khaled.m@gmail.com</p>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Heliopolis</p>
+<p class="text-xs text-on-surface-variant">Korba Station</p>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-sm">motorcycle</span> Bike
+                                </span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-black uppercase tracking-tighter">Pending Review</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest rounded-lg transition-all" title="View Profile">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-all" title="Approve">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 rounded-lg transition-all" title="Reject">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 bg-surface-container-low/30 border-t border-surface-container-high flex justify-between items-center">
+<button class="text-sm font-bold text-primary flex items-center gap-2 hover:underline">
+<span class="material-symbols-outlined">chevron_left</span> Previous
+                </button>
+<div class="flex gap-2">
+<span class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm">1</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-sm">2</span>
+<span class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-sm">3</span>
+</div>
+<button class="text-sm font-bold text-primary flex items-center gap-2 hover:underline">
+                    Next <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Informational Footer Banner -->
+<section class="mt-12 p-8 bg-primary text-white rounded-3xl relative overflow-hidden flex items-center justify-between">
+<div class="relative z-10">
+<h4 class="text-2xl font-bold mb-2">Automated Compliance Check</h4>
+<p class="opacity-80 max-w-md">Our system has automatically flagged 3 applications with expired documents. Please review the 'Profile' section for details before approving.</p>
+</div>
+<div class="relative z-10">
+<button class="px-8 py-4 bg-white text-primary rounded-full font-black uppercase tracking-tighter shadow-lg hover:scale-105 active:scale-95 transition-transform">
+                    Run Batch Audit
+                </button>
+</div>
+<!-- Decorative 'M' Logo Watermark -->
+<div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+<svg fill="currentColor" height="240" viewbox="0 0 100 100" width="240">
+<path d="M10 90 L10 10 L50 50 L90 10 L90 90 Z"></path>
+</svg>
+</div>
+</section>
+</main>
+<!-- FAB Suppression: No FAB on Details/Admin pages as per mandate -->
+</body></html>

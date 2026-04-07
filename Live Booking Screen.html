@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#602100",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e2e2ea",
+                    "tertiary-container": "#853100",
+                    "secondary": "#4f5e82",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-primary": "#b0c6ff",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary": "#ffffff",
+                    "outline": "#737783",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d5b7f",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-primary-container": "#a1bbff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d9e2ff",
+                    "surface-variant": "#e2e2ea",
+                    "outline-variant": "#c3c6d4",
+                    "inverse-on-surface": "#f0f0f8",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary-fixed": "#001945",
+                    "primary": "#003178",
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "on-surface-variant": "#434652",
+                    "on-surface": "#1a1b21",
+                    "surface-container-low": "#f3f3fb",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384669",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "surface-container-high": "#e8e7f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffa781",
+                    "on-background": "#1a1b21",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ededf5",
+                    "inverse-surface": "#2e3036",
+                    "surface-dim": "#d9d9e1",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface": "#faf8ff",
+                    "secondary-container": "#c5d4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600 cursor-pointer">menu</span>
+<h1 class="font-manrope display-md tracking-tight text-xl font-bold text-blue-900">Moasla | مواصله</h1>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="driver profile photo" class="h-full w-full object-cover" data-alt="professional portrait of a middle-aged Egyptian man with a friendly expression, soft studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7dmP0PqwTdowRLxQUl4181EiRyzSVTvAYIghh4NwIwBga0yDi8YrwPbaqNm4UHOy7bpGA82DgsBCpifHXgPunf_adEM1r7VsOGxCte8Z0QI6VynAkc365cPCcZ8Amw59ERTwfgQbTOfpD9Gfqj7Dpl-Z9qQ3LBgsT9A17x_SAEquJF5NDG1jgv-T4XO3iVviWlBrtXH4NN9jUCYmPAsxGEwys8EmE8b1tp810683Xf6dbEqczHYoHV8wzAu91OHZvda5QrgGpAsk"/>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-5xl mx-auto">
+<!-- Live Status Banner -->
+<div class="mb-8 p-6 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary flex items-center justify-between shadow-lg">
+<div>
+<p class="font-manrope label-md uppercase tracking-widest opacity-80 mb-1">Current Route</p>
+<h2 class="text-2xl font-bold">Cairo - Alexandria Express</h2>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+<span class="text-sm">Live Booking Active • 14 Seats Total</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-4xl font-black">9/14</p>
+<p class="text-xs uppercase tracking-tighter opacity-70">Occupancy</p>
+</div>
+</div>
+<!-- Real-time Notification -->
+<div class="mb-8 flex items-center gap-4 bg-tertiary-fixed p-4 rounded-xl shadow-sm border-l-4 border-tertiary">
+<div class="bg-tertiary p-2 rounded-full">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-tertiary-fixed">A rider booked with you / تم حجز مقعد</p>
+<p class="text-sm text-on-tertiary-fixed-variant">Seat #12 just reserved by Omar S.</p>
+</div>
+<span class="text-xs font-bold opacity-60">Just now</span>
+</div>
+<!-- Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Bus Map Section (Bento Style) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 rounded-3xl shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-manrope text-xl font-extrabold tracking-tight">Microbus Seating Plan</h3>
+<div class="flex gap-4 text-xs font-bold uppercase tracking-widest">
+<div class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-surface-container-highest"></span> Available</div>
+<div class="flex items-center gap-1"><span class="w-3 h-3 rounded bg-primary"></span> Booked</div>
+</div>
+</div>
+<!-- Bus Simulation Shell -->
+<div class="relative mx-auto max-w-[320px] bg-surface-container-low rounded-[40px] p-8 border-[6px] border-surface-variant">
+<!-- Driver Seat Area -->
+<div class="flex justify-between items-center mb-12 border-b border-outline-variant pb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">steering_wheel_heat</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary/20 border-2 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+<!-- Passenger Seats Grid -->
+<div class="grid grid-cols-3 gap-y-6 gap-x-4">
+<!-- Row 1 -->
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">1</div>
+<span class="text-[10px] mt-1 font-bold text-primary">OMAR</span>
+</div>
+<div class="col-start-3 group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">2</div>
+<span class="text-[10px] mt-1 font-bold text-primary">SARA</span>
+</div>
+<!-- Row 2 -->
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">3</div>
+<span class="text-[10px] mt-1 font-bold text-primary">AHMED</span>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold border border-outline-variant/30">4</div>
+<span class="text-[10px] mt-1 font-bold opacity-0">...</span>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">5</div>
+<span class="text-[10px] mt-1 font-bold text-primary">MONA</span>
+</div>
+<!-- Row 3 -->
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold border border-outline-variant/30">6</div>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">7</div>
+<span class="text-[10px] mt-1 font-bold text-primary">ZAIN</span>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">8</div>
+<span class="text-[10px] mt-1 font-bold text-primary">LAYLA</span>
+</div>
+<!-- Row 4 -->
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold border border-outline-variant/30">9</div>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">10</div>
+<span class="text-[10px] mt-1 font-bold text-primary">HANY</span>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary shadow-md flex items-center justify-center text-white font-bold">11</div>
+<span class="text-[10px] mt-1 font-bold text-primary">TARIQ</span>
+</div>
+<!-- Last Row (Back) -->
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-primary ring-4 ring-tertiary-fixed shadow-md flex items-center justify-center text-white font-bold">12</div>
+<span class="text-[10px] mt-1 font-bold text-tertiary">NEW</span>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold border border-outline-variant/30">13</div>
+</div>
+<div class="group relative flex flex-col items-center cursor-pointer transition-all duration-150 active:scale-95">
+<div class="w-14 h-14 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant font-bold border border-outline-variant/30">14</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rider Info Side Panel -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Rider Detail Card (Selected State) -->
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-10 translate-x-12 -translate-y-8">
+<span class="material-symbols-outlined text-[120px] text-primary">chair</span>
+</div>
+<h3 class="font-manrope label-md uppercase tracking-widest text-primary mb-4">Selected Rider</h3>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-black text-2xl">OS</div>
+<div>
+<h4 class="text-xl font-bold">Omar Shaker</h4>
+<p class="text-sm text-slate-500">Seat Number: <span class="text-primary font-bold">12</span></p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-3 border-b border-surface-container">
+<span class="text-slate-500 text-sm">Status</span>
+<span class="px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold">CONFIRMED</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-surface-container">
+<span class="text-slate-500 text-sm">Payment Method</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="text-on-surface text-sm font-medium">Cash at Pickup</span>
+</div>
+</div>
+<div class="flex justify-between items-center py-3">
+<span class="text-slate-500 text-sm">Pickup Point</span>
+<span class="text-on-surface text-sm font-medium">Ramses Square</span>
+</div>
+</div>
+<button class="w-full mt-6 py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold transition-transform active:scale-95">
+                        Call Passenger
+                    </button>
+</div>
+<!-- Live Earnings Snapshot -->
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-manrope label-md uppercase tracking-widest text-slate-600">Trip Earnings</h3>
+<span class="material-symbols-outlined text-tertiary">trending_up</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-black text-on-surface">450.00</span>
+<span class="text-sm font-bold text-slate-500">EGP</span>
+</div>
+<p class="text-xs text-slate-400 mt-2">Target for full bus: 700.00 EGP</p>
+</div>
+<!-- Action Shortcut -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest p-4 rounded-2xl flex flex-col items-center justify-center text-center gap-2 cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">map</span>
+<span class="text-xs font-bold uppercase tracking-tighter">View Route</span>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-2xl flex flex-col items-center justify-center text-center gap-2 cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">qr_code_scanner</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Scan Ticket</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-4px_30px_rgba(0,0,0,0.05)] rounded-t-3xl border-t-0">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 text-blue-900 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">route</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1 font-bold">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope label-md uppercase tracking-widest text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button -->
+<div class="fixed bottom-24 right-6 z-40">
+<button class="h-14 w-14 rounded-full bg-tertiary shadow-xl flex items-center justify-center text-white active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add_road</span>
+</button>
+</div>
+</body></html>

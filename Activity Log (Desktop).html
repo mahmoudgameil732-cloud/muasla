@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b7c6f0",
+                    "surface-container-highest": "#e2e2ea",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "on-surface-variant": "#434652",
+                    "surface-variant": "#e2e2ea",
+                    "background": "#faf8ff",
+                    "secondary-container": "#c5d4fe",
+                    "surface-container-low": "#f3f3fb",
+                    "surface": "#faf8ff",
+                    "on-tertiary-container": "#ffa781",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e7f0",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed": "#ffdbcd",
+                    "tertiary": "#602100",
+                    "secondary-fixed": "#d9e2ff",
+                    "primary-fixed": "#d9e2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#4d5b7f",
+                    "surface-dim": "#d9d9e1",
+                    "outline": "#737783",
+                    "tertiary-container": "#853100",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c6d4",
+                    "secondary": "#4f5e82",
+                    "on-primary-fixed-variant": "#00429c",
+                    "on-secondary-fixed-variant": "#384669",
+                    "surface-container": "#ededf5",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b0c6ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "inverse-on-surface": "#f0f0f8",
+                    "inverse-surface": "#2e3036",
+                    "on-primary-container": "#a1bbff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1b21",
+                    "primary": "#003178",
+                    "on-surface": "#1a1b21",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "primary-container": "#0d47a1",
+                    "surface-tint": "#2b5bb5",
+                    "on-secondary-fixed": "#0a1a3b",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-full overflow-y-auto h-screen w-64 border-r-0 bg-slate-50 dark:bg-slate-900 z-50">
+<div class="p-6">
+<h1 class="text-xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">Moasla | مواصله</h1>
+<p class="font-manrope text-sm font-medium tracking-tight text-blue-800 dark:text-blue-400">Admin Dashboard</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">local_taxi</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Drivers</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Riders</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">map</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Areas</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">hub</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Stations</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">alt_route</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Routes</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">payments</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Pricing</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">schedule</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Shifts</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">reorder</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Queue</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">commute</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Trips</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">book_online</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Bookings</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">account_balance_wallet</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Payments</span>
+</a>
+<a class="flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">person</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Profiles</span>
+</a>
+<a class="flex items-center px-3 py-2 text-blue-800 dark:text-blue-400 font-bold border-r-4 border-blue-800 dark:border-blue-400 bg-blue-50/50 dark:bg-blue-900/20 transition-all" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-manrope text-sm font-medium tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="p-6 mt-auto">
+<div class="flex items-center p-3 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+<img alt="Moasla Admin Profile" class="w-10 h-10 rounded-full object-cover" data-alt="professional male portrait of an administrator in a modern office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-497_EFQa7DdTmb28P2EnwEE1igTJfymZJPitD7ah5foDnL11Zh-xTRNIdHjP3kuZEQfFKKp3GIojXuxxf9GeowuboGFuNr6n1sh_I6Wbo3rK2MeuxQeuwsjOz6gRCa-McMz091VFIvsF-v-iwWHzhTwYeuyhwogJL5mRnSov-VLs-EukpRJ5Lee9OnD4EfzZQSJd6CufbyImyJclNlG6X-Lc-AZdg0hcIideLFTtUqI5N5JczezMxlEaz1-8TjxwxkjXVKU1EOs"/>
+<div class="ml-3">
+<p class="text-sm font-bold text-blue-900 dark:text-blue-100">Moasla Admin</p>
+<p class="text-xs text-slate-500">ID: #4902-X</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 z-40 ml-64 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center w-1/3">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-high rounded-md border-none focus:ring-1 focus:ring-primary text-sm font-manrope" placeholder="Search activity logs..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<button class="flex items-center space-x-2 px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform duration-150 scale-95">
+<span class="material-symbols-outlined text-slate-500">language</span>
+<span class="font-manrope text-sm tracking-wide text-slate-500">English/عربي</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-transform duration-150 scale-95 relative">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-300">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="flex items-center space-x-3 pl-4 border-l border-slate-100 dark:border-slate-800">
+<div class="text-right">
+<p class="text-sm font-semibold text-blue-700 dark:text-blue-300">Admin</p>
+<p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Active Now</p>
+</div>
+<img alt="Administrator Portrait" class="w-8 h-8 rounded-full border-2 border-primary-container" data-alt="close-up portrait of a professional male administrator with a confident smile and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL8FjnUSDyGU81prntx5tS9Xx4u3UPnVqKFzadIJFU7xMrvyd_60xOIi8IMWd4dGVsZIzKziV4FK0Sjy4iGVKyjst13-tuLoYge6zHgmrxfwHfPjuy5O2ZRM3jabimvzobimUnUFTbt-jH8Vx-99rK41xsMdCjQ1f-tewxku5pZAHo9JuExpYosiOq8QvYdGzVZ8XTng3SKEGnYk0-IQEbrk4VIi16qpYVOZZt8KrW4xugJysMn0UimB2y0hkTiReYo-e-Llv1ki0"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="ml-64 p-8 max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Activity Log</h2>
+<p class="text-on-surface-variant text-lg font-medium leading-relaxed">Comprehensive operational audit trail for system actions, driver lifecycle, and transaction flow.</p>
+</div>
+<div class="flex space-x-3">
+<button class="bg-surface-container-low text-on-surface px-5 py-2.5 rounded-full text-sm font-bold flex items-center hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined mr-2 text-[20px]">download</span> Export CSV
+                </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl text-sm font-bold flex items-center shadow-lg shadow-primary/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined mr-2 text-[20px]">refresh</span> Refresh Log
+                </button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-low p-4 rounded-2xl mb-8 flex flex-wrap items-center gap-4">
+<div class="flex items-center bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/15">
+<span class="text-xs font-bold text-on-surface-variant mr-3 uppercase tracking-tighter">Category:</span>
+<select class="bg-transparent border-none text-sm font-semibold p-0 focus:ring-0 text-blue-800">
+<option>All Activities</option>
+<option>Driver Approvals</option>
+<option>Booking Activity</option>
+<option>Queue Changes</option>
+<option>System Updates</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/15">
+<span class="text-xs font-bold text-on-surface-variant mr-3 uppercase tracking-tighter">Date Range:</span>
+<input class="bg-transparent border-none text-sm font-semibold p-0 focus:ring-0 text-blue-800" type="date"/>
+<span class="mx-2 text-slate-300">-</span>
+<input class="bg-transparent border-none text-sm font-semibold p-0 focus:ring-0 text-blue-800" type="date"/>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/15">
+<span class="text-xs font-bold text-on-surface-variant mr-3 uppercase tracking-tighter">Priority:</span>
+<div class="flex space-x-1">
+<button class="w-6 h-6 rounded-full bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</button>
+<button class="w-6 h-6 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">circle</span>
+</button>
+</div>
+</div>
+<button class="ml-auto text-sm font-bold text-primary hover:underline px-4">Clear All Filters</button>
+</div>
+<!-- Chronological Grid -->
+<div class="space-y-6">
+<!-- Day Group 1 -->
+<div>
+<div class="flex items-center mb-6">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-slate-400">Today — Oct 24, 2023</h3>
+<div class="flex-1 h-[1px] bg-slate-100 ml-4"></div>
+</div>
+<!-- Bento Activity List -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Activity Card 1: Critical -->
+<div class="md:col-span-12 bg-surface-container-lowest p-6 rounded-2xl flex items-start gap-6 hover:bg-surface-bright transition-all group relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-error-container" style="font-variation-settings: 'FILL' 1;">report</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-base font-bold text-on-surface">System Security Update Failed</h4>
+<span class="text-xs font-bold text-on-surface-variant">09:42 AM</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">The scheduled deployment for v2.4.1 core security patch encountered a timeout on the secondary cluster. Rollback completed successfully.</p>
+<div class="flex items-center space-x-4">
+<span class="px-2 py-1 bg-surface-container-high rounded-md text-[10px] font-black uppercase tracking-widest text-on-surface-variant">System Updates</span>
+<span class="flex items-center text-xs font-bold text-error">
+<span class="material-symbols-outlined text-[14px] mr-1">history</span> Action Required
+                                </span>
+</div>
+</div>
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-low rounded-lg transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Activity Card 2: Driver Approval -->
+<div class="md:col-span-7 bg-surface-container-lowest p-6 rounded-2xl flex items-start gap-6 hover:bg-surface-bright transition-all group border-l-4 border-primary">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container">verified_user</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-base font-bold text-on-surface">Driver Onboarding Approved</h4>
+<span class="text-xs font-bold text-on-surface-variant">08:15 AM</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3">Driver <span class="font-bold text-on-surface">Ahmed K. Mansour</span> has been fully verified and added to the <span class="text-primary font-bold">Cairo North</span> fleet.</p>
+<div class="flex -space-x-2 mb-4">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="profile photo of a smiling professional driver wearing a blue uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmoNL7Q1ipqTfT-glvP6OBNMJ-Tjakn6VZhxsEFqcfc6QI4nK9cuKbEjtAnmWEx9Nk5-TWOSks7ZGOSu3G02MwbP3iAsf1NP6C69L2fiSOrre7AIGWZma3sCR4mvX_qsl-lH0_KdoLrH94qvVlKKzGXzkvvl568n4UnggVoaBDjEMck1p5gwuQ0q4VHfynH0Jub47bfv0vML5arRvBlx5HZMy7thIIs_hgo4jt8_Dx1UigPxnnNMc8LOwChsgX0X05QCCMLPsZy5g"/>
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-500 border-2 border-white">+3</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-high rounded-md text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Driver Approvals</span>
+</div>
+</div>
+<!-- Activity Card 3: Queue -->
+<div class="md:col-span-5 bg-surface-container-lowest p-6 rounded-2xl flex flex-col justify-between hover:bg-surface-bright transition-all group border-l-4 border-secondary">
+<div class="flex items-start gap-4 mb-4">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">reorder</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-on-surface">Queue Optimized</h4>
+<p class="text-xs text-on-surface-variant">07:50 AM</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Dynamic re-routing applied to <span class="font-bold">Station 12 (Central)</span> to reduce peak-hour wait times by 14%.</p>
+<div class="flex items-center justify-between">
+<span class="px-2 py-1 bg-surface-container-high rounded-md text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Queue Changes</span>
+<span class="text-xs font-bold text-secondary">View Impact Report</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Group 2 -->
+<div class="pt-6">
+<div class="flex items-center mb-6">
+<h3 class="text-sm font-black uppercase tracking-[0.2em] text-slate-400">Yesterday — Oct 23, 2023</h3>
+<div class="flex-1 h-[1px] bg-slate-100 ml-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Activity Card 4: Booking -->
+<div class="md:col-span-6 bg-surface-container-lowest p-6 rounded-2xl flex items-start gap-6 hover:bg-surface-bright transition-all group border-l-4 border-tertiary">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary">book_online</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-base font-bold text-on-surface">Mass Booking Success</h4>
+<span class="text-xs font-bold text-on-surface-variant">10:22 PM</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Corporate event booking for <span class="font-bold text-on-surface">TechGlobal Inc.</span> completed. 45 vehicles dispatched to Station B.</p>
+<span class="px-2 py-1 bg-surface-container-high rounded-md text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Booking Activity</span>
+</div>
+</div>
+<!-- Activity Card 5: Shift Change -->
+<div class="md:col-span-6 bg-surface-container-lowest p-6 rounded-2xl flex items-start gap-6 hover:bg-surface-bright transition-all group border-l-4 border-outline">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline">schedule</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-base font-bold text-on-surface">Night Shift Transition</h4>
+<span class="text-xs font-bold text-on-surface-variant">08:00 PM</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Shift hand-over for Cairo Metropolitan area completed. 124 active units reported.</p>
+<span class="px-2 py-1 bg-surface-container-high rounded-md text-[10px] font-black uppercase tracking-widest text-on-surface-variant">Operations</span>
+</div>
+</div>
+<!-- Decorative Branding Element -->
+<div class="md:col-span-12 h-40 bg-primary-container rounded-3xl relative overflow-hidden flex items-center px-12">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative z-10 flex items-center gap-12 w-full">
+<div class="flex-1">
+<h5 class="text-white text-2xl font-black mb-2 tracking-tight">Audit Confidence: 100%</h5>
+<p class="text-primary-fixed-dim text-sm max-w-sm">All logs are cryptographically hashed and synced across three secure nodes to ensure zero-tamper operational history.</p>
+</div>
+<div class="hidden md:block">
+<div class="w-24 h-24 rounded-full border-8 border-primary flex items-center justify-center bg-white/5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Section -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center text-sm font-bold text-primary group">
+                Load previous logs
+                <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-y-1">expand_more</span>
+</button>
+</div>
+</main>
+<!-- FAB Suppression: Not rendered as this is a details/log screen -->
+</body></html>
